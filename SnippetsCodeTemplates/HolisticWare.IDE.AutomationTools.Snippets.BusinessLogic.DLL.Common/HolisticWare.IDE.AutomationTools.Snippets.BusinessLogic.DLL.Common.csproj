@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9EBFCE0C-D837-4112-95B7-15B01158C7D0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HolisticWare.IDE.AutomationTools.Snippets</RootNamespace>
+    <AssemblyName>HolisticWare.IDE.AutomationTools.DLL.Snippets</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bat\xsd2cs-RazorCodeTemplates-CodeTemplates.bat" />
+    <None Include="bat\xsd-infer-MonoDevelop-CodeTemplate.bat" />
+    <None Include="bat\xsd2cs-VisualStudio-CodeSnippets.bat" />
+    <Compile Include="cs-generated\CodeTemplates_[from-MonoDevelop-templates_xml]_template.cs" />
+    <Compile Include="cs-generated\RazorCodeTemplates_[from-RazorCodeTemplates-template_xml]_template.cs" />
+    <Compile Include="cs-generated\snippetformat.cs" />
+    <Compile Include="SnippetManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="xsd\CodeTemplates.[from-MonoDevelop-templates.xml].template.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="xsd\RazorCodeTemplates.[from-RazorCodeTemplates-template.xml].template.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="xsd\snippetformat.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bat\xsd2cs-MonoDevelop-CodeTemplates.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="visual-studio-snippets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="xamarin-studio-templates\MonoDevelop-templates.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

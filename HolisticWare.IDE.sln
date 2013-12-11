@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SnippetsCodeTemplates", "SnippetsCodeTemplates", "{1026D189-4BE2-44ED-A633-3E87CB8C42EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.IDE.AutomationTools.Snippets.BusinessLogic.DLL.Common", "SnippetsCodeTemplates\HolisticWare.IDE.AutomationTools.Snippets.BusinessLogic.DLL.Common\HolisticWare.IDE.AutomationTools.Snippets.BusinessLogic.DLL.Common.csproj", "{9EBFCE0C-D837-4112-95B7-15B01158C7D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.HolisticWare.IDE.AutomationTools.Snippets.BusinessLogic.DLL.Common", "SnippetsCodeTemplates\UnitTests.HolisticWare.IDE.AutomationTools.Snippets.BusinessLogic.DLL.Common\UnitTests.HolisticWare.IDE.AutomationTools.Snippets.BusinessLogic.DLL.Common.csproj", "{E40B7287-4447-4659-AFEA-58F0CDA5AAD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualStudioAddIn", "VisualStudioAddIn\VisualStudioAddIn.csproj", "{54C786E5-FD14-4036-92AE-E9F25B71534B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinStudioAddIn", "XamarinStudioAddIn\XamarinStudioAddIn.csproj", "{7317561E-A125-452F-B8AF-C595B06F053B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54C786E5-FD14-4036-92AE-E9F25B71534B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54C786E5-FD14-4036-92AE-E9F25B71534B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54C786E5-FD14-4036-92AE-E9F25B71534B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54C786E5-FD14-4036-92AE-E9F25B71534B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7317561E-A125-452F-B8AF-C595B06F053B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7317561E-A125-452F-B8AF-C595B06F053B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7317561E-A125-452F-B8AF-C595B06F053B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7317561E-A125-452F-B8AF-C595B06F053B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EBFCE0C-D837-4112-95B7-15B01158C7D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EBFCE0C-D837-4112-95B7-15B01158C7D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EBFCE0C-D837-4112-95B7-15B01158C7D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EBFCE0C-D837-4112-95B7-15B01158C7D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E40B7287-4447-4659-AFEA-58F0CDA5AAD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E40B7287-4447-4659-AFEA-58F0CDA5AAD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E40B7287-4447-4659-AFEA-58F0CDA5AAD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E40B7287-4447-4659-AFEA-58F0CDA5AAD0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9EBFCE0C-D837-4112-95B7-15B01158C7D0} = {1026D189-4BE2-44ED-A633-3E87CB8C42EE}
+		{E40B7287-4447-4659-AFEA-58F0CDA5AAD0} = {1026D189-4BE2-44ED-A633-3E87CB8C42EE}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = SnippetsCodeTemplates\UnitTests.HolisticWare.IDE.AutomationTools.Snippets.BusinessLogic.DLL.Common\UnitTests.HolisticWare.IDE.AutomationTools.Snippets.BusinessLogic.DLL.Common.csproj
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

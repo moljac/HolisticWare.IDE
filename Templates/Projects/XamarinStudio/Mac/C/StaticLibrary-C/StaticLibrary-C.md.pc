@@ -1,0 +1,5 @@
+Name: StaticLibrary-C
+Description: 
+Version: 0.1
+Libs: -L"/Users/moljac/Projects/HolisticWare.IDE/Templates/Projects/XamarinStudio/C/StaticLibrary-C/bin/Debug" -lStaticLibrary-C
+Cflags: -I"/Users/moljac/Projects/HolisticWare.IDE/Templates/Projects/XamarinStudio/C/StaticLibrary-C"

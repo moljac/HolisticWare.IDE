@@ -1,0 +1,300 @@
+Hi
+
+Few weeks ago I have noticed that Android projects created by XS on Mac cannot be opened with VS 2010 and 2012. Recently this is true for XS on Windows too.
+
+From what I have found all Android projects now have 3 GUIDs in ProjectTypeGuids xml element in csproj file.
+
+
+* 	VisualStudio	
+	{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}
+* 	XamarinStudio	
+	{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{F278D4AB-4730-4720-B08E-FE5E31564D9E};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}	
+
+	
+	find . -name "*proj" | xargs grep "ProjectTypeGuid" > ProjectTypeGuids.txt
+
+
+Excerpt
+
+	
+	./VisualStudio/2012/CS/Android/AndroidApplication-CS/AndroidApplication-CS.csproj:
+		<ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+	./VisualStudio/2012/CS/Android/AndroidBindingLibrary-CS/AndroidBindingLibrary-CS.csproj:
+		<ProjectTypeGuids>{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+	./VisualStudio/2012/CS/Android/AndroidClassLibrary-CS/AndroidClassLibrary-CS.csproj:
+		<ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+	./VisualStudio/2012/CS/Android/AndroidHoneycombApplication-CS/AndroidHoneycombApplication-CS.csproj:
+		<ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+	./VisualStudio/2012/CS/Android/AndroidIceCreamSandwichApplication-CS/AndroidIceCreamSandwichApplication-CS.csproj:
+		<ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+	./VisualStudio/2012/CS/Android/AndroidOpenGLApplication-CS/AndroidOpenGLApplication-CS.csproj:
+		<ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+		
+		
+	./XamarinStudio/Mac/CS/Android/AndroidApplication-CS/AndroidApplication-CS.csproj:
+		<ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{F278D4AB-4730-4720-B08E-FE5E31564D9E};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+	./XamarinStudio/Mac/CS/Android/AndroidHoneycombApplication-CS/AndroidHoneycombApplication-CS.csproj:
+		<ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{F278D4AB-4730-4720-B08E-FE5E31564D9E};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+	./XamarinStudio/Mac/CS/Android/AndroidIceCreamSandwichApplication-CS/AndroidIceCreamSandwichApplication-CS.csproj:
+		<ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{F278D4AB-4730-4720-B08E-FE5E31564D9E};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+	./XamarinStudio/Mac/CS/Android/AndroidJavaBindingLibrary-CS/AndroidJavaBindingLibrary-CS.csproj:
+		<ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{10368E6C-D01B-4462-8E8B-01FC667A7035};{F278D4AB-4730-4720-B08E-FE5E31564D9E};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+	./XamarinStudio/Mac/CS/Android/AndroidLibraryProject-CS/AndroidLibraryProject-CS.csproj:
+		<ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{F278D4AB-4730-4720-B08E-FE5E31564D9E};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+	./XamarinStudio/Mac/CS/Android/AndroidOpenGLApplication-CS/AndroidOpenGLApplication-CS.csproj:
+		<ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{F278D4AB-4730-4720-B08E-FE5E31564D9E};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+	./XamarinStudio/Mac/CS/Android/AndroidUnitTestProject/AndroidUnitTestProject.csproj:
+		<ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{F278D4AB-4730-4720-B08E-FE5E31564D9E};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+	./XamarinStudio/Windows/CS/Android/AndroidApplication-CS/AndroidApplication-CS.csproj:
+		<ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{F278D4AB-4730-4720-B08E-FE5E31564D9E};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+	./XamarinStudio/Windows/CS/Android/AndroidApplication-CS/AndroidHoneycombApplication-CS/AndroidHoneycombApplication-CS.csproj:
+		<ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{F278D4AB-4730-4720-B08E-FE5E31564D9E};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+	./XamarinStudio/Windows/CS/Android/AndroidApplication-CS/AndroidIceCreamSandwichApplication-CS/AndroidIceCreamSandwichApplication-CS.csproj:
+		<ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{F278D4AB-4730-4720-B08E-FE5E31564D9E};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+	./XamarinStudio/Windows/CS/Android/AndroidApplication-CS/AndroidJavaBindingsLibrary-CS/AndroidJavaBindingsLibrary-CS.csproj:
+		<ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{10368E6C-D01B-4462-8E8B-01FC667A7035};{F278D4AB-4730-4720-B08E-FE5E31564D9E};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+	./XamarinStudio/Windows/CS/Android/AndroidApplication-CS/AndroidLibraryProject-CS/AndroidLibraryProject-CS.csproj:
+		<ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{F278D4AB-4730-4720-B08E-FE5E31564D9E};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+	./XamarinStudio/Windows/CS/Android/AndroidApplication-CS/AndroidOpenGLApplication-CS/AndroidOpenGLApplication-CS.csproj:
+		<ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{F278D4AB-4730-4720-B08E-FE5E31564D9E};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+	./XamarinStudio/Windows/CS/Android/AndroidUnitTestProject-CS/AndroidUnitTestProject-CS.csproj:
+		<ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{F278D4AB-4730-4720-B08E-FE5E31564D9E};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+		
+		
+		
+		
+		
+		
+		
+		
+In the post above I have pasted binding library GUID 10368E6C-D01B-4462-8E8B-01FC667A7035
+
+Correction:
+
+
+* 	VisualStudio	
+	{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}
+* 	XamarinStudio	
+	{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{F278D4AB-4730-4720-B08E-FE5E31564D9E};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}	
+
+So the middle one GUID {F278D4AB-4730-4720-B08E-FE5E31564D9E} is new.
+
+
+
+
+
+
+
+# Version info
+
+## MacOSX
+
+	=== Xamarin Studio ===
+
+	Version 4.3.0 (build 52)
+	Installation UUID: 7f42cd6c-f6c2-47c4-960b-ba19ea98bebf
+	Runtime:
+		Mono 3.2.5 ((no/964e8f0)
+		GTK+ 2.24.20 theme: Raleigh
+		GTK# (2.12.0.0)
+		Package version: 302050000
+
+	=== Apple Developer Tools ===
+
+	Xcode 5.0.2 (3335.32)
+	Build 5A3005
+
+	=== Xamarin.iOS ===
+
+	Version: 7.0.5.2 (Business Edition)
+	Hash: 9c42159
+	Branch: 
+	Build date: 2013-02-12 20:04:08-0500
+
+	=== Xamarin.Mac ===
+
+	Xamarin.Mac: Not Installed
+
+	=== Xamarin.Android ===
+
+	Version: 4.10.1 (Business Edition)
+	Android SDK: /Users/moljac/Downloads/adt-bundle-mac-x86_64-20131030/sdk
+		Supported Android versions:
+			1.6   (API level 4)
+			2.1   (API level 7)
+			2.2   (API level 8)
+			2.3   (API level 10)
+			3.1   (API level 12)
+			3.2   (API level 13)
+			4.0   (API level 14)
+			4.0.3 (API level 15)
+			4.1   (API level 16)
+			4.2   (API level 17)
+			4.3   (API level 18)
+			4.4   (API level 19)
+	Java SDK: /usr
+	java version "1.6.0_65"
+	Java(TM) SE Runtime Environment (build 1.6.0_65-b14-462-11M4609)
+	Java HotSpot(TM) 64-Bit Server VM (build 20.65-b04-462, mixed mode)
+
+	=== Build Information ===
+
+	Release ID: 403000052
+	Git revision: cd02fcfb350930f468f3d7cbf8e39f940553d378
+	Build date: 2013-11-24 02:13:57+0000
+	Xamarin addins: 14d41853742c36662973f9bbc0d14e58befdebfb
+
+	=== Operating System ===
+
+	Mac OS X 10.8.5
+	Darwin c8-e0-eb-13-eb-0b.dummy.porta.siemens.net 12.5.0 Darwin Kernel Version 12.5.0
+		Sun Sep 29 13:33:47 PDT 2013
+		root:xnu-2050.48.12~1/RELEASE_X86_64 x86_64
+
+
+## Windows
+
+### Xamarin Studio
+
+	=== Xamarin Studio ===
+
+	Version 4.2.2 (build 2)
+	Installation UUID: 592b4009-4f3b-45a2-b03b-78ea92b1608b
+	Runtime:
+		Microsoft .NET 4.0.30319.18052
+		GTK+ 2.24.20 theme: MS-Windows
+		GTK# (2.12.0.0)
+
+	=== Xamarin.Android ===
+
+	Version: 4.10.1 (Business Edition)
+	Android SDK: C:\Program Files (x86)\Android\android-sdk
+		Supported Android versions:
+			1.6   (API level 4)
+			2.1   (API level 7)
+			2.2   (API level 8)
+			2.3   (API level 10)
+			3.1   (API level 12)
+			3.2   (API level 13)
+			4.0   (API level 14)
+			4.0.3 (API level 15)
+			4.1   (API level 16)
+			4.2   (API level 17)
+			4.3   (API level 18)
+	Java SDK: C:\Program Files (x86)\Java\jdk1.6.0_39
+	java version "1.6.0_39"
+	Java(TM) SE Runtime Environment (build 1.6.0_39-b04)
+	Java HotSpot(TM) Client VM (build 20.14-b01, mixed mode, sharing)
+
+	=== Build Information ===
+
+	Release ID: 402020002
+	c5f82958ae7d9af652b44b87ceff777b3ad19b91
+	Build date: 2013-11-19 10:28:29Z
+	Xamarin addins: a4044fee09138f6fd031a9944b7caaeb51e57e80
+
+	=== Operating System ===
+
+	Windows 6.1.7601.65536 (64-bit)
+
+
+	
+	
+### Visual Studio
+
+	Microsoft Visual Studio Ultimate 2012
+	Version 11.0.61030.00 Update 4
+	Microsoft .NET Framework
+	Version 4.5.50709
+	
+	Installed Version: Ultimate
+	
+	Architecture and Modeling Tools   04940-004-0038003-02864
+	Microsoft Architecture and Modeling Tools
+		
+	UML® and Unified Modeling Language™ are trademarks or registered trademarks of the Object Management Group, Inc. in the United States and other countries.
+	
+	LightSwitch for Visual Studio 2012   04940-004-0038003-02864
+	Microsoft LightSwitch for Visual Studio 2012
+	
+	Office Developer Tools   04940-004-0038003-02864
+	Microsoft Office Developer Tools
+	
+	Team Explorer for Visual Studio 2012   04940-004-0038003-02864
+	Microsoft Team Explorer for Visual Studio 2012
+	
+	Visual Basic 2012   04940-004-0038003-02864
+	Microsoft Visual Basic 2012
+	
+	Visual C# 2012   04940-004-0038003-02864
+	Microsoft Visual C# 2012
+	
+	Visual C++ 2012   04940-004-0038003-02864
+	Microsoft Visual C++ 2012
+	
+	Visual F# 2012   04940-004-0038003-02864
+	Microsoft Visual F# 2012
+	
+	Visual Studio 2012 Code Analysis Spell Checker   04940-004-0038003-02864
+	Microsoft® Visual Studio® 2012 Code Analysis Spell Checker
+	
+	Portions of International CorrectSpell™ spelling correction system © 1993 by Lernout & Hauspie Speech Products N.V. All rights reserved.
+	
+	The American Heritage® Dictionary of the English Language, Third Edition Copyright © 1992 Houghton Mifflin Company. Electronic version licensed from Lernout & Hauspie Speech Products N.V. All rights reserved.
+	
+	Visual Studio 2012 SharePoint Developer Tools   04940-004-0038003-02864
+	Microsoft Visual Studio 2012 SharePoint Developer Tools
+	
+	AlignAssignments   1.0
+	Command for aligning assignments.
+	
+	ASP.NET and Web Tools   2012.3.41009
+	Microsoft Web Developer Tools contains the following components:
+	Support for creating and opening ASP.NET web projects
+	Browser Link: A communication channel between Visual Studio and browsers
+	Editor extensions for HTML, CSS, and JavaScript
+	Page Inspector: Inspection tool for ASP.NET web projects
+	Scaffolding: A framework for building and running code generators
+	Server Explorer extensions for Windows Azure Web Sites
+	Web publishing: Extensions for publishing ASP.NET web projects to hosting providers, on-premises servers, or Windows Azure
+	
+	AutoBraceComplete   1.0
+	auto brace complete
+	
+	CustomDocWell   1.0
+	Provides configurable behavior for the document well in Visual Studio 2012.
+	
+	Microsoft Practices Project Linker   1.0
+	Microsoft patterns & practices project linker
+	
+	NuGet Package Manager   2.6.40627.9000
+	NuGet Package Manager in Visual Studio. For more information about NuGet, visit http://docs.nuget.org/.
+	
+	OptionsPageImpl   1.0
+	Information about my package
+	
+	PowerCommands for Visual Studio 2010   1.0
+	A set of power commands for Visual Studio 2010
+	
+	PreEmptive Analytics Visualizer   1.0
+	Microsoft Visual Studio extension to visualize aggregated summaries from the PreEmptive Analytics product.
+	
+	Quick Launch Tasks   1.0
+	Microsoft Quick LaunchTasks package adds accessibility and settings tasks to the Quick Launch tool.
+	
+	SQL Server Data Tools   11.1.20627.00
+	Microsoft SQL Server Data Tools
+	
+	VSCommands11   12.0
+	VSCommands 11
+	
+	Xamarin.Android   4.10.01073 (d23a19bf)
+	Visual Studio plugin to enable development for Xamarin.Android.
+	
+	Xamarin.iOS   1.10.19 (0b230018)
+	Visual Studio extension to enable development for Xamarin.iOS
+	
+	XamlSpyPowerTools   1.0
+	XAML Spy Power Tools for Visual Studio	
+
+

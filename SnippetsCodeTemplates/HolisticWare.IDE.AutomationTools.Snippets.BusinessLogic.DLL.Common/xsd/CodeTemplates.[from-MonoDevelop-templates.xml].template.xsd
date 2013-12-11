@@ -1,0 +1,26 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CodeTemplates">
+	<xs:complexType>
+	  <xs:sequence>
+		<xs:element name="CodeTemplateGroup" maxOccurs="unbounded" minOccurs="0">
+		  <xs:complexType>
+			<xs:sequence>
+			  <xs:element name="CodeTemplate" maxOccurs="unbounded" minOccurs="0">
+				<xs:complexType>
+				  <xs:simpleContent>
+					<xs:extension base="xs:string">
+					  <xs:attribute type="xs:string" name="template" use="optional"/>
+					  <xs:attribute type="xs:string" name="description" use="optional"/>
+					</xs:extension>
+				  </xs:simpleContent>
+				</xs:complexType>
+			  </xs:element>
+			</xs:sequence>
+			<xs:attribute type="xs:string" name="extensions" use="optional"/>
+		  </xs:complexType>
+		</xs:element>
+	  </xs:sequence>
+	  <xs:attribute type="xs:float" name="version"/>
+	</xs:complexType>
+  </xs:element>
+</xs:schema>
