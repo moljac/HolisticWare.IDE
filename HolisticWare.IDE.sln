@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.IDE.Automation
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.HolisticWare.IDE.AutomationTools.Snippets.BusinessLogic.DLL.Common", "SnippetsCodeTemplates\UnitTests.HolisticWare.IDE.AutomationTools.Snippets.BusinessLogic.DLL.Common\UnitTests.HolisticWare.IDE.AutomationTools.Snippets.BusinessLogic.DLL.Common.csproj", "{E40B7287-4447-4659-AFEA-58F0CDA5AAD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualStudioAddIn", "VisualStudioAddIn\VisualStudioAddIn.csproj", "{54C786E5-FD14-4036-92AE-E9F25B71534B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualStudioAddIn", "AddIns-Extensions\VisualStudio\VisualStudioAddIn.csproj", "{54C786E5-FD14-4036-92AE-E9F25B71534B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinStudioAddIn", "XamarinStudioAddIn\XamarinStudioAddIn.csproj", "{7317561E-A125-452F-B8AF-C595B06F053B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinStudioAddIn", "AddIns-Extensions\XamarinStudio\XamarinStudioAddIn.csproj", "{7317561E-A125-452F-B8AF-C595B06F053B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
