@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Template>
+	<TemplateConfiguration>
+		<_Name>Utility Application</_Name>
+		<_Category>C#/iOS/iPad Storyboard</_Category>
+		<Icon>md-project-iphone</Icon>
+		<LanguageName>C#</LanguageName>
+		<_Description>Utility application project for iPad. With storyboard support.</_Description>
+	</TemplateConfiguration>
+	
+	<Actions>
+		<Open filename = "AppDelegate.cs"/>
+	</Actions>
+	
+	<Combine name = "${ProjectName}" directory = ".">
+		<Options>
+			<StartupProject>${ProjectName}</StartupProject>
+		</Options>
+		
+		<Project name = "${ProjectName}" directory = "." type = "IPhone">
+			<References>
+				<Reference type="Gac" refto="System, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
+				<Reference type="Gac" refto="System.Xml, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
+				<Reference type="Gac" refto="System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
+				<Reference type="Gac" refto="monotouch" />
+			</References>
+			<Files>
+				<Directory name="Resources" />
+				<File name="Info.plist" AddStandardHeader="False" src="../Common/Info_iPad.Storyboard.plist.xml" />
+				<File name="Entitlements.plist" AddStandardHeader="False" src="../Common/Entitlements.plist.xml" />
+				<File name="Main.cs" AddStandardHeader="True" src="../Common/Main.cs" />
+				<File name="AppDelegate.cs" AddStandardHeader="True" src="AppDelegate.Storyboard.cs" />
+				<RawFile name="MainStoryboard.storyboard" src="IPad/MainStoryboard.storyboard" />
+				<File name="MainViewController.cs" AddStandardHeader="True" src="IPad/MainViewController.Storyboard.cs" />
+				<File name="MainViewController.designer.cs" AddStandardHeader="False" DependsOn="MainViewController.cs"
+					src="MainViewController.designer.cs" />
+				<File name="FlipsideViewController.cs" AddStandardHeader="True" src="IPad/FlipsideViewController.Storyboard.cs" />
+				<File name="FlipsideViewController.designer.cs" DependsOn="FlipsideViewController.cs" AddStandardHeader="False"
+					src="FlipsideViewController.designer.cs" />
+			</Files>
+		</Project>
+	</Combine>
+</Template>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Template>
+	<TemplateConfiguration>
+		<_Name>Android Layout</_Name>
+		<Icon>md-text-file-icon</Icon>
+		<_Category>Android</_Category>
+		<ProjectType>MonoDroid</ProjectType>
+		<_Description>Creates an Android Layout.</_Description>
+	</TemplateConfiguration>
+	
+	<Conditions>
+	</Conditions>
+	
+	<TemplateFiles>
+		<AndroidResource type="layout">
+			<File name="${Name}.axml" ><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+</LinearLayout>
+]]>
+			</File>
+		</AndroidResource>
+	</TemplateFiles>
+</Template>
+
+
+

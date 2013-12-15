@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Template>
+	<TemplateConfiguration>
+		<_Name>Android Java Bindings Library</_Name>
+		<_Category>C#/Android</_Category>
+		<Icon>monodroid-project|md-library-overlay</Icon>
+		<LanguageName>C#</LanguageName>
+		<_Description>A project for creating an Android class library that binds an Android/Java jar.</_Description>
+	</TemplateConfiguration>
+	
+	<Actions>
+	</Actions>
+	
+	<Combine name = "${ProjectName}" directory = ".">
+		<Options>
+			<StartupProject>${ProjectName}</StartupProject>
+		</Options>
+		
+		<Project name = "${ProjectName}" directory = "." type = "MonoDroidBinding">
+			<Options Target = "Library" />
+			<References>
+				<Reference type="Gac" refto="System, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
+				<Reference type="Gac" refto="System.Xml, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
+				<Reference type="Gac" refto="System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
+				<Reference type="Gac" refto="Mono.Android" />
+			</References>
+			<Files>
+				<Directory name="Properties">
+					<File name="AssemblyInfo.cs" src="MonoDroidApplication/AssemblyInfo.cs" />
+				</Directory>
+				<Directory name="Additions">
+					<File name="AboutAdditions.txt" src="BindingProject/AboutAdditions.txt" />
+				</Directory>
+				<Directory name="Jars">
+					<File name="AboutJars.txt" src="BindingProject/AboutJars.txt" />
+				</Directory>
+				<Directory name="Transforms">
+					<File name="EnumFields.xml" src="BindingProject/EnumFields.xml" />
+					<File name="EnumMethods.xml" src="BindingProject/EnumMethods.xml" />
+					<File name="Metadata.xml" src="BindingProject/Metadata.xml" />
+				</Directory>
+			</Files>
+		</Project>
+	</Combine>
+</Template>

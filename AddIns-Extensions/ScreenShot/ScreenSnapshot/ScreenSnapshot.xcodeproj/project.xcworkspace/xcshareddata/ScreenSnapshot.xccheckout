@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D74D99E4-E140-4164-898F-12AB5248C73C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ScreenSnapshot</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7C76BB05-9184-4FD9-A4EA-5F72C774253F</key>
+		<string>https://github.com/moljac/HolisticWare.IDE.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>AddIns-Extensions/ScreenShot/ScreenSnapshot/ScreenSnapshot.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7C76BB05-9184-4FD9-A4EA-5F72C774253F</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/moljac/HolisticWare.IDE.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7C76BB05-9184-4FD9-A4EA-5F72C774253F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7C76BB05-9184-4FD9-A4EA-5F72C774253F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HolisticWare</string>
+		</dict>
+	</array>
+</dict>
+</plist>

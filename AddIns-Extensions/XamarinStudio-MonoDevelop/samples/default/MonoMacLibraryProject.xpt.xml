@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Template>
+	<TemplateConfiguration>
+		<_Name>MonoMac Library Project</_Name>
+		<_Category>C#/Mac (open source)</_Category>
+		<Icon>md-project-library</Icon>
+		<LanguageName>C#</LanguageName>
+		<_Description>Creates a MonoMac library project.</_Description>
+	</TemplateConfiguration>
+	
+	<Actions>
+	</Actions>
+	
+	<Combine name = "${ProjectName}" directory = ".">
+		<Options>
+			<StartupProject>${ProjectName}</StartupProject>
+		</Options>
+		
+		<Project name = "${ProjectName}" directory = "." type = "MonoMac">
+			<Options />
+			<References>
+				<Reference type="Gac" refto="System" />
+				<Reference type="Gac" refto="System.Xml" />
+				<Reference type="Gac" refto="System.Core" />
+				<Reference type="Gac" refto="System.Xml.Linq" />
+				<Reference type="Gac" refto="System.Drawing" />
+				<Reference type="Gac" refto="MonoMac" SpecificVersion="false" />
+			</References>
+			<Files>
+				<Directory name="Resources" />
+			</Files>
+		</Project>
+	</Combine>
+</Template>

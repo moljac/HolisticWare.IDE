@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Template>
+	<TemplateConfiguration>
+		<_Name>App Icon Assets</_Name>
+		<Icon>md-xml-file-icon</Icon>
+		<_Category>iOS</_Category>
+		<LanguageName>*</LanguageName>
+		<ProjectType>IPhone</ProjectType>
+		<DefaultFilename>AppIcons</DefaultFilename>
+		<_Description>Creates an asset catalog for App Icons.</_Description>
+	</TemplateConfiguration>
+	
+	<Conditions>
+		<ParentProject RequireProject="True"/>
+		<MacProject IsAssetCatalog="True"/>
+	</Conditions>
+	
+	<TemplateFiles>
+		<RawFile name="${Name}.appiconset/Contents.json" SuppressAutoOpen="False" BuildAction="ImageAsset" src="AppIcons.json" />
+    </TemplateFiles>
+</Template>

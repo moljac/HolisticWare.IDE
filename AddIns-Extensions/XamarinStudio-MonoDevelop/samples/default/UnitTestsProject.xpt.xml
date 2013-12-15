@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Template>
+	<TemplateConfiguration>
+		<_Name>iOS Unit Tests Project</_Name>
+		<_Category>C#/iOS</_Category>
+		<Icon>md-project-iphone</Icon>
+		<LanguageName>C#</LanguageName>
+		<_Description>Creates a unit tests project for iOS.</_Description>
+	</TemplateConfiguration>
+	
+	<Actions>
+		<Open filename = "UnitTestAppDelegate.cs"/>
+	</Actions>
+	
+	<Combine name = "${ProjectName}" directory = ".">
+		<Options>
+			<StartupProject>${ProjectName}</StartupProject>
+		</Options>
+		
+		<Project name = "${ProjectName}" directory = "." type = "IPhone">
+			<References>
+				<Reference type="Gac" refto="System, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
+				<Reference type="Gac" refto="System.Xml, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
+				<Reference type="Gac" refto="System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
+				<Reference type="Gac" refto="monotouch" />
+				<Reference type="Gac" refto="MonoTouch.NUnitLite" />
+			</References>
+			<Files>
+				<Directory name="Resources" />
+				<File name="Info.plist" AddStandardHeader="False" src="../Common/Info_Universal.plist.xml" />
+				<File name="Main.cs" AddStandardHeader="True" src="Main.cs" />
+				<File name="UnitTestAppDelegate.cs" AddStandardHeader="True" src="UnitTestAppDelegate.cs" />
+			</Files>
+		</Project>
+	</Combine>
+</Template>

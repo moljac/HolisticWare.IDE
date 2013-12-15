@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Template>
+	<TemplateConfiguration>
+		<_Name>Android Fragment</_Name>
+		<Icon>md-text-file-icon</Icon>
+		<_Category>Android</_Category>
+		<LanguageName>C#</LanguageName>
+		<ProjectType>MonoDroid</ProjectType>
+		<_Description>Creates an Android Fragment.</_Description>
+	</TemplateConfiguration>
+	
+	<Conditions>
+	</Conditions>
+	
+	<TemplateFiles>
+		<File name="${Name}.cs" ><![CDATA[
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+using Android.App;
+using Android.Content;
+using Android.OS;
+using Android.Runtime;
+using Android.Util;
+using Android.Views;
+using Android.Widget;
+
+namespace ${Namespace}
+{
+	public class ${Name} : Fragment
+	{
+		public override void OnCreate (Bundle savedInstanceState)
+		{
+			base.OnCreate (savedInstanceState);
+
+			// Create your fragment here
+		}
+	}
+}
+]]></File>
+	</TemplateFiles>
+</Template>

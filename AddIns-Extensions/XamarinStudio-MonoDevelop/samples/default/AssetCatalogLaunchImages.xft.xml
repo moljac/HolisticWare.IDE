@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Template>
+	<TemplateConfiguration>
+		<_Name>Launch Image Assets</_Name>
+		<Icon>md-xml-file-icon</Icon>
+		<_Category>iOS</_Category>
+		<LanguageName>*</LanguageName>
+		<ProjectType>IPhone</ProjectType>
+		<DefaultFilename>LaunchImages</DefaultFilename>
+		<_Description>Creates an asset catalog for Launch Images.</_Description>
+	</TemplateConfiguration>
+	
+	<Conditions>
+		<ParentProject RequireProject="True"/>
+		<MacProject IsAssetCatalog="True"/>
+	</Conditions>
+	
+	<TemplateFiles>
+		<RawFile name="${Name}.launchimage/Contents.json" SuppressAutoOpen="False" BuildAction="ImageAsset" src="LaunchImages.json" />
+    </TemplateFiles>
+</Template>

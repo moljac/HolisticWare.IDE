@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Template>
+	<TemplateConfiguration>
+		<_Name>Android Unit Test project</_Name>
+		<_Category>C#/Android</_Category>
+		<Icon>monodroid-project</Icon>
+		<LanguageName>C#</LanguageName>
+		<_Description>Creates an Android Unit Test Application.</_Description>
+	</TemplateConfiguration>
+	
+	<Actions>
+	</Actions>
+	
+	<Combine name = "${ProjectName}" directory = ".">
+		<Options>
+			<StartupProject>${ProjectName}</StartupProject>
+		</Options>
+		
+		<Project name = "${ProjectName}" directory = "." type = "MonoDroid">
+			<Options
+				AndroidApplication="true"
+				AndroidResgenFile="Resources/Resource.designer.cs"
+				AndroidResgenClass="Resource" />
+			<References>
+				<Reference type="Gac" refto="System, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
+				<Reference type="Gac" refto="System.Xml, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
+				<Reference type="Gac" refto="System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
+				<Reference type="Gac" refto="Mono.Android" />
+				<Reference type="Gac" refto="Xamarin.Android.NUnitLite" />
+			</References>
+			<Files>
+				<File name="MainActivity.cs" src="UnitTestProject/MainActivity.cs" />
+				<File name="TestsSample.cs" src="UnitTestProject/TestsSample.cs" />
+				<Directory name="Resources">
+					<File name="Resource.designer.cs" src="MonoDroidApplication/Resource.cs" />
+					<RawFile name="AboutResources.txt" src="MonoDroidApplication/AboutResources.txt" />
+					<Directory name ="drawable">
+						<RawFile name="Icon.png" src="MonoDroidApplication/Icon-md.png" />
+					</Directory>
+				</Directory>
+				<Directory name="Properties">
+					<File name="AssemblyInfo.cs" src="MonoDroidApplication/AssemblyInfo.cs" />
+				</Directory>
+				<Directory name="Assets">
+					<RawFile name="AboutAssets.txt" src="MonoDroidApplication/AboutAssets.txt" />
+				</Directory>
+			</Files>
+		</Project>
+	</Combine>
+</Template>

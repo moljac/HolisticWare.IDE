@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Template>
+	<TemplateConfiguration>
+		<_Name>Entitlements.plist</_Name>
+		<_Category>iOS</_Category>
+		<Icon>md-xml-file-icon</Icon>
+		<LanguageName>*</LanguageName>
+		<ProjectType>IPhone</ProjectType>
+		<DefaultFilename IsFixed="True">Entitlements.plist</DefaultFilename>
+		<_Description>An Entitlements manifest.</_Description>
+	</TemplateConfiguration>
+	
+	<Conditions>
+		<ParentProject PermittedCreationPaths="" ExcludedFiles="Entitlements.plist"/>
+		<MacProject IsAssetCatalog="False"/>
+	</Conditions>
+
+	<TemplateFiles>
+		<File name="Entitlements.plist" DefaultExtension=".plist">
+<![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+</dict>
+</plist>]]></File>
+	</TemplateFiles>
+</Template>
