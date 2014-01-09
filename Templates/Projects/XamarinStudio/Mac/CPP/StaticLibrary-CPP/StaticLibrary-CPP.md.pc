@@ -1,5 +1,5 @@
 Name: StaticLibrary-CPP
 Description: 
 Version: 0.1
-Libs: -L"/Users/moljac/Projects/HolisticWare.IDE/Templates/Projects/XamarinStudio/CPP/StaticLibrary-CPP/bin/Debug" -lStaticLibrary-CPP
-Cflags: -I"/Users/moljac/Projects/HolisticWare.IDE/Templates/Projects/XamarinStudio/CPP/StaticLibrary-CPP"
+Libs: -L"/Users/moljac/Projects/HolisticWare.IDE/Templates/Projects/XamarinStudio/Mac/CPP/StaticLibrary-CPP/bin/Debug" -lStaticLibrary-CPP
+Cflags: -I"/Users/moljac/Projects/HolisticWare.IDE/Templates/Projects/XamarinStudio/Mac/CPP/StaticLibrary-CPP"

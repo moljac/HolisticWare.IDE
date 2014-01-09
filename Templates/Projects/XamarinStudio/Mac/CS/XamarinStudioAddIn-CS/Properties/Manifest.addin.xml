@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Addin namespace="XamarinStudioAddIn-CS" id="XamarinStudioAddIn-CS" name="XamarinStudioAddIn-CS" author="moljac" copyright="moljac" description="XamarinStudioAddIn-CS" category="IDE extensions" version="1.0">
+	<Dependencies>
+		<Addin id="::MonoDevelop.Core" version="4.0" />
+		<Addin id="::MonoDevelop.Ide" version="4.0" />
+	</Dependencies>
+	<Runtime>
+	</Runtime>
+</Addin>

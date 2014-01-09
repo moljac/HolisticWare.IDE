@@ -1,5 +1,5 @@
 Name: SharedLibrary-C
 Description: 
 Version: 0.1
-Libs: -L"/Users/moljac/Projects/HolisticWare.IDE/Templates/Projects/XamarinStudio/C/SharedLibrary-C/bin/Debug" -lSharedLibrary-C
-Cflags: -I"/Users/moljac/Projects/HolisticWare.IDE/Templates/Projects/XamarinStudio/C/SharedLibrary-C"
+Libs: -L"/Users/moljac/Projects/HolisticWare.IDE/Templates/Projects/XamarinStudio/Mac/C/SharedLibrary-C/bin/Debug" -lSharedLibrary-C
+Cflags: -I"/Users/moljac/Projects/HolisticWare.IDE/Templates/Projects/XamarinStudio/Mac/C/SharedLibrary-C"

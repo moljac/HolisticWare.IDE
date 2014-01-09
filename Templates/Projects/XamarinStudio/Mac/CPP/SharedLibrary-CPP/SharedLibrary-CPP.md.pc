@@ -1,5 +1,5 @@
 Name: SharedLibrary-CPP
 Description: 
 Version: 0.1
-Libs: -L"/Users/moljac/Projects/HolisticWare.IDE/Templates/Projects/XamarinStudio/CPP/SharedLibrary-CPP/bin/Debug" -lSharedLibrary-CPP
-Cflags: -I"/Users/moljac/Projects/HolisticWare.IDE/Templates/Projects/XamarinStudio/CPP/SharedLibrary-CPP"
+Libs: -L"/Users/moljac/Projects/HolisticWare.IDE/Templates/Projects/XamarinStudio/Mac/CPP/SharedLibrary-CPP/bin/Debug" -lSharedLibrary-CPP
+Cflags: -I"/Users/moljac/Projects/HolisticWare.IDE/Templates/Projects/XamarinStudio/Mac/CPP/SharedLibrary-CPP"
