@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Template">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TemplateConfiguration" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Icon" type="xs:string" minOccurs="0" />
+              <xs:element name="_Category" type="xs:string" minOccurs="0" />
+              <xs:element name="_Description" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TemplateFiles" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="File" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="name" type="xs:string" />
+                  <xs:attribute name="BuildAction" type="xs:string" />
+                  <xs:attribute name="CustomTool" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="originator" type="xs:string" />
+      <xs:attribute name="created" type="xs:string" />
+      <xs:attribute name="lastModified" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Template" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Template" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Options">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="StartupProject" type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+      </xs:sequence>
+      <xs:attribute name="AndroidApplication" type="xs:string" />
+      <xs:attribute name="AndroidResgenFile" type="xs:string" />
+      <xs:attribute name="AndroidResgenClass" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="File" nillable="true">
+    <xs:complexType>
+      <xs:simpleContent msdata:ColumnName="File_Text" msdata:Ordinal="2">
+        <xs:extension base="xs:string">
+          <xs:attribute name="name" type="xs:string" />
+          <xs:attribute name="src" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Directory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="RawFile" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute name="name" type="xs:string" />
+            <xs:attribute name="src" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="File" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="Directory" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+      <xs:attribute name="name" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Template" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Options" />
+        <xs:element ref="File" />
+        <xs:element ref="Directory" />
+        <xs:element name="TemplateConfiguration">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="_Category" type="xs:string" minOccurs="0" />
+              <xs:element name="Icon" type="xs:string" minOccurs="0" />
+              <xs:element name="LanguageName" type="xs:string" minOccurs="0" />
+              <xs:element name="_Description" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Actions">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Open" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="filename" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Combine">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="Options" minOccurs="0" maxOccurs="unbounded" />
+              <xs:element name="Project" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="Options" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element name="References" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Reference" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:attribute name="type" type="xs:string" />
+                              <xs:attribute name="refto" type="xs:string" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Files" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element ref="File" minOccurs="0" maxOccurs="unbounded" />
+                          <xs:element ref="Directory" minOccurs="0" maxOccurs="unbounded" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="name" type="xs:string" />
+                  <xs:attribute name="directory" type="xs:string" />
+                  <xs:attribute name="type" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" />
+            <xs:attribute name="directory" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
