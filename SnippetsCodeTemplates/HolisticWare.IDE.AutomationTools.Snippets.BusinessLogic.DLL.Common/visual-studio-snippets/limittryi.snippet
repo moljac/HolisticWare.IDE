@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Try Increment Limit</Title>
+			<Shortcut>limittryi</Shortcut>
+			<Description>Issues a limit increment request in a controlling if statement. If work in the if statement fails, a catch handler will issue a compensating decrement.</Description>
+			<Author>Apprenda</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>The name of the limit feature.</ToolTip>
+					<Default></Default>
+				</Literal>
+				<Literal>
+					<ID>exhaustionMessage</ID>
+					<ToolTip>The message to be relayed when a limit is exhausted.</ToolTip>
+					<Default></Default>
+				</Literal>
+      </Declarations>
+			<Code Language="csharp">
+    <![CDATA[bool succeeded = false;
+            try
+            {
+                if (SubscriptionContext.Instance.IncrementLimitCounter($name$))
+                {
+                 $end$
+                  succeeded = true;
+                }
+                else 
+                {
+                  throw new LimiterExhaustedException($exhaustionMessage$, $name$, SubscriptionContext.Instance.GetLimit($name$));
+                }
+            }
+            finally
+            {
+                if(!succeeded)
+                {
+                  SubscriptionContext.Instance.DecrementLimitCounter($name$);   
+                }
+            }
+            ]]>
+        
+        
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>hw_m4a_Widget_CheckBox</Title>
+			<Shortcut>hw_m4a_Widget_CheckBox</Shortcut>
+			<Description>hw_m4a_Widget_CheckBox</Description>
+			<Author>Miljenko Cvjetko mc++</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>CheckBox Name</ToolTip>
+					<Default>Option</Default>
+				</Literal>
+				<Literal>
+					<ID>text</ID>
+					<ToolTip>Text</ToolTip>
+					<Default>Check Box Option</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[
+		    # region    Region CheckBox $name$
+			//------------------------------------------------------------------
+			/*
+			Move this to AXML Layout file:
+			
+			<CheckBox
+				android:id="@+id/checkBox$name$"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="$text$"
+			/>
+			*/
+			Android.Widget.CheckBox checkBox$name$
+				= FindViewById<Android.Widget.CheckBox>(Resource.Id.checkBox$name$);
+			checkBox$name$.Click +=
+				// Inline
+				(sender, e) =>
+				{
+					throw new NotImplementedException();
+					bool chckd = checkBox$name$.Checked;
+					checkBox$name$.Toggle();
+					
+					return;
+				}
+				//---------------------------------------
+				// ! Inline
+				//
+				// new EventHandler(checkBox$name$_Click)
+	            //
+				// Move following code out of the function!
+				// private
+				// 	void
+				// 	checkBox$name$_Click
+				// 	(
+				// 	  object sender
+				// 	, EventArgs e
+				// 	)
+				// {
+				// 		throw new NotImplementedException();
+				//		checkBox$name$.Checked;
+				//		checkBox$name$.Toggle();
+				//		
+				//		return;
+				//
+				// 	return;
+				// }
+				;
+			//------------------------------------------------------------------
+			# endregion Region CheckBox $name$
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

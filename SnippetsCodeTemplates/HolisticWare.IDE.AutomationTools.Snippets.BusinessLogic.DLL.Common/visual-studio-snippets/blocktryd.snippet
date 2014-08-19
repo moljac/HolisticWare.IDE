@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Try Decrement Block</Title>
+			<Shortcut>blocktryd</Shortcut>
+			<Description>Issues a block decrement request in a controlling if statement. If work in the if statement fails, a catch handler will issue a crediting increment.</Description>
+			<Author>Apprenda</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>The name of the block feature.</ToolTip>
+					<Default></Default>
+				</Literal>
+				<Literal>
+					<ID>exhaustedMessage</ID>
+					<ToolTip>The name of the block feature.</ToolTip>
+					<Default></Default>
+				</Literal>				
+      </Declarations>
+			<Code Language="csharp">
+    <![CDATA[bool succeeded = false;    
+            try
+            {
+                if (SubscriptionContext.Instance.DecrementBlock($name$))
+                {
+                  $end$
+                  succeeded = true;
+                }
+                else 
+                {
+                  throw new BlockExhaustedException($exhaustedMessage$, $name$);
+                }
+            }
+            finally
+            {
+                if(!succeeded)
+                {
+                  SubscriptionContext.Instance.IncrementBlock($name$);                   
+                }
+            }
+            
+            ]]>
+        
+        
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

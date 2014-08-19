@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Change the Server name and Database name</Title>
+			<Author>Business Objects</Author>
+			<Description>Changes a Server name and Database name used by the report.  For this code snippet to compile, add a reference to CrystalDecisions.CrystalReports.Engine.dll and CrystalDecisions.Shared.dll.</Description>
+			<HelpUrl>http://www.businessobjects.com/products/dev_zone/net/default.asp</HelpUrl>
+			<Shortcut>crChangeDBLogon</Shortcut>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>FileName</ID>
+					<Type>String</Type>
+					<ToolTip>Replace this string with the name of the report file that you want to change the database logon.</ToolTip>
+					<Default>"C:\My Crystal Reports\Report Name.rpt"</Default>
+				</Literal>
+				<Literal>
+					<ID>OldServerName</ID>
+					<Type>String</Type>
+					<ToolTip>Replace this string with the old server name that is used in the report. </ToolTip>
+					<Default>"OldServer"</Default>
+				</Literal>
+				<Literal>
+					<ID>NewServerName</ID>
+					<Type>String</Type>
+					<ToolTip>Replace this string with the new server name that the report will be using. </ToolTip>
+					<Default>"NewServer"</Default>
+				</Literal>
+				<Literal>
+					<ID>OldDatabaseName</ID>
+					<Type>String</Type>
+					<ToolTip>Replace this string with the old database name that is used in the report. </ToolTip>
+					<Default>"OldDatabase"</Default>
+				</Literal>
+				<Literal>
+					<ID>NewDatabaseName</ID>
+					<Type>String</Type>
+					<ToolTip>Replace this string with the new database name that the report will be using. </ToolTip>
+					<Default>"NewDatabase"</Default>
+				</Literal>
+				<Literal>
+					<ID>UserID</ID>
+					<Type>String</Type>
+					<ToolTip>Replace this string with the user ID to logon to the new server. </ToolTip>
+					<Default>"MyUserID"</Default>
+				</Literal>
+				<Literal>
+					<ID>Password</ID>
+					<Type>String</Type>
+					<ToolTip>Replace this string with the user's password to logon to the new server. </ToolTip>
+					<Default>"MyPassword"</Default>
+				</Literal>
+        <Literal Editable="false">
+          <ID>ReportDocumentClass</ID>
+          <Function>SimpleTypeName(CrystalDecisions.CrystalReports.Engine.ReportDocument)</Function>
+        </Literal>
+        <Literal Editable="false">
+          <ID>IConnectionInfoClass</ID>
+          <Function>SimpleTypeName(CrystalDecisions.Shared.IConnectionInfo)</Function>
+        </Literal>        
+			</Declarations>
+			<Code Language="csharp">
+        <![CDATA[$ReportDocumentClass$ report = new $ReportDocumentClass$();          
+          string oldServerName = $OldServerName$;
+          string newServerName = $NewServerName$;
+          string oldDatabaseName = $OldDatabaseName$;
+          string newDatabaseName = $NewDatabaseName$;
+          string userID = $UserID$;
+          string password = $Password$;
+          
+          report.Load(@$FileName$);
+          
+          // Change the server name and database in main reports          
+          foreach($IConnectionInfoClass$ connection in report.DataSourceConnections)
+          {
+            if ((String.Compare(connection.ServerName, oldServerName, true) == 0) &&
+              (String.Compare(connection.DatabaseName, oldDatabaseName, true) == 0))
+            {
+              // SetConnection can also be used to set new logon and new database table
+              report.DataSourceConnections[oldServerName, oldDatabaseName].SetConnection(
+                newServerName, newDatabaseName, userID, password);
+            }
+          }     
+          
+          // Change the server name and database in subreport
+          foreach($ReportDocumentClass$ subReport in report.Subreports)
+          {
+            foreach($IConnectionInfoClass$ connection in subReport.DataSourceConnections)
+            {
+              if ((String.Compare(connection.ServerName, oldServerName, true) == 0) &&
+                (String.Compare(connection.DatabaseName, oldDatabaseName, true) == 0))
+              {
+                // SetConnection can also be used to set new logon and new database table
+                subReport.DataSourceConnections[oldServerName, oldDatabaseName].SetConnection(
+                  newServerName, newDatabaseName, userID, password);
+              }
+            }
+          }$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

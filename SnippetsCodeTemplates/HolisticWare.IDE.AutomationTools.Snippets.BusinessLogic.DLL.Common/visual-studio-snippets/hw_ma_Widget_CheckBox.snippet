@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>hw_m4a_Navigation_with_Intent_to_Activity</Title>
+			<Shortcut>hw_m4a_Navigation_with_Intent_to_Activity</Shortcut>
+			<Description>hw_m4a_Navigation_with_Intent_to_Activity</Description>
+			<Author>Miljenko Cvjetko mc++</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>Target Activity Name</ToolTip>
+					<Default>ActivityToNavigate</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[
+		    # region    Navigate with Intent to Activity
+			//------------------------------------------------------------------
+			// StartActivity(typeof($name$));
+
+			Intent second = new Intent(this, typeof($name$));
+			StartActivity(second);
+
+			Intent second = new Intent(this, typeof($name$));
+			// push data to Navigation Target Activity
+			second.PutExtra("key", "value");
+			StartActivity(second);
+
+			// pull data in Navigation Target Activity
+			// move this code to Navigation Target Activity:
+			// string data = Intent.GetStringExtra("FirstData") ?? “No data!”;
+			//------------------------------------------------------------------
+			# endregion Navigate with Intent to Activity
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>mc_DA_IStorage</Title>
+      <Shortcut>mc_DA_IStorage</Shortcut>
+      <Description>Code snippet for DataAccess Interface</Description>
+      <Author>Miljenko Cvjetko mc++</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>type</ID>
+          <ToolTip>Property type</ToolTip>
+          <Default>int</Default>
+          <Function>
+          </Function>
+        </Literal>
+
+      </Declarations>
+      <Code Language="csharp">
+	<![CDATA[
+		# region    CRUD $type$
+		//-------------------------------------------------------------------------
+		List<$type$>
+			Select
+			(
+			  $type$ t
+			);
+		//-------------------------------------------------------------------------
+		List<$type$>
+			Insert
+			(
+			  $type$ t
+			);
+		//-------------------------------------------------------------------------
+		List<$type$>
+			Update
+			(
+			  $type$ t
+			);
+		//-------------------------------------------------------------------------
+		List<$type$>
+			Delete
+			(
+			  $type$ e
+			);
+		//-------------------------------------------------------------------------
+		# endregion CRUD $type$
+  	$end$
+	]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

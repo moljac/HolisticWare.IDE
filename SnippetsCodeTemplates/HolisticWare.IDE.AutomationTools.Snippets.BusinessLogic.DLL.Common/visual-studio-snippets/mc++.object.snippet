@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>mc_object</Title>
+			<Shortcut>mc_object</Shortcut>
+			<Description>Code snippet for System.Object mc++</Description>
+			<Author>Miljenko Cvjetko mc++</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>classname</ID>
+					<ToolTip>Class name</ToolTip>
+					<Default>ClassName</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[
+		# region    System.Object
+		//-------------------------------------------------------------------------
+		/// <summary>
+		/// The default implementation of Equals supports reference equality for 
+		/// reference types, and bitwise equality for value types. Reference equality
+		/// means the object references that are compared refer to the same object. 
+		/// Bitwise equality means the objects that are compared have the same binary
+		/// representation. 
+		/// Note that a derived type might override the Equals method to implement
+		/// value equality. Value equality means the compared objects have the same
+		/// value even though they have different binary representations. For example,
+		/// consider two Decimal objects that represent the numbers 1.10 and 1.1000.
+		/// The Decimal objects do not have bitwise equality because they have different
+		/// binary representations to account for the different number of trailing zeroes.
+		/// However, the objects have value equality because the numbers 1.10 and 1.1000
+		/// are considered equal for comparison purposes since the trailing zeroes are
+		/// insignificant. 
+		/// 
+		/// Notes to Implementers: 
+		/// This method can be overridden by a derived class. For example, many of the
+		/// base data types return true if both objects represent the same value;
+		/// otherwise, false.
+		/// This method only compares primitives and objects. It must be overridden to
+		/// compare more complex structures, such as arrays of objects.
+		/// 
+		/// The following statements must be true for all implementations of the Equals
+		/// method. In the list, x, y, and z represent object references that are not
+		/// nullNothingnullptra null reference (Nothing in Visual Basic).
+		/// 
+		/// x.Equals(x) returns true, except in cases that involve floating-point types.
+		/// See IEC 60559:1989, Binary Floating-point Arithmetic for Microprocessor
+		/// Systems.
+		/// 
+		/// x.Equals(y) returns the same value as y.Equals(x).
+		/// 
+		/// x.Equals(y) returns true if both x and y are NaN.
+		/// 
+		/// (x.Equals(y) && y.Equals(z)) returns true if and only if x.Equals(z) returns
+		/// true.
+		/// 
+		/// Successive calls to x.Equals(y) return the same value as long as the objects
+		/// referenced by x and y are not modified.
+		/// 
+		/// x.Equals(nullNothingnullptra null reference (Nothing in Visual Basic))
+		/// returns false.
+		/// 
+		/// See GetHashCode for additional required behaviors pertaining to the
+		/// Equals method.
+		/// 
+		/// Implementations of Equals must not throw exceptions.
+		/// 
+		/// For some kinds of objects, it is desirable to have Equals test for value
+		/// equality instead of referential equality. Such implementations of Equals
+		/// return true if the two objects have the same "value", even if they are
+		/// not the same instance. The type's implementer decides what constitutes
+		/// an object's "value", but it is typically some or all the data stored in
+		/// the instance variables of the object. For example, the value of a String
+		/// is based on the characters of the string; the Equals method of the String
+		/// class returns true for any two string instances that contain exactly the
+		/// same characters in the same order.
+		/// 
+		/// Types that implement IComparable must override Equals.
+		/// 
+		/// Types that override Equals must also override GetHashCode; otherwise,
+		/// Hashtable might not work correctly.
+		/// 
+		/// If your programming language supports operator overloading and if you
+		/// choose to overload the equality operator for a given type, that type must
+		/// override the Equals method. Such implementations of the Equals method must
+		/// return the same results as the equality operator. Following this guideline
+		/// will help ensure that class library code using Equals (such as ArrayList
+		/// and Hashtable) behaves in a manner that is consistent with the way the
+		/// equality operator is used by application code.
+		/// 
+		/// The following guidelines are for implementing a value type: 
+		/// 
+		/// Consider overriding Equals to gain increased performance over that provided
+		/// by the default implementation of Equals on ValueType.
+		/// 
+		/// If you override Equals and the language supports operator overloading,
+		/// you must overload the equality operator for your value type.
+		/// 
+		/// The following guidelines are for implementing a reference type: 
+		/// 
+		/// Consider overriding Equals on a reference type if the semantics of the
+		/// type are based on the fact that the type represents some value(s).
+		/// 
+		/// Most reference types must not overload the equality operator, even if
+		/// they override Equals. However, if you are implementing a reference type
+		/// that is intended to have value semantics, such as a complex number type,
+		/// you must override the equality operator.
+		/// </summary>
+		/// <param name="o"></param>
+		/// <returns></returns>
+		public 
+			override 
+			bool 
+			Equals
+			(
+				object o
+			)
+		{
+			// If this and obj do not refer to the same type, then they are not equal.
+			if (o.GetType() != this.GetType())
+			{
+				return false;
+			}
+
+			// Return true if  x and y fields match.
+			$classname$ rhs = ($classname$)o;
+
+			return 
+				(this.Property1 == rhs.Property1) 
+				&& 
+				(this.Property2 == rhs.Property2)
+				;
+		}
+		//-------------------------------------------------------------------------
+		/// <summary>
+		/// A hash function is used to quickly generate a number (hash code) 
+		/// that corresponds to the value of an object. Hash functions are usually 
+		/// specific to each Type and must use at least one of the instance fields 
+		/// as input.
+		/// A hash function must have the following properties: 
+		/// If two objects compare as equal, the GetHashCode method for each object 
+		/// must return the same value. However, if two objects do not compare as 
+		/// equal, the GetHashCode methods for the two object do not have to return 
+		/// different values.
+		/// The GetHashCode method for an object must consistently return the same
+		/// hash code as long as there is no modification to the object state that
+		/// determines the return value of the object's Equals method. Note that
+		/// this is true only for the current execution of an application, and that
+		/// a different hash code can be returned if the application is run again.
+		/// 
+		/// For the best performance, a hash function must generate a random 
+		/// distribution for all input. 
+		/// For derived classes of Object, the GetHashCode method can delegate to 
+		/// the Object..::.GetHashCode implementation, if and only if that derived 
+		/// class defines value equality to be reference equality and the type is 
+		/// not a value type.
+		/// 
+		/// Providing a good hash function on a class can significantly affect the 
+		/// performance of adding those objects to a hash table. In a hash table
+		/// with a good implementation of a hash function, searching for an element
+		/// takes constant time (for example, an O(1) operation). In a hash table
+		/// with a poor implementation of a hash function, the performance of a
+		/// search depends on the number of items in the hash table (for example,
+		/// an O(n) operation, where n is the number of items in the hash table).
+		/// Hash functions must also be inexpensive to compute.
+		/// 
+		/// Implementations of the GetHashCode method must not result in circular
+		/// references. For example, if ClassA.GetHashCode calls ClassB.GetHashCode,
+		/// ClassB.GetHashCode must not call ClassA.GetHashCode either directly or
+		/// indirectly.
+		/// 
+		/// Implementations of the GetHashCode method must not throw exceptions.
+		/// 
+		/// Derived classes that override GetHashCode must also override Equals
+		/// to guarantee that two objects considered equal have the same hash code;
+		/// otherwise, the Hashtable type might not work correctly.
+		/// </summary>
+		/// <returns></returns>
+		public 
+			override 
+			int 
+			GetHashCode
+			(
+			)
+		{
+			return
+ 				this.Property1
+				^ 
+				this.Property2
+				;
+		}
+		//-------------------------------------------------------------------------
+		/// <summary>
+		/// returns a human-readable string that is culture-sensitive 
+		/// </summary>
+		/// <returns></returns>
+		public 
+			override 
+			System.String 
+			ToString
+			(
+			)
+		{
+			
+	    //.........................................................................
+			StringBuilder sb = new StringBuilder();
+			sb.Append("Property1 =");
+			sb.Append(Property1);
+			sb.Append(" ");
+			sb.Append("Property2 =");
+			sb.Append(Property2);
+		  //.........................................................................
+
+			return sb.ToString();
+		}
+		//-------------------------------------------------------------------------
+		# endregion System.Object
+		]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

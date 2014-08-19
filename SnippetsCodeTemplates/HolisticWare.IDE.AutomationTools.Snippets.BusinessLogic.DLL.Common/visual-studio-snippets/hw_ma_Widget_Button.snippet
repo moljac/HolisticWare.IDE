@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>hw_m4a_Widget_Button</Title>
+			<Shortcut>hw_m4a_Widget_Button</Shortcut>
+			<Description>hw_m4a_Widget_Button</Description>
+			<Author>Miljenko Cvjetko mc++</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>Button Name</ToolTip>
+					<Default>Button</Default>
+				</Literal>
+				<Literal>
+					<ID>text</ID>
+					<ToolTip>Text</ToolTip>
+					<Default>Button</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[
+		    # region    Region Button $name$
+			//------------------------------------------------------------------
+			/*
+			Move this to AXML Layout file:
+			
+			<Button
+				android:id="@+id/button$name$"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="$text$"
+			/>			
+			*/
+			Android.Widget.Button button$name$
+				= FindViewById<Android.Widget.Button>(Resource.Id.button$name$);
+			button$name$.Click += 
+				// Inline  
+				(sender, e) => 
+				{
+					throw new NotImplementedException();
+				
+					return;
+				}
+				//---------------------------------------
+				// ! Inline
+				// 
+				// new EventHandler(button$name$_Click)
+	            // 
+				// Move following code out of the function!
+				// private 
+				// 	void 
+				// 	button$name$_Click
+				// 	(
+				// 	  object sender
+				// 	, EventArgs e
+				// 	)
+				// {
+				// 		throw new NotImplementedException();
+				//   
+				// 		return;
+				// }
+				;
+			//------------------------------------------------------------------
+			# endregion Region Button $name$
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

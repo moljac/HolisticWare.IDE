@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>mc_Dispose_IDisposable</Title>
+			<Shortcut>mc_Dispose_IDisposable</Shortcut>
+			<Description>Code snippet for IDisposable.Dispose</Description>
+			<Author>Miljenko Cvjetko mc++</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>class</ID>
+					<ToolTip>Class name</ToolTip>
+					<Default>ClassName</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[
+		# region    IDisposable.Dispose
+		//-------------------------------------------------------------------------
+        // Pointer to an external unmanaged resource.
+        // private IntPtr handle;
+        // Other managed resource this class uses.
+        // private Component component = new Component();
+        // Track whether Dispose has been called.
+        // private bool disposed = false;
+
+        // Implement IDisposable.
+        // Do not make this method virtual.
+        // A derived class should not be able to override this method.
+        public 
+			void 
+			Dispose
+			(
+			)
+        {
+            Dispose(true);
+            // This object will be cleaned up by the Dispose method.
+            // Therefore, you should call GC.SupressFinalize to
+            // take this object off the finalization queue
+            // and prevent finalization code for this object
+            // from executing a second time.
+            GC.SuppressFinalize(this);
+			
+			return;
+        }
+
+        // Dispose(bool disposing) executes in two distinct scenarios.
+        // If disposing equals true, the method has been called directly
+        // or indirectly by a user's code. Managed and unmanaged resources
+        // can be disposed.
+        // If disposing equals false, the method has been called by the
+        // runtime from inside the finalizer and you should not reference
+        // other objects. Only unmanaged resources can be disposed.
+        protected virtual void Dispose(bool disposing)
+        {
+            // Check to see if Dispose has already been called.
+            // if(!this.disposed)
+            // {
+            //     // If disposing equals true, dispose all managed
+            //     // and unmanaged resources.
+            //     if(disposing)
+            //     {
+            //         // Dispose managed resources.
+            //         component.Dispose();
+            //     }
+            // 
+            //     // Call the appropriate methods to clean up
+            //     // unmanaged resources here.
+            //     // If disposing is false,
+            //     // only the following code is executed.
+            //     CloseHandle(handle);
+            //     handle = IntPtr.Zero;
+            // 
+            //     // Note disposing has been done.
+            //     disposed = true;
+            // 
+            // }
+        }
+		//-------------------------------------------------------------------------	
+		# endregion IDisposable.Dispose
+	]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

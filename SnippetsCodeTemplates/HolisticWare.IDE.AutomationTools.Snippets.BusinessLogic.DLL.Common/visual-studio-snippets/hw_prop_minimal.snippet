@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>hw_prop_short</Title>
+      <Shortcut>hw_prop_short</Shortcut>
+      <Description>Code snippet for property and backing field (replace MS prop) Edited by ikxx</Description>
+      <Author>Miljenko Cvjetko mc++ moljac@holisticware, edited by ikxx</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>type</ID>
+          <ToolTip>Property type</ToolTip>
+          <Default>int</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>property</ID>
+          <ToolTip>Property _$property$</ToolTip>
+          <Default>SomeProperty</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>field</ID>
+          <ToolTip>The variable backing this property</ToolTip>
+          <Default>some_property</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+	<![CDATA[
+	//-------------------------------------------------------------------------
+    # region Property $type$ $property$ w/o Events
+    /// <summary>
+    /// $property$
+    /// </summary>
+    public
+      $type$
+      $property$
+    {
+		get
+		{
+			return $field$;
+		} // $property$.get
+		set
+		{
+			//if ($field$ != value)		// do not write if equivalent/equal/same
+			{
+				//MT: lock($field$) // MultiThread safe				
+				{
+					$field$ = value;
+				}				
+			}
+		} // $property$.get
+	} // $property$
+	
+	/// <summary>
+	/// private member field for holding $property$ data
+	/// </summary>
+	private
+		$type$
+		$field$
+		;
+    # endregion Property $type$ $property$ w/o Events
+	//-------------------------------------------------------------------------
+  	$end$
+	]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

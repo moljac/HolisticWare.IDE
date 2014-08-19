@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Securable Code Block</Title>
+			<Shortcut>secure</Shortcut>
+			<Description>Creates an if statement that will control access to a secured piece of Apprenda code.</Description>
+			<Author>Apprenda</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>The name of the securable.</ToolTip>
+					<Default></Default>
+				</Literal>
+				<Literal>
+					<ID>message</ID>
+					<ToolTip>The message to relay.</ToolTip>
+					<Default></Default>
+				</Literal>				
+      </Declarations>
+			<Code Language="csharp">
+    <![CDATA[if (UserContext.Instance.IsAuthorized($name$))
+            {
+              $end$
+            }
+            else
+            {
+              throw new NotAuthorizedException($message$, $name$);
+            }
+            ]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

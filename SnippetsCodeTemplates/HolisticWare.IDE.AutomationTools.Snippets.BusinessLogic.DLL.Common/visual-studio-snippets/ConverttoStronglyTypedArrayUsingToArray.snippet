@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Convert an ArrayList to a Strongly Typed Array</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Converts an ArrayList to a strongly typed array using ToArray(Type)</Description>
+      <Shortcut>arrConv</Shortcut>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>DataType</ID>
+          <ToolTip>Replace with the Type to convert to.</ToolTip>
+          <Default>string</Default>
+        </Literal>
+        <Literal>
+          <ID>ExistingArray</ID>
+          <ToolTip>Replace with the existing ArrayList to convert.</ToolTip>
+          <Default>existingArrayList</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[$DataType$[] nameArray = ($DataType$[])$ExistingArray$.ToArray(typeof($DataType$));$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

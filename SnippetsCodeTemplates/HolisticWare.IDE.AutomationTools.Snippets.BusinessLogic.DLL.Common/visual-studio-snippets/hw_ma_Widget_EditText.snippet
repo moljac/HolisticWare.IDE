@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>hw_m4a_Widget_EditText</Title>
+			<Shortcut>hw_m4a_Widget_EditText</Shortcut>
+			<Description>hw_m4a_Widget_EditText</Description>
+			<Author>Miljenko Cvjetko mc++</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>EditText Name</ToolTip>
+					<Default>Content</Default>
+				</Literal>
+				<Literal>
+					<ID>text</ID>
+					<ToolTip>Text</ToolTip>
+					<Default>text Content ...</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[
+		    # region    Region EditText $name$
+			//------------------------------------------------------------------
+			/*
+			Move this to AXML Layout file:
+			
+			<EditText
+				android:id="@+id/editText$name$"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+			/>
+			*/
+			Android.Widget.EditText editText$name$
+				= FindViewById<Android.Widget.EditText>(Resource.Id.editText$name$);
+			editText$name$.KeyPress  += 
+				// Inline  
+				(sender, View.KeyEventArgs e) => 
+				{
+					if (
+					  	e.E.Action == KeyEventActions.Down 
+					  	&& 
+					  	e.KeyCode == Keycode.Enter
+						) 
+					{
+						Toast
+							.MakeText(this, editText$name$.Text, ToastLength.Short)
+							.Show ()
+							;
+						e.Handled = true;
+						
+						return;
+					}
+				}
+				//---------------------------------------
+				// ! Inline
+				// 
+				// new EventHandler(editText$name$_Click)
+	            // 
+				// Move following code out of the function!
+				// private 
+				// 	void 
+				// 	editText$name$_Click
+				// 	(
+				// 	  object sender
+				// 	, View.KeyEventArgs e
+				// 	)
+				// {
+				// 		throw new NotImplementedException();
+				//   
+				// 		return;
+				// }
+				;
+			//------------------------------------------------------------------
+			# endregion Region EditText $name$
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

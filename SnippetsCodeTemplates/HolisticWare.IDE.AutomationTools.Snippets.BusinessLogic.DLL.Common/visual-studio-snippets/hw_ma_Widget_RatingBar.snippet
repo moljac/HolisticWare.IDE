@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>hw_m4a_Widget_RatingBar</Title>
+			<Shortcut>hw_m4a_Widget_RatingBar</Shortcut>
+			<Description>hw_m4a_Widget_RatingBar</Description>
+			<Author>Miljenko Cvjetko mc++</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>Button Name</ToolTip>
+					<Default>Button</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[
+		    # region    Region RatingBar $name$
+			//------------------------------------------------------------------
+			/*
+			Move this to AXML Layout file:
+			
+			<RatingBar 
+				android:id="@+id/ratingBar$name$"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:numStars="5"
+				android:stepSize="1.0"
+			/>			
+			*/
+			Android.Widget.RatingBar ratingBar$name$
+				= FindViewById<Android.Widget.RatingBar>(Resource.Id.ratingBar$name$);
+			ratingBar$name$.RatingBarChange += 
+				// Inline  
+				(sender, e) => 
+				{
+					throw new NotImplementedException();
+				
+					return;
+				}
+				//---------------------------------------
+				// ! Inline
+				// 
+				// new EventHandler(ratingBar$name$_Click)
+	            // 
+				// Move following code out of the function!
+				// private 
+				// 	void 
+				// 	ratingBar$name$_RatingBarChange
+				// 	(
+				// 	  object sender
+				// 	, EventArgs e
+				// 	)
+				// {
+				// 		throw new NotImplementedException();
+				//   
+				// 		return;
+				// }
+				;
+			//------------------------------------------------------------------
+			# endregion Region RatingBar $name$
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

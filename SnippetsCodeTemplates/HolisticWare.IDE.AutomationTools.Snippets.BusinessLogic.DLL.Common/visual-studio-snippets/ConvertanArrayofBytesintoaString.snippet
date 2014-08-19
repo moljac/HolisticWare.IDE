@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Convert an Array of Bytes into a String</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Convert an Array of Bytes into a String</Description>
+      <Shortcut>typeByteStr</Shortcut>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>Encoding</ID>
+          <ToolTip>Replace with the Encoding enumeration value that corresponds to your string.</ToolTip>
+          <Default>UTF8</Default>
+        </Literal>
+        <Literal Editable="false">
+          <ID>EncodingClass</ID>
+          <Function>SimpleTypeName(System.Text.Encoding)</Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[private string ConvertByteArrayToString(byte[] byteArray) 
+		{ 
+			$EncodingClass$ enc = $EncodingClass$.$Encoding$; 
+			string text = enc.GetString(byteArray); 
+			return text; 
+		}$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

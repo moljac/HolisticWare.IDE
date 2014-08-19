@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>mc_WF_FormWithUserControl</Title>
+			<Shortcut>mc_WF_FormWithUserControl</Shortcut>
+			<Description>Code snippet to Launch UserControl thorugh Form</Description>
+			<Author>Miljenko Cvjetko mc++</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>type_control</ID>
+					<ToolTip>User Control Type</ToolTip>
+					<Default>UserControl</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+            <![CDATA[
+			//-------------------------------------------------------------------------
+			Core.DLL_05PL_01WF_netfx20.any_any_any.Windows.Forms.Form form;
+			form = new Core.DLL_05PL_01WF_netfx20.any_any_any.Windows.Forms.Form
+													(
+														new $type_control$()
+													);
+			form.Text = "HolisticWare ....";
+			form.Show();
+			//-------------------------------------------------------------------------
+  	$end$
+	]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Calculate a Monthly Payment on a Loan</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Calculates the monthly payment on a loan.  For this code snippet to compile, add a reference to Microsoft.VisualBasic.dll.</Description>
+      <Shortcut>mathPayLoan</Shortcut>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>annualInterestRate</ID>
+          <ToolTip>Replace with a Double for the annual interest rate (e.g. 0.05 for 5%).</ToolTip>
+          <Default>.05</Default>
+        </Literal>
+        <Literal>
+          <ID>numberOfPayments</ID>
+          <ToolTip>Replace with code that returns a Double for the total number of monthly payments.</ToolTip>
+          <Default>36</Default>
+        </Literal>
+        <Literal>
+          <ID>loanAmount</ID>
+          <ToolTip>Replace with code that returns a Double for the loan amount.</ToolTip>
+          <Default>1000</Default>
+        </Literal>
+        <Literal Editable="false">
+          <ID>FinancialClass</ID>
+          <Function>SimpleTypeName(Microsoft.VisualBasic.Financial)</Function>
+        </Literal>
+        <Literal Editable="false">
+          <ID>DueDateClass</ID>
+          <Function>SimpleTypeName(Microsoft.VisualBasic.DueDate)</Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[double futureValue = 0; 
+        double payment;
+        
+        payment = $FinancialClass$.Pmt($annualInterestRate$ / 12, $numberOfPayments$, -$loanAmount$, futureValue, $DueDateClass$.EndOfPeriod);$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

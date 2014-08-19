@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Use BeginInvoke on a Control to Run Code Asynchronously</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Uses BeginInvoke on a control to run code asynchronously.</Description>
+      <Shortcut>osInvoke</Shortcut>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>text1</ID>
+          <ToolTip>Replace with TextBox.</ToolTip>
+          <Default>textBox1</Default>
+        </Literal>
+        <Literal>
+          <ID>str</ID>
+          <ToolTip>Replace with String.</ToolTip>
+          <Default>"Invoked"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[delegate void InvokeDelegate(); 
+
+public void Begin_Invoke() 
+{ 
+ $text1$.BeginInvoke(new InvokeDelegate(InvokeMethod)); 
+} 
+
+public void InvokeMethod() 
+{ 
+$text1$.Text = $str$; 
+$end$
+}]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

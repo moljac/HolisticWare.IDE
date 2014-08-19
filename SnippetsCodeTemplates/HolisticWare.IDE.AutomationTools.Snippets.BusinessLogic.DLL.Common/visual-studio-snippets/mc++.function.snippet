@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>mc_function</Title>
+			<Shortcut>mc_function</Shortcut>
+			<Description>Code snippet for function body mc++</Description>
+			<Author>Miljenko Cvjetko mc++</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>FunctionName</ID>
+					<ToolTip>Function/Method Name</ToolTip>
+					<Default>Function</Default>
+				</Literal>
+
+				<Literal>
+					<ID>ResultObjectType</ID>
+					<ToolTip>Object Type of the Result returned</ToolTip>
+					<Default>ObjectType</Default>
+				</Literal>
+
+				<Literal>
+					<ID>ArgunetType</ID>
+					<ToolTip>Type of the metho argument</ToolTip>
+					<Default>ObjectType</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[
+		public
+			override
+			$ResultObjectType$
+			$FunctionName$
+			(
+				$ArgunetType$ arg
+			)
+		{
+			$ResultObjectType$ result =  default($ResultObjectType$);
+				
+			return result;
+		}  // End Function/Method: $FunctionName$
+	]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

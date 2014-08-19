@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Add a new row to a typed DataTable</Title>
+      <Description>Adds a new row to a typed DataTable.  For this code snippet to compile, add a reference to System.Data.dll and System.Xml.dll.</Description>
+      <Shortcut>adoNewRow</Shortcut>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>dataTableType</ID>          
+          <ToolTip>Replace with the Row Type to add.</ToolTip>
+          <Default>NorthwindDataSet.CustomersRow</Default>
+        </Literal>
+        <Literal>
+          <ID>table</ID>
+          <ToolTip>Replace with the DataTable for the new row.</ToolTip>
+          <Default>this.NorthwindDataSet.Customers</Default>
+        </Literal>
+        <Literal>
+          <ID>column1</ID>
+          <ToolTip>Replace with the first column of the new DataRow.</ToolTip>
+          <Default>CustomerID</Default>
+        </Literal>
+        <Literal>
+          <ID>column2</ID>
+          <ToolTip>Replace with the second column of the new DataRow.</ToolTip>
+          <Default>CompanyName</Default>
+        </Literal>
+        <Literal>
+          <ID>column1Value</ID>
+          <ToolTip>Replace with the new value for this column.</ToolTip>
+          <Default>"A124"</Default>
+        </Literal>
+        <Literal>
+          <ID>column2Value</ID>
+          <ToolTip>Replace with the new value for this column.</ToolTip>
+          <Default>"Acme"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[$dataTableType$ newRow = $table$.NewRow();
+        newRow.$column1$ = $column1Value$;
+        newRow.$column2$ = $column2Value$;
+        
+        $table$.Rows.Add(newRow);$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

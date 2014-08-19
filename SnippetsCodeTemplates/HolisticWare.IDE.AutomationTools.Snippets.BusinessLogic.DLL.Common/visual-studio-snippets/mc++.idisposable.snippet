@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>IDisposable_mc</Title>
+			<Shortcut>idisposable_mc</Shortcut>
+			<Description>Code snippet for IDisposable</Description>
+			<Author>Miljenko Cvjetko mc++</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>title</ID>
+					<ToolTip>Region Title</ToolTip>
+					<Default>IDisposable</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+			<![CDATA[
+		# region    IDisposable
+		private
+			bool
+			is_disposed
+			= false
+			;
+		//...........................................................................
+		protected
+			virtual
+			void
+			Dispose
+			(
+				bool disposing
+			)
+		{
+			if (!is_disposed) // dispose only once
+			{
+				if (disposing == true)
+				{
+					// nullify objexts
+
+					// remove Event Handlers
+					// leaving Event handlers attached could hinder garbage collection
+					// deleting of 
+					//this.EventHandler -= new EventHandler(Handler_PowerModuleFailure);
+
+					// serialize info
+					Core.BL.Data.PersisterXML<TransmittingParallelSystem> p_xml;
+					p_xml = new Core.BL.Data.PersisterXML<TransmittingParallelSystem>();
+					p_xml.FileNameSeparator = "." + this.Name + ".";
+					p_xml.Serialize<TransmittingParallelSystem>(this);
+				}
+				is_disposed = true;
+			}
+
+			return;
+		}
+
+		public
+			void
+			Dispose
+			(
+			)
+		{
+			Dispose(true);
+			GC.SuppressFinalize(this);
+
+			return;
+		}
+
+		~ClassName
+			(
+			)
+		{
+			Dispose(false);
+
+			return;
+		}
+		//...........................................................................
+		# endregion IDisposable	
+	]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

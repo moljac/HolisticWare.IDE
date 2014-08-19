@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>hw_m4a_AutoComplete</Title>
+			<Shortcut>hw_m4a_AutoComplete</Shortcut>
+			<Description>hw_m4a_AutoComplete</Description>
+			<Author>Miljenko Cvjetko mc++</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>filename</ID>
+					<ToolTip>File name</ToolTip>
+					<Default>FileName</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[
+			//=========================================================================
+			/*
+			http://docs.xamarin.com/android/tutorials/User_Interface/grid_view
+
+			1. 
+			Create an XML file named list_item.xml and save it inside the 
+				Resources\Layout\ folder. 
+			Set the Build Action of this file to AndroidResource.
+			This file defines a simple TextView that will be used for each item 
+			that appears in the list of suggestions
+			
+			<?xml version="1.0" encoding="utf-8"?>
+
+			<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:padding="10dp"
+				android:textSize="16sp"
+				android:textColor="#000">
+			</TextView>
+			
+			
+			2. 
+			Open the Resources\layout\main.xml file and insert the following:
+			The TextView is a label that introduces the AutoCompleteTextView 
+			widget.
+			
+			<?xml version="1.0" encoding="utf-8"?>
+			<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+				android:orientation="horizontal"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				android:padding="5dp">
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Country" />
+				<AutoCompleteTextView android:id="@+id/autocomplete_country"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="5dp"/>
+			</LinearLayout>
+			*/
+
+			/// Into Activity
+			protected 
+				override 
+				void 
+				OnCreate 
+				(
+				  Bundle bundle
+				)
+				{
+					base.OnCreate (bundle);
+
+					// Set our view from the "Main" layout resource
+					SetContentView (Resource.Layout.Main);
+
+					AutoCompleteTextView textView = 
+							FindViewById<AutoCompleteTextView> 
+							(
+							  Resource.Id.autocomplete_country
+							);
+					ArrayAdapter<String> adapter = new ArrayAdapter<String> 
+													(
+													  this
+													, Resource.Layout.list_item
+													, COUNTRIES
+													);
+
+					textView.Adapter = adapter;
+				}			
+			//=========================================================================
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

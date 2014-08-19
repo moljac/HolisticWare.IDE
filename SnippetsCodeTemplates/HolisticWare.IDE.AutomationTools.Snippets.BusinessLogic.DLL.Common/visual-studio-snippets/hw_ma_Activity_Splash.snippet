@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>hw_m4a_Activity_Splash</Title>
+			<Shortcut>hw_m4a_Activity_Splash</Shortcut>
+			<Description>hw_m4a_Activity_Splash</Description>
+			<Author>Miljenko Cvjetko mc++</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>activity_splash_name</ID>
+					<ToolTip>Splash Activity Name</ToolTip>
+					<Default>Splash</Default>
+				</Literal>
+				<Literal>
+					<ID>activity_label</ID>
+					<ToolTip>Splash Activity Name</ToolTip>
+					<Default>Splash</Default>
+				</Literal>
+				<Literal>
+					<ID>layout_splash_filename</ID>
+					<ToolTip>Splash Layout (filename [a]xml)</ToolTip>
+					<Default>Resource.Layout.Splash</Default>
+				</Literal>
+				<Literal>
+					<ID>activity_target_type</ID>
+					<ToolTip>Activity targeted Type (name)</ToolTip>
+					<Default>ActivityTarget</Default>
+				</Literal>
+				<Literal>
+					<ID>timer_callback_name</ID>
+					<ToolTip>Timer callback Name</ToolTip>
+					<Default>TimerCallBack</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[
+	# region    Activity.Splash $activity_splash_name$
+	//------------------------------------------------------------------
+	///
+	
+	[
+		Android.App.Activity
+		(
+		  MainLauncher = true
+		, Label = "$activity_label$"
+		, LaunchMode=Android.Content.PM.LaunchMode.SingleInstance
+		// back button will skip splash when exiting
+		, NoHistory = true
+		)
+	]
+	public 
+		partial
+		class 
+		$activity_label$
+		:
+		Android.App.Activity
+	{
+		/// Timer for Splash screen
+		private
+			System.Threading.Timer
+			timer
+			;
+
+		protected 
+			override 
+			void 
+			OnCreate
+			(
+			  Android.OS.Bundle bundle
+			 )
+		{
+			base.OnCreate(bundle);
+
+			// Application Creation
+			// Window (Splash) Featureshide 
+			RequestWindowFeature
+				(
+				  // Window without Title
+				  Android.Views.WindowFeatures.NoTitle
+				  &
+				  Android.Views.WindowFeatures.Progress
+				);
+			Window.SetFlags
+				(
+				  Android.Views.WindowManagerFlags.Fullscreen
+				, Android.Views.WindowManagerFlags.NotTouchable
+				);
+
+			SetContentView($layout_splash_filename$);
+
+			// delayed timer that fires once to callback
+			// $timer_callback_name$_Tick
+			timer = new System.Threading.Timer
+							(
+							  $timer_callback_name$_Tick
+							, null
+							, 5000
+							, System.Threading.Timeout.Infinite
+							);	 
+
+			return;				
+		}
+
+		protected
+			void 
+			$timer_callback_name$_Tick
+			(
+			  object state
+			)
+		{
+			System.Type activity_next = 
+				typeof
+				(
+				  Resources.Layout.$activity_target_type$
+				);
+			Android.Content.Intent intent_next;
+			intent_next = new Android.Content.Intent(this, activity_next);
+			StartActivity(intent_next);
+			Finish();
+
+			//RunOnUiThread(() =>
+			//{
+			//  initSQLiteDatabase();
+			//  checkAuthorization();
+			//});
+			
+			return;
+		}
+	}			
+	//------------------------------------------------------------------
+	# endregion Activity.Splash $activity_splash_name$
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

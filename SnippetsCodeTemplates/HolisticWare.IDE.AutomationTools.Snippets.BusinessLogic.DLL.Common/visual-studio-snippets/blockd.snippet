@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Decrement Block</Title>
+			<Shortcut>blockd</Shortcut>
+			<Description>Issues a block decrement request that bleeds into an executable 'if' block given a successful reduction in the block count.</Description>
+			<Author>Apprenda</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>The name of the block feature.</ToolTip>
+					<Default></Default>
+				</Literal>
+      </Declarations>
+			<Code Language="csharp">
+    <![CDATA[if (SubscriptionContext.Instance.DecrementBlock($name$))
+            {
+              $end$
+            }
+            ]]>
+        
+        
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>mc_persister</Title>
+			<Shortcut>mc_persister</Shortcut>
+			<Description>Code snippet for Core.BL.Data.Persister class</Description>
+			<Author>Miljenko Cvjetko mc++</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>target</ID>
+					<ToolTip>Target for persistence (XML,SOAP,Bin,RawBin)</ToolTip>
+					<Default>XML</Default>
+				</Literal>
+				<Literal>
+					<ID>type</ID>
+					<ToolTip>Persisted Object type</ToolTip>
+					<Default>int</Default>
+				</Literal>
+				<Literal>
+					<ID>object_persister</ID>
+					<ToolTip>Persister Object</ToolTip>
+					<Default>p_$target$</Default>
+				</Literal>
+				<Literal>
+					<ID>object_persisted</ID>
+					<ToolTip>Persisted object</ToolTip>
+					<Default>this</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+            <![CDATA[
+			//-------------------------------------------------------------------------
+			Core.BL.netfx2.dll.Data.Persister$target$<$type$> $object_persister$;
+			$object_persister$ = new Core.BL.netfx2.dll.Data.Persister$target$<$type$>();
+			// Binary Serialziation causes Exception because BindToData is not
+			// marked as Serializable
+			// unbinding thorugh assignment to new object!!!:
+			$type$ $object_persisted$ = 
+								new $type$() 
+								//default($type$)
+								;
+			
+			//-------------------------------------------------------------------------
+			string data_serialized = null;
+			//System.IO.FileStream data_serialized = new System.IO.FileStream();
+			//byte[] data_serialized = null;
+			//System.IO.Stream data_serialized = new System.IO.FileStream();
+
+			data_serialized = $object_persister$.Serialize<$type$>($object_persisted$);
+			//-------------------------------------------------------------------------
+			string data_to_deserialize = null;
+			//System.IO.FileStream data_to_deserialize = new System.IO.FileStream();
+			//byte[] data_to_deserialize = null;
+			//System.IO.Stream data_to_deserialize = new System.IO.FileStream();
+
+			$object_persisted$ = $object_persister$.Deserialize<$type$>(data_to_deserialize);
+			//-------------------------------------------------------------------------
+  	$end$
+	]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

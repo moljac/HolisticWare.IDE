@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>mc_linq_query</Title>
+			<Shortcut>mc_linq_query</Shortcut>
+			<Description>Code snippet for NUnitTest class</Description>
+			<Author>Miljenko Cvjetko mc++</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>type</ID>
+					<ToolTip>Type of the result collection</ToolTip>
+					<Default>int</Default>
+				</Literal>
+				<Literal>
+					<ID>results</ID>
+					<ToolTip>Resulting collection</ToolTip>
+					<Default>result</Default>
+				</Literal>
+				<Literal>
+					<ID>o</ID>
+					<ToolTip>collection object/variable</ToolTip>
+					<Default>o</Default>
+				</Literal>
+				<Literal>
+					<ID>o_conditions</ID>
+					<ToolTip>Filter Condition</ToolTip>
+					<Default> o == o1 </Default>
+				</Literal>
+				<Literal>
+					<ID>collection</ID>
+					<ToolTip>input collection</ToolTip>
+					<Default>collection_input</Default>
+				</Literal>
+				<Literal>
+					<ID>property</ID>
+					<ToolTip>object property</ToolTip>
+					<Default>property</Default>
+				</Literal>
+				<Literal>
+					<ID>grouping_name</ID>
+					<ToolTip>name of the group</ToolTip>
+					<Default>grouping_name</Default>
+				</Literal>
+
+
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[
+				IEnumerable<$type$> $results$ = 
+					(
+						from $o$ in $collection$
+						where $o_conditions$
+						group $o by $o$.$property$ into $grouping_name$
+						orderby $o$.$property$ ascending // descending
+						select
+							new
+							{
+								$property$1 = $o.Property1
+							//,	$property$1 = $o.Property1
+							}
+					)
+					//.AggregateExtenstionMethod() // Aggregate ExtensionMethod
+					;
+	]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

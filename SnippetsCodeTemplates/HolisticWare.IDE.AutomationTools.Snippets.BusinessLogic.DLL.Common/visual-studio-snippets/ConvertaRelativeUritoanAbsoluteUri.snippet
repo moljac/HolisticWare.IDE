@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Convert a Relative Uri to an Absolute Uri</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Converts a relative Uri to an absolute Uri</Description>
+      <Shortcut>conConv</Shortcut>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>uri1</ID>
+          <ToolTip>Replace with base URI.</ToolTip>
+          <Default>"http://www.contoso.com/"</Default>
+        </Literal>
+        <Literal>
+          <ID>uri2</ID>
+          <ToolTip>Replace with relative URI.</ToolTip>
+          <Default>"images/index.htm?id=null"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[Uri baseUri = new Uri($uri1$);
+		Uri relativeUri = new Uri($uri2$, UriKind.Relative);
+    
+		// Compose absolute Uri using the base and the relative Uri.
+		Uri absoluteUri = new Uri(baseUri, relativeUri);
+    
+		string absolute= absoluteUri.AbsolutePath;$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

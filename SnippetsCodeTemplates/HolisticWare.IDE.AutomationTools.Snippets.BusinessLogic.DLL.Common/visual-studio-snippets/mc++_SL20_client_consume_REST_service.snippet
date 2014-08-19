@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>mc_SL20_client_consume_REST_service</Title>
+			<Shortcut>mc_SL20_client_consume_REST_service</Shortcut>
+			<Description>Code snippet for Silverlight 20 client consume REST service mc++</Description>
+			<Author>Miljenko Cvjetko mc++</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>Class name</ToolTip>
+					<Default>ClassImplementation</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[
+
+		// using System.Net;
+		
+		// config change that you have to do.  When you add a WCF service to an 
+		// ASP.NET application, it alters the web.config to add some binding information. 
+		// By default it adds an endpoint configuration but adds it like this:
+		// <endpoint address="" binding="wsHttpBinding" contract="IWcfService">
+		// 
+		// Silverlight communicates using the BasicHttpBinding for WCF, so you have 
+		// to change it to this (or add another endpoint with this binding):
+
+		// <endpoint address="" binding="basicHttpBinding" contract="IWcfService">
+
+		private void WcfServiceButton_Click(object sender, RoutedEventArgs e)
+		{
+			WebClient rest = new WebClient();
+			rest.DownloadStringCompleted += new DownloadStringCompletedEventHandler(rest_DownloadStringCompleted);
+			 rest.DownloadStringAsync(new Uri(flickrApi));
+			 try
+			string data = e.Result;
+			string url = string.Empty;
+
+			FlickrImages.Children.Clear();
+
+			XDocument doc = XDocument.Parse(e.Result);
+			var photos = from results in doc.Descendants("photo")
+						select new
+						{
+							id = results.Attribute("id").Value.ToString(),
+							farm = results.Attribute("farm").Value.ToString(),
+							server = results.Attribute("server").Value.ToString(),
+							secret = results.Attribute("secret").Value.ToString()
+						};
+
+			foreach (var photo in photos)
+			{
+				url = string.Format("http://farm{0}.static.flickr.com/{1}/{2}_{3}_m.jpg", 
+				  photo.farm, photo.server, photo.id, photo.secret);
+				Image img = new Image();
+				img.Stretch = Stretch.Fill;
+				img.Margin = new Thickness(10);
+				img.Source = new BitmapImage(new Uri(url));
+				FlickrImages.Children.Add(img);
+			}
+		}
+
+		void wcf_HelloWorldFromWcfCompleted(object sender, HelloWorldFromWcfCompletedEventArgs e)
+		{
+			try
+			{
+				OutputString.Text = string.Format("Output from WCF: {0}", e.Result.ToString());
+			}
+			catch (Exception ex)
+			{
+				OutputString.Text = ex.Message;
+			}
+		}
+	]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

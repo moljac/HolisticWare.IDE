@@ -1,0 +1,526 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+
+  <!--Import NUnit.Framework-->
+  <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>
+				Import NUnit.Framework
+			</Title>
+			<Shortcut>unuf</Shortcut>
+		</Header>
+		<Snippet>
+			<Code Language="CSharp">
+				<![CDATA[using NUnit.Framework;]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+
+  <!--TestFixture Attribute and Public Class Visibility-->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        NUnit TestFixture Attribute and Public Class Visibility
+      </Title>
+      <Shortcut>tfp</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>NUnit.Framework</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="CSharp">
+        <![CDATA[[TestFixture]
+        public ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!--TestFixture Attribute-->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        NUnit TestFixture Attribute
+      </Title>
+      <Shortcut>tfa</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[[TestFixture]]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!--SetUp Method-->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        NUnit SetUp Method
+      </Title>
+      <Shortcut>su</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>methodName</ID>
+          <ToolTip>Method Name</ToolTip>
+          <Default>SetUp</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[[SetUp]
+        public void $methodName$()
+        {
+          $end$
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!--Test Case-->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        NUnit Test Case
+      </Title>
+      <Shortcut>tc</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>methodName</ID>
+          <ToolTip>Method Name</ToolTip>
+          <Default>TestCase</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[[Test]
+        public void $methodName$()
+        {
+          $end$
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!--TearDown Method-->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        NUnit TearDown Method
+      </Title>
+      <Shortcut>td</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>methodName</ID>
+          <ToolTip>Method Name</ToolTip>
+          <Default>TearDown</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[[TearDown]
+        public void $methodName$()
+        {
+          $end$
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!--Assert.AreEqual-->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        NUnit Assert.AreEqual
+      </Title>
+      <Shortcut>ae</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expected</ID>
+          <ToolTip>Expected</ToolTip>
+          <Default>expected</Default>
+        </Literal>
+        <Literal>
+          <ID>actual</ID>
+          <ToolTip>Actual</ToolTip>
+          <Default>actual</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[Assert.AreEqual($expected$, $actual$);$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!--Assert.AreSame-->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        NUnit Assert.AreSame
+      </Title>
+      <Shortcut>as</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expected</ID>
+          <ToolTip>Expected</ToolTip>
+          <Default>expected</Default>
+        </Literal>
+        <Literal>
+          <ID>actual</ID>
+          <ToolTip>Actual</ToolTip>
+          <Default>actual</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[Assert.AreSame($expected$, $actual$);$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!--Assert.IsTrue-->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        NUnit Assert.IsTrue
+      </Title>
+      <Shortcut>at</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>condition</ID>
+          <ToolTip>Condition</ToolTip>
+          <Default>condition</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[Assert.IsTrue($condition$);$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!--Assert.IsFalse-->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        NUnit Assert.IsFalse
+      </Title>
+      <Shortcut>af</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>condition</ID>
+          <ToolTip>Condition</ToolTip>
+          <Default>condition</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[Assert.IsFalse($condition$);$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!--Assert.IsNull-->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        NUnit Assert.IsNull
+      </Title>
+      <Shortcut>an</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>object</ID>
+          <ToolTip>Object</ToolTip>
+          <Default>object</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[Assert.IsNull($object$);$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!--Assert.IsNotNull-->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        NUnit Assert.IsNotNull
+      </Title>
+      <Shortcut>ann</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>object</ID>
+          <ToolTip>Object</ToolTip>
+          <Default>object</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[Assert.IsNotNull($object$);$end$]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>
+
+<!--Assert.IsInstanceOfType-->
+<CodeSnippet Format="1.0.0">
+  <Header>
+    <Title>
+      NUnit Assert.IsInstanceOfType
+    </Title>
+    <Shortcut>ai</Shortcut>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>expected</ID>
+        <ToolTip>Expected Type</ToolTip>
+        <Default>expected</Default>
+      </Literal>
+      <Literal>
+        <ID>actual</ID>
+        <ToolTip>Actual</ToolTip>
+        <Default>actual</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp">
+      <![CDATA[Assert.IsInstanceOfType(typeof($expected$), $actual$);$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!--StringAssert.Contains-->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        NUnit StringAssert.Contains
+      </Title>
+      <Shortcut>sac</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>expected</ID>
+          <ToolTip>Expected</ToolTip>
+          <Default>expected</Default>
+        </Literal>
+        <Literal>
+          <ID>actual</ID>
+          <ToolTip>Actual</ToolTip>
+          <Default>actual</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[StringAssert.Contains($expected$, $actual$);$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!--NUnit Assert-->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>NUnit Assert</Title>
+      <Shortcut>a</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>assertion</ID>
+          <ToolTip>Assertion</ToolTip>
+          <Default>assertion</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[Assert.$assertion$$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!--TestFixtureSetUp Method-->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        NUnit TestFixtureSetUp Method
+      </Title>
+      <Shortcut>tfsu</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>methodName</ID>
+          <ToolTip>Method Name</ToolTip>
+          <Default>TestFixtureSetUp</Default>
+        </Literal>
+      </Declarations>      
+      <Code Language="CSharp">
+        <![CDATA[[TestFixtureSetUp]
+        public void $methodName$()
+        {
+          $end$
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!--TestFixtureTearDown Method-->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        NUnit TestFixtureTearDown Method
+      </Title>
+      <Shortcut>tftd</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>methodName</ID>
+          <ToolTip>Method Name</ToolTip>
+          <Default>TestFixtureTearDown</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[[TestFixtureTearDown]
+        public void $methodName$()
+        {
+          $end$
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!--ExpectedException Attribute-->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        NUnit ExpectedException Attribute
+      </Title>
+      <Shortcut>eea</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>exceptionType</ID>
+          <ToolTip>Exception Type</ToolTip>
+          <Default>exceptionType</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[[ExpectedException(typeof($exceptionType$))]$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+
+  <!--Ignore Attribute-->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        NUnit Ignore Attribute
+      </Title>
+      <Shortcut>ia</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>reason</ID>
+          <ToolTip>Reason</ToolTip>
+          <Default>reason</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[[Ignore("$reason$")]$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!--Test Attribute-->
+  <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>
+				NUnit Test Attribute
+			</Title>
+			<Shortcut>ta</Shortcut>
+		</Header>
+		<Snippet>
+			<Code Language="CSharp">
+				<![CDATA[[Test]
+        ]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+
+  <!--SetUp Attribute-->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        NUnit SetUp Attribute
+      </Title>
+      <Shortcut>sua</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[[SetUp]
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!--TearDown Attribute-->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        NUnit TearDown Attribute
+      </Title>
+      <Shortcut>tda</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[[TearDown]
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+
+  <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>
+				NUnit TestFixtureSetUp Attribute
+			</Title>
+			<Shortcut>tfsua</Shortcut>
+		</Header>
+		<Snippet>
+			<Code Language="CSharp">
+				<![CDATA[[TestFixtureSetUp]
+        ]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+  
+  
+  <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>
+				NUnit TestFixtureTearDown Attribute
+			</Title>
+			<Shortcut>tftda</Shortcut>
+		</Header>
+		<Snippet>
+			<Code Language="CSharp">
+				<![CDATA[[TestFixtureTearDown]]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+
+</CodeSnippets>

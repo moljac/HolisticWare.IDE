@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>mc_event</Title>
+			<Shortcut>mc_event</Shortcut>
+			<Description>Code snippet for Event mc++</Description>
+			<Author>Miljenko Cvjetko mc++</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>Name</ID>
+					<ToolTip>Event or PlugiIn Name</ToolTip>
+					<Default>EventorPlugIn</Default>
+				</Literal>
+				<Literal>
+					<ID>Object</ID>
+					<ToolTip>Object</ToolTip>
+					<Default>object</Default>
+				</Literal>
+				<Literal>
+					<ID>EventArguments</ID>
+					<ToolTip>Event Arguments</ToolTip>
+					<Default>EventArgs</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[
+		# region    $Name$ Event or PlugIn implementation
+		//-------------------------------------------------------------------------
+		/// <summary>
+		/// Event or PlugIn Handler Delegate
+		/// </summary>
+		/// <param name="o"></param>
+		/// <param name="ea"></param>
+		public
+			delegate
+			void
+			$Name$Handler
+			(
+				$Object$ o
+			, $EventArguments$ ea
+			);
+
+		/// <summary>
+		/// Event for Event or PlugIn implementation
+		/// add following code in constructors:
+		/// $Name$ += new $Nemo$Handler($Name$HandlerDefault);
+		/// </summary>
+		public
+			event
+			$Name$Handler
+			$Name$
+			;
+
+		/// Default Event or PlugIn handler
+		/// to disable default handler add following code before use:
+		/// 
+		///     $Name$ = null;
+		/// 
+		/// to override default handler add following code before use:
+		/// 
+		///     $Name$ = null;
+		///     $Name$ += $Name$Handler($Name$HandlerOverride);
+		public
+			virtual
+			void
+			$Name$HandlerDefault
+			(
+				$Object$ o
+			, $EventArguments$ ea
+			)
+		{
+			throw new NotImplementedException("$Name$HandlerDefault");
+
+			// return; // turn off stupid warrnings!
+		}
+		//-------------------------------------------------------------------------	
+		# endregion $Name$ Event or PlugIn implementation
+	]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

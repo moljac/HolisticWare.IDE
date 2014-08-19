@@ -1,0 +1,37 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+  <TemplateData>
+    <DefaultName>HolisticWare.Android.ListActivityWithLayout.axml</DefaultName>
+    <Name>HolisticWare.Android.ListActivityWithLayout</Name>
+    <Description>HolisticWare.Android.ListActivityWithLayout</Description>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>10</SortOrder>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>Mono.Android</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>mscorlib</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Core</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Xml.Linq</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Xml</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem SubType="AndroidResource" TargetFileName="$fileinputname$.axml" ReplaceParameters="false">AddExpense.axml</ProjectItem>
+    <ProjectItem SubType="Code" TargetFileName="$fileinputname$.axml.Adapter.Category.cs" ReplaceParameters="true">AddExpense.axml.Adapter.Category.cs</ProjectItem>
+    <ProjectItem SubType="Code" TargetFileName="$fileinputname$.axml.Adapter.cs" ReplaceParameters="true">AddExpense.axml.Adapter.cs</ProjectItem>
+    <ProjectItem SubType="Code" TargetFileName="$fileinputname$.axml.cs" ReplaceParameters="true">AddExpense.axml.cs</ProjectItem>
+    <ProjectItem SubType="AndroidResource" TargetFileName="$fileinputname$.axml" ReplaceParameters="false">AddExpense_axml_ListView_RowTemplate.axml</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

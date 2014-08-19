@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>mc_SL20_client_consume_soap_web_service_asmx</Title>
+			<Shortcut>mc_SL20_client_consume_soap_web_service_asmx</Shortcut>
+			<Description>mc++_SL20_client_consume_soap_web_service_asmx mc++</Description>
+			<Author>Miljenko Cvjetko mc++</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>ServiceReferenceName</ID>
+					<ToolTip>SOAP service name in References (from WSDL)</ToolTip>
+					<Default>ServiceReferenceName</Default>
+				</Literal>
+				<Literal>
+					<ID>WebService_Name</ID>
+					<ToolTip>SOAP web service name</ToolTip>
+					<Default>WebServiceName</Default>
+				</Literal>
+				<Literal>
+					<ID>Method</ID>
+					<ToolTip>SOAP web service method</ToolTip>
+					<Default>Method</Default>
+				</Literal>
+				<Literal>
+					<ID>MethodCallParams</ID>
+					<ToolTip>SOAP web service method parameters</ToolTip>
+					<Default>string param</Default>
+				</Literal>
+				<Literal>
+					<ID>TypeResult</ID>
+					<ToolTip>Result of the SOAP web service method</ToolTip>
+					<Default>string</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[
+		# region    Call$WebService_Name$$Method$
+		//-------------------------------------------------------------------------
+		// WebService Uri path relaltive if on the same server which hosts 
+		// Silverlight application!
+		private 
+			string 
+			ws_uri_path = @"../$WebService_Name$.asmx"
+			;
+
+		// Uri of the WebService (asmx file)
+		private 
+			Uri 
+			uri_ws
+			;
+
+		// WebService client/proxy
+		private 
+			$ServiceReferenceName$.$WebService_Name$SoapClient 
+			client_proxy
+			;
+
+
+		// Result of the Web Service Method
+		public
+			$TypeResult$
+			$WebService_Name$$Method$Result
+			;
+		public
+			void
+			Call$WebService_Name$$Method$
+			(
+			  $MethodCallParams$
+			)
+		{
+			# region    initialization
+			//-------------------------------------------------------------------------
+			string web_service_uri_relative_asmx = ws_uri_path;
+			// this url will work both in dev and after deploy.
+			uri_ws = new Uri
+							(
+							  Application.Current.Host.Source
+							, web_service_uri_relative_asmx
+							);
+			int port = HtmlPage.Document.DocumentUri.Port;
+			//-------------------------------------------------------------------------
+			# endregion initialization	
+
+			System.ServiceModel.EndpointAddress endpoint;
+			endpoint = new System.ServiceModel.EndpointAddress(uri_ws);
+
+			string client_binding_config_name = "WebServiceTestSoap_TestVS_Release";
+			client_proxy = 
+				new $ServiceReferenceName$.$WebService_Name$SoapClient
+												(
+													client_binding_config_name
+												);
+			client_proxy.Endpoint.Address = 
+							new System.ServiceModel.EndpointAddress(uri_ws);
+
+			// This is the default constructor, url will be read from the 
+			// client config file binding attribute
+			/*
+			client = new ServiceReferenceTest.WebServiceTestSoapClient
+								(
+								  client_binding_config_name
+								 , address.AbsolutePath
+								 );
+			*/
+
+			//async callback when completed
+			client_proxy.$Method$Completed +=
+				new EventHandler<$ServiceReferenceName$.$Method$CompletedEventArgs>
+							(
+							  client_$WebService_Name$$Method$Completed
+							);
+			// web service call
+			client_proxy.$Method$Async();
+			
+			return;
+		}
+
+		/// <summary>
+		/// client_$WebService_Name$$Method$Completed
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private
+			void 
+			client_$WebService_Name$$Method$Completed
+			(
+			  object sender
+			, $ServiceReferenceName$.$Method$CompletedEventArgs e
+			)
+		{
+			$TypeResult$ response = e.Result;
+
+			// DataBind
+			//textBoxTestResponse.Text = response;
+
+			return;
+		}
+		//-------------------------------------------------------------------------
+		# endregion Call$WebService_Name$$Method$
+				
+	]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

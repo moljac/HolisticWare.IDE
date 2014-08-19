@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>hw_m4a_Widget_ButtonCustom</Title>
+			<Shortcut>hw_m4a_Widget_ButtonCustom</Shortcut>
+			<Description>hw_m4a_Widget_ButtonCustom</Description>
+			<Author>Miljenko Cvjetko mc++</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>Button Name</ToolTip>
+					<Default>ActionCustom</Default>
+				</Literal>
+				<Literal>
+					<ID>text</ID>
+					<ToolTip>Text</ToolTip>
+					<Default>Button</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[
+		    # region    Region Button Custom $name$
+			//------------------------------------------------------------------
+			/*
+			Move this to AXML Layout file:
+			
+			<Button
+				android:id="@+id/buttonCustom$name$"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:padding="10dp"
+				android:background="@drawable/icon" 
+			/>
+
+			in resources\drawable create xml file:
+
+			<?xml version="1.0" encoding="utf-8"?>
+			<selector xmlns:android="http://schemas.android.com/apk/res/android">
+				<item android:drawable="@drawable/android_pressed"
+					  android:state_pressed="true" />
+				<item android:drawable="@drawable/android_focused"
+					  android:state_focused="true" />
+				<item android:drawable="@drawable/android_normal" />
+			</selector>			
+			
+			Assure that item icons exist in Resources\Drawable\ :
+				drawable/android_pressed
+				drawable/android_focused
+				drawable/android_normal
+			*/
+			Android.Widget.Button buttonCustom$name$ 
+				= FindViewById<Android.Widget.Button>(Resource.Id.buttonCustom$name$);
+			buttonCustom$name$.Click += 
+				// Inline  
+				(sender, e) => 
+				{
+					throw new NotImplementedException();
+				
+					return;
+				}
+				//---------------------------------------
+				// ! Inline
+				// 
+				// new EventHandler(buttonCustom$name$ _Click)
+	            // 
+				// Move following code out of the function!
+				// private 
+				// 	void 
+				// 	buttonCustom$name$_Click
+				// 	(
+				// 	  object sender
+				// 	, EventArgs e
+				// 	)
+				// {
+				// 		throw new NotImplementedException();
+				//   
+				// 		return;
+				// }
+				;
+			//------------------------------------------------------------------
+			# endregion Region Button Custom $name$
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

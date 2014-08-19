@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>mc_process</Title>
+			<Shortcut>mc_process</Shortcut>
+			<Description>Code snippet for class mc++</Description>
+			<Author>Miljenko Cvjetko mc++</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>app_name</ID>
+					<ToolTip>Application name</ToolTip>
+					<Default>Application</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[
+			//=========================================================================
+			string application = "$app_name$";
+			System.Diagnostics.Process process = new System.Diagnostics.Process();
+			process.StartInfo.FileName = application;
+			process.StartInfo.Arguments = "";
+			process.StartInfo.CreateNoWindow = false;
+			process.StartInfo.UserName = "";
+			//process.StartInfo.Password = "";
+			process.StartInfo.LoadUserProfile = false;
+			process.StartInfo.UseShellExecute = true;
+
+			process.Start();
+			//=========================================================================
+	]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

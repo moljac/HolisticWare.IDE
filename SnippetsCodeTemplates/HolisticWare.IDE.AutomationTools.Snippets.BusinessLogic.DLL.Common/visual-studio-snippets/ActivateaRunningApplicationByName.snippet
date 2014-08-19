@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Activate a Running Application by Name</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Activates a running application using the name of the application.  For this code snippet to compile, add a reference to Microsoft.VisualBasic.dll.</Description>
+      <Shortcut>appActNa</Shortcut>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>        
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="false">
+          <ID>VisualBasicInteractionClass</ID>
+          <Function>SimpleTypeName(Microsoft.VisualBasic.Interaction)</Function>
+        </Literal>
+        <Literal>
+          <ID>applicationName</ID>
+          <ToolTip>Replace with the name of the application. This is often the title of the application window.</ToolTip>
+          <Default>"Untitled - Notepad"</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[$VisualBasicInteractionClass$.AppActivate($applicationName$);$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

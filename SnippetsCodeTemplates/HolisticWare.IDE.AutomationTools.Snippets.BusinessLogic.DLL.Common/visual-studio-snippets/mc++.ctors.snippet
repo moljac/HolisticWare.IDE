@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>mc_ctors</Title>
+			<Shortcut>mc_ctors</Shortcut>
+			<Description>Code snippet for constructors mc++</Description>
+			<Author>Miljenko Cvjetko mc++</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>class</ID>
+					<ToolTip>Class name</ToolTip>
+					<Default>ClassName</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[
+		# region    Constructors
+		//-------------------------------------------------------------------------
+		public
+			$class$
+			(
+			)
+			: base()
+		{
+			return;
+		}
+		//-------------------------------------------------------------------------
+		public
+			$class$
+			(
+				$class$ class_instance
+			)
+		{
+			// add code
+			
+			return;
+		}
+		//-------------------------------------------------------------------------	
+		# endregion Constructors
+	]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

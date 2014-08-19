@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>hw_prop_event_post</Title>
+      <Shortcut>hw_prop_event_post</Shortcut>
+      <Description>Code snippet for property and backing field (replace MS prop) Edited by ikxx</Description>
+      <Author>Miljenko Cvjetko mc++ moljac@holisticware, edited by ikxx</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>type</ID>
+          <ToolTip>Property type</ToolTip>
+          <Default>int</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>property</ID>
+          <ToolTip>Property _$property$</ToolTip>
+          <Default>SomeProperty</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>field</ID>
+          <ToolTip>The variable backing this property</ToolTip>
+          <Default>some_property</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+	<![CDATA[
+	//-------------------------------------------------------------------------
+    # region Property $type$ $property$ w Event post ($property$Changed)
+    /// <summary>
+    /// $property$
+    /// </summary>
+    public
+      $type$
+      $property$
+    {
+		get
+		{
+			return $field$;
+		} // $property$.get
+		set
+		{
+			//if ($field$ != value)		// do not write if equivalent/equal/same
+			{
+				// for multi threading apps uncomment lines beginnig with //MT:
+				//MT: lock($field$) // MultiThread safe				
+				{
+					$field$ = value;
+					if (null != $property$Changed)
+					{
+						$property$Changed(this, new EventArgs());
+					}
+				}
+			} 
+		} // $property$.set
+	} // $property$
+	
+	/// <summary>
+	/// private member field for holding $property$ data
+	/// </summary>
+	private
+		$type$
+		$field$
+		;
+
+	///<summary>
+	/// Event for wiring BusinessLogic object changes and presentation
+	/// layer notifications.
+	/// $property$Changed (<propertyname>Changed) is intercepted by Windows Forms
+	/// 1.x and 2.0 event dispatcher 
+	/// and for some CLR types by WPF event dispatcher 
+	/// usually INotifyPropertyChanged and PropertyChanged event
+	///</summary>
+	public
+		event
+		EventHandler
+		$property$Changed
+		;
+    # endregion Property $type$ $property$ w Event post ($property$Changed)
+	//-------------------------------------------------------------------------
+  	$end$
+	]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

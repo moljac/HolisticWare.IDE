@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>mc_SL20_class_BL</Title>
+			<Shortcut>mc_SL20_class_BL</Shortcut>
+			<Description>Code snippet for Silverlight 2.0 BO class mc++</Description>
+			<Author>Miljenko Cvjetko mc++</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>Class name</ToolTip>
+					<Default>ClassImplementation</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[
+	/// BusinessObject class for Silverlight 2.0
+	// add instance of this class to DataContext of the Silverlight Control
+	// Binding done through accessing properties of BO class
+	// Silverlight.Control.Property="{Binding BOClass_PropertyName, Mode=XXX}"
+	public
+		partial
+		class
+		$name$
+	{
+		$selected$$end$
+		
+		# region    DataBinding INotifyPropertyChanged
+		//-------------------------------------------------------------------------
+		public
+			event
+			PropertyChangedEventHandler
+			PropertyChanged
+			;
+
+		public
+			void
+			NotifyPropertyChanged
+			(
+			  string property_name
+			)
+		{
+			if (this.PropertyChanged != null)
+			{
+				PropertyChanged(this, new PropertyChangedEventArgs(property_name));
+			}
+
+			return;
+		}
+		//-------------------------------------------------------------------------
+		# endregion DataBinding INotifyPropertyChanged
+				
+	} // class $name$
+	]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

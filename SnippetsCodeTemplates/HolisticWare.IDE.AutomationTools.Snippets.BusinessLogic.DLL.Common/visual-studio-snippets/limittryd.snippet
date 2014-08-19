@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Try Decrement Limit</Title>
+			<Shortcut>limittryd</Shortcut>
+			<Description>Issues a limit decrement request in a controlling if statement. If work in the if statement fails, a catch handler will issue a compensating increment.</Description>
+			<Author>Apprenda</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>The name of the limit feature.</ToolTip>
+					<Default></Default>
+				</Literal>
+      </Declarations>
+			<Code Language="csharp">
+    <![CDATA[try
+            {
+                if (SubscriptionContext.Instance.DecrementLimitCounter($name$))
+                {
+                  $end$
+                }
+            }
+            catch (Exception)
+            {
+                SubscriptionContext.Instance.IncrementLimitCounter($name$);   
+                throw;
+            }
+            ]]>
+        
+        
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>hw_m4a_Widget_RadioButton</Title>
+			<Shortcut>hw_m4a_Widget_RadioButton</Shortcut>
+			<Description>hw_m4a_Widget_RadioButton</Description>
+			<Author>Miljenko Cvjetko mc++</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>Button Name</ToolTip>
+					<Default>Radio Button</Default>
+				</Literal>
+				<Literal>
+					<ID>text</ID>
+					<ToolTip>Text</ToolTip>
+					<Default>Radio Button</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[
+		    # region    Region RadioButton $name$
+			//------------------------------------------------------------------
+			/*
+			Move this to AXML Layout file:
+			
+			<RadioGroup
+				  android:layout_width="fill_parent"
+				  android:layout_height="wrap_content"
+				  android:orientation="vertical">
+				  <RadioButton 
+					android:id="@+id/radioButton$name$01"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="$text$01" 
+					/>
+				  <RadioButton 
+					android:id="@+id/radioButton$name$02"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="$text$02" 
+					/>
+			</RadioGroup>
+			*/
+			Android.Widget.RadioButton radioButton$name$01
+				= FindViewById<Android.Widget.RadioButton>(Resource.Id.radioButton$name$01);
+			Android.Widget.RadioButton radioButton$name$02
+				= FindViewById<Android.Widget.RadioButton>(Resource.Id.radioButton$name$02);
+			radioButton$name$01.Click += 
+				// Inline  
+				(sender, e) => 
+				{
+					throw new NotImplementedException();
+				
+					return;
+				}
+				//---------------------------------------
+				// ! Inline
+				// 
+				// new EventHandler(radioButton$name$_Click)
+	            // 
+				// Move following code out of the function!
+				// private 
+				// 	void 
+				// 	radioButton$name$_Click
+				// 	(
+				// 	  object sender
+				// 	, EventArgs e
+				// 	)
+				// {
+				// 		throw new NotImplementedException();
+				//   
+				// 		return;
+				// }
+				;
+			//------------------------------------------------------------------
+			# endregion Region RadioButton $name$
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

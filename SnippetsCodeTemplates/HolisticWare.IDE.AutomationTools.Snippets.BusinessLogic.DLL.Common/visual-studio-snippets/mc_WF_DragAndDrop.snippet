@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>mc_WF_DragAndDrop</Title>
+			<Shortcut>mc_WF_DragAndDrop</Shortcut>
+			<Description>Code snippet to Launch UserControl thorugh Form</Description>
+			<Author>Miljenko Cvjetko mc++</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>type_control</ID>
+					<ToolTip>User Control Type</ToolTip>
+					<Default>UserControl</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+            <![CDATA[
+			//-------------------------------------------------------------------------
+			// DragEnter from $CONTROL_SOURCE$
+			private 
+				void 
+				$CONTROL_SOURCE$_DragEnter
+			(
+			  object sender
+			, System.Windows.Forms.DragEventArgs e
+			)
+			{
+				if (e.Data.GetDataPresent(DataFormats.Text)) 
+				{
+					e.Effect = DragDropEffects.Copy;
+				}
+				else
+			   {
+					e.Effect = DragDropEffects.None;
+				}
+				  
+				return;
+			}
+			//-------------------------------------------------------------------------
+			// DragDrop to $$
+			private 
+				void
+				$CONTROL_DESTINATION$_DragDrop
+				(
+				  object sender
+				, System.Windows.Forms.DragEventArgs e
+				)
+			{
+				$CONTROL_DESTINATION$.Tag = 
+					e.Data.GetData(DataFormats.Text);
+			   
+			   return;
+			}
+			//-------------------------------------------------------------------------
+  	$end$
+	]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

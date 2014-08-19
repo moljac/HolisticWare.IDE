@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Perform an Action when System Power Mode Changes</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Performs an action when the system power mode changes.</Description>
+      <Shortcut>osPower</Shortcut>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="false">
+          <ID>SystemEventsClass</ID>
+          <Function>SimpleTypeName(Microsoft.Win32.SystemEvents)</Function>
+        </Literal>
+        <Literal Editable="false">
+          <ID>PowerModeChangedEventHandlerClass</ID>
+          <Function>SimpleTypeName(Microsoft.Win32.PowerModeChangedEventHandler)</Function>
+        </Literal>
+        <Literal Editable="false">
+          <ID>PowerModeChangedEventArgsClass</ID>
+          <Function>SimpleTypeName(Microsoft.Win32.PowerModeChangedEventArgs)</Function>
+        </Literal>
+        <Literal Editable="false">
+          <ID>PowerModesClass</ID>
+          <Function>SimpleTypeName(Microsoft.Win32.PowerModes)</Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[private void AddEventHandler() 
+	{ 
+ 		$SystemEventsClass$.PowerModeChanged += new $PowerModeChangedEventHandlerClass$(PowerModeChangedSub); 
+	}
+
+private void PowerModeChangedSub(object sender, $PowerModeChangedEventArgsClass$ e)
+{
+switch(e.Mode)
+{
+        case $PowerModesClass$.Resume:
+            	break;
+        case $PowerModesClass$.StatusChange:
+		          break;
+        case $PowerModesClass$.Suspend:
+		          break;
+        default:
+              break;         
+}
+}$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

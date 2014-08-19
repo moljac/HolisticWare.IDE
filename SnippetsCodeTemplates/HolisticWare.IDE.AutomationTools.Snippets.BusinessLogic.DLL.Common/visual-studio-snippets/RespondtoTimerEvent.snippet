@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Respond to Timer Event</Title>
+      <Author>Microsoft Corporation</Author>
+      <Description>Responds to a timer event.  For this code snippet to compile, add a reference to System.Windows.Forms.dll.</Description>
+      <Shortcut>osTimer</Shortcut>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>interval</ID>
+          <ToolTip>Replace with interval in milliseconds. </ToolTip>
+          <Default>1000</Default>
+          <Function /></Literal>
+        <Literal Editable="false">
+          <ID>TimerClass</ID>
+          <Function>SimpleTypeName(System.Windows.Forms.Timer)</Function>
+        </Literal>
+        <Literal Editable="false">
+          <ID>EventArgsClass</ID>
+          <Function>SimpleTypeName(System.EventArgs)</Function>
+        </Literal>
+        <Literal Editable="false">
+          <ID>EventHandlerClass</ID>
+          <Function>SimpleTypeName(System.EventHandler)</Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[$TimerClass$ Timer1 = new $TimerClass$(); 
+
+private void StartTimer() 
+{ 
+ Timer1.Interval = $interval$; 
+ Timer1.Start(); 
+ Timer1.Tick += new $EventHandlerClass$(Timer1_Tick); 
+} 
+
+private void Timer1_Tick(object obj, $EventArgsClass$ e)
+{ 
+$end$//Add code here to respond to timer ticks
+}]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

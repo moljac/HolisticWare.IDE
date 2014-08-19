@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>hw_m4a_AdapterImage_Grid</Title>
+			<Shortcut>hw_m4a_AdapterImage_Grid</Shortcut>
+			<Description>hw_m4a_AdapterImage_Grid</Description>
+			<Author>Miljenko Cvjetko mc++</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal Editable="true">
+					<ID>IDAndroid</ID>
+					<ToolTip>Android ID for referencing</ToolTip>
+					<Default>int</Default>
+					<Function></Function>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[
+			//=========================================================================
+			/*
+			http://docs.xamarin.com/android/tutorials/User_Interface/grid_view
+			
+			<?xml version="1.0" encoding="utf-8"?>
+			<GridView xmlns:android="http://schemas.android.com/apk/res/android" 
+				android:id="@+id/$IDAndroid$"
+				android:layout_width="fill_parent" 
+				android:layout_height="fill_parent"
+				android:columnWidth="90dp"
+				android:numColumns="auto_fit"
+				android:verticalSpacing="10dp"
+				android:horizontalSpacing="10dp"
+				android:stretchMode="columnWidth"
+				android:gravity="center"
+			/>
+			*/
+			public 
+				partial
+				class 
+				AdapterImages 
+				: 
+				BaseAdapter
+			{
+				Context context;
+
+				public 
+					AdapterImages 
+					(
+					  Context c
+					)
+				{
+					context = c;
+				}
+
+				public 
+					override 
+					int 
+					Count 
+				{
+					get { return thumbIds.Length; }
+				}
+
+				public 
+					override 
+					Java.Lang.Object 
+					GetItem 
+					(
+					  int position
+					)
+				{
+					return null;
+				}
+
+				public 
+					override 
+					long 
+					GetItemId 
+					(
+					  int position
+					)
+				{
+					return 0;
+				}
+
+				// create a new ImageView for each item referenced by the Adapter
+				public 
+					override 
+					View 
+					GetView 
+					(
+					  int position
+					, View convertView
+					, ViewGroup parent
+					)
+				{
+					ImageView imageView;
+
+					if (convertView == null) 
+					{  
+						// if it's not recycled, initialize some attributes
+						imageView = new ImageView (context);
+						imageView.LayoutParameters = 
+								new GridView.LayoutParams (85, 85);
+						imageView.SetScaleType (ImageView.ScaleType.CenterCrop);
+						imageView.SetPadding (8, 8, 8, 8);
+					} else 
+					{
+						imageView = (ImageView)convertView;
+					}
+
+					imageView.SetImageResource (thumbIds[position]);
+					return imageView;
+				}
+			}
+			
+			/// Move following stuff into separate file!
+			public 
+				partial
+				class 
+				AdapterImages 
+				: 
+				BaseAdapter
+			{			
+				// references to our images
+				int[] thumbIds = 
+				{
+					Resource.Drawable.sample_1, 
+					Resource.Drawable.sample_2, 
+					Resource.Drawable.sample_3,
+					Resource.Drawable.sample_4, 
+					Resource.Drawable.sample_5,
+				};
+			}
+			//=========================================================================
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

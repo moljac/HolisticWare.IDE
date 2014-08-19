@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>mc_threading_periodic_call</Title>
+			<Shortcut>mc_threading_periodic_call</Shortcut>
+			<Description>Code snippet for periodic calls to function</Description>
+			<Author>Miljenko Cvjetko mc++</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>function_name</ID>
+					<ToolTip>function_name</ToolTip>
+					<Default>function_name</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[
+			//=========================================================================
+			bool stop_function_name = false;
+			int timeout = 2000;		// 2 seconds
+			System.Threading.ThreadPool.QueueUserWorkItem
+			(
+				(v) =>
+				{
+					while (!stop_function_name) 
+					{
+						function_name();
+						Thread.Sleep (timeout); 
+					}
+				}
+			);
+			//=========================================================================
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

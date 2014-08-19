@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>hw_m4a_Activity</Title>
+			<Shortcut>hw_m4a_Activity</Shortcut>
+			<Description>hw_m4a_Activity</Description>
+			<Author>Miljenko Cvjetko mc++</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>Activity Name</ToolTip>
+					<Default>Main</Default>
+				</Literal>
+				<Literal>
+					<ID>layout</ID>
+					<ToolTip>Layout Name</ToolTip>
+					<Default>Main</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[
+		    # region    Region Activity$name$
+			//------------------------------------------------------------------
+			[Activity 
+				(
+				  Label = @"Activity$name$"
+				, MainLauncher=false
+				//, Icon = @"@drawable/icon"
+				// 
+				//, Permission = ""
+				)
+			]
+			public 
+				partial
+				class 
+				Activity$name$ 
+				:
+				global::Android.App.Activity
+			{
+				protected 
+					override 
+					void 
+					OnCreate
+					(
+					  global::Android.OS.Bundle bundle
+					)
+				{
+					base.OnCreate (bundle);
+					
+					// Create your application here
+					// Load UI - Presentaion Layer
+					// Set the View from the layout resource $layout$
+					SetContentView (Resource.Layout.$layout$);
+
+					// Add Widgets here
+					
+					return;
+				}
+			}
+			//------------------------------------------------------------------
+			# endregion Region Activity$name$
+]]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

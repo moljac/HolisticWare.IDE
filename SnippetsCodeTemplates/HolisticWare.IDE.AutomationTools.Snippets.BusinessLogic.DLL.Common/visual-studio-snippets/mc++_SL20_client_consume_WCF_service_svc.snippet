@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>mc_SL20_client_consume_WCF_service_svc</Title>
+			<Shortcut>mc_SL20_client_consume_WCF_service_svc</Shortcut>
+			<Description>mc_SL20_client_consume_WCF_service_svc mc++</Description>
+			<Author>Miljenko Cvjetko mc++</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>Class name</ToolTip>
+					<Default>ClassImplementation</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[
+		// config change that you have to do.  When you add a WCF service to an 
+		// ASP.NET application, it alters the web.config to add some binding information. 
+		// By default it adds an endpoint configuration but adds it like this:
+		// <endpoint address="" binding="wsHttpBinding" contract="IWcfService">
+		// 
+		// Silverlight communicates using the BasicHttpBinding for WCF, so you have 
+		// to change it to this (or add another endpoint with this binding):
+
+		// <endpoint address="" binding="basicHttpBinding" contract="IWcfService">
+
+		private void WcfServiceButton_Click(object sender, RoutedEventArgs e)
+		{
+			BasicHttpBinding bind = new BasicHttpBinding();
+			EndpointAddress endpoint = new EndpointAddress("http://localhost/WcfService.svc");
+
+			WcfServiceClient wcf = new WcfServiceClient(bind, endpoint);
+			wcf.HelloWorldFromWcfCompleted += 
+			  new EventHandler<HelloWorldFromWcfCompletedEventArgs>(wcf_HelloWorldFromWcfCompleted);
+			try
+			{
+				wcf.HelloWorldFromWcfAsync(StringToEmit.Text);
+			}
+			catch (Exception ex)
+			{
+				OutputString.Text = ex.Message;
+			}
+		}
+
+		void wcf_HelloWorldFromWcfCompleted(object sender, HelloWorldFromWcfCompletedEventArgs e)
+		{
+			try
+			{
+				OutputString.Text = string.Format("Output from WCF: {0}", e.Result.ToString());
+			}
+			catch (Exception ex)
+			{
+				OutputString.Text = ex.Message;
+			}
+		}
+
+
+	]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

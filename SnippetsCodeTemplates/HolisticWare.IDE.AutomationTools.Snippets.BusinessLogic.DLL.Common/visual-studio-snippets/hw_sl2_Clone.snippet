@@ -1,0 +1,30 @@
+		//	<ItemGroup>
+		//		<Reference Include="mscorlib" />
+		//		<Reference Include="System.Runtime.Serialization" />
+		//		<Reference Include="System.Windows" />
+		//		<Reference Include="system" />
+		//		<Reference Include="System.Core" />
+		//		<Reference Include="System.Xml" />
+		//		<Reference Include="System.Net" />
+		//		<Reference Include="System.Windows.Browser" />
+		//	</ItemGroup>
+		public T Clone<T>(T source)
+		{
+
+			System.Runtime.Serialization.DataContractSerializer dcs;
+			dcs = new System.Runtime.Serialization.DataContractSerializer(typeof(T));
+			T retval = default (T);
+			using (System.IO.MemoryStream ms = new System.IO.MemoryStream())
+			{
+				serializer.WriteObject(ms, source);
+				ms.Seek(0, System.IO.SeekOrigin.Begin);
+				retval = (T)serializer.ReadObject(ms);
+			}
+			
+			return retval;
+		}
+
+		public T Clone<T>()
+		{
+			return this.Clone(this);
+		}

@@ -15,9 +15,9 @@ HolisticWare tools (item and project templates, code snippets/templates) for Vis
 		* 	MonoMac
 
 
-
-
-
+http://motzcod.es/post/81143199096/xamarin-android-templates-pack
+http://visualstudiogallery.msdn.microsoft.com/bee6442f-8f5a-4bba-8849-e380b61e76b0
+https://github.com/jamesmontemagno/Xam.Android-Templates
 http://stackoverflow.com/questions/10236340/custom-control-equivalent-in-xcode-monomac
 https://github.com/Clancey/MonoMac.Windows.Form
 http://www.marcellop.com/resume

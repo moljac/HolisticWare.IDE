@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Log Declaration</Title>
+			<Shortcut>declog</Shortcut>
+			<Description>Declares a static Appprenda Logger instance pointing to the default logger</Description>
+			<Author>Apprenda</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>The name of your logger</ToolTip>
+					<Default>log</Default>
+				</Literal>
+      </Declarations>
+			<Code Language="csharp">
+    <![CDATA[private static readonly ILogger $name$ = LogManager.Instance().GetLogger();
+    $end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

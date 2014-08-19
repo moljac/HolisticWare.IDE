@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>mc_prop_dep</Title>
+      <Shortcut>mc_prop_dep</Shortcut>
+      <Description>Code snippet for WPF/XAML dependecy property (mc++)</Description>
+      <Author>Miljenko Cvjetko mc++</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>type</ID>
+          <ToolTip>Property type</ToolTip>
+          <Default>string</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>property</ID>
+          <ToolTip>Property $field$</ToolTip>
+          <Default>SomeProperty</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>field</ID>
+          <ToolTip>The variable backing this property</ToolTip>
+          <Default>some_property</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>user_control</ID>
+          <ToolTip>User Control for Dependency Property</ToolTip>
+          <Default>user_control</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+	<![CDATA[
+				//---------------------------------------------------------------------------
+				# region  DependecyProperty.$property$
+				/// <summary>
+				/// $property$
+				/// Gets or sets the Dependecy $property$ assigned to the control.
+				/// </summary>
+				public
+					$type$
+					$property$
+				{
+					get
+					{
+						return ($type$)Get$property$($property$Property);
+					} // $property$.get
+					set
+					{
+						Set$property$($property$Property, value);
+					}
+
+
+				/// <summary>
+				/// Identifies the Value dependency property.
+				/// </summary>
+				public
+					static
+					readonly
+					DependencyProperty
+					$property$Property
+					=
+						DependencyProperty.Register
+						(
+    					"$property$"						// XAML property name/id
+   					, typeof($type$)					// 
+   					, typeof($user_control$)	// UserControl containing Property
+						/*
+   					, new FrameworkPropertyMetadata
+   								(
+   									Min$property$
+   								, new PropertyChangedCallback(On$property$Changed)
+   								)
+						*/
+   					);
+
+				private
+					static
+					void
+					On$property$Changed
+					(
+						DependencyObject obj
+					, DependencyPropertyChangedEventArgs args
+					)
+				{
+						$user_control$ control = ($user_control$)obj;
+						control.UpdateTextBlock();
+
+						RoutedPropertyChangedEventArgs<$type$> e;
+						e = new RoutedPropertyChangedEventArgs<$type$>
+    					(
+      					($type$)args.Old$property$
+							, ($type$)args.New$property$
+							, $property$ChangedEvent
+							);
+						control.On$property$Changed(e);
+				}
+
+				/// <summary>
+				/// Identifies the $property$Changed routed event.
+				/// </summary>
+				public
+					static
+					readonly
+					RoutedEvent
+					$property$ChangedEvent =
+						EventManager.RegisterRoutedEvent
+							(
+    						"$property$Changed"
+    					, RoutingStrategy.Bubble
+    					, typeof(RoutedPropertyChangedEventHandler<$type$>)
+    					, typeof($user_control$)
+    					);
+
+				/// <summary>
+				/// Occurs when the $property$ property changes.
+				/// </summary>
+				public
+					event
+					RoutedPropertyChangedEventHandler<$type$>
+					$property$Changed
+				{
+						add
+						{
+    					AddHandler($property$ChangedEvent, $property$);
+						}
+						remove
+						{
+    					RemoveHandler($property$ChangedEvent, $property$);
+						}
+				}
+
+				/// <summary>
+				/// Raises the $property$Changed event.
+				/// </summary>
+				/// <param name="args">
+				/// Arguments associated with the $property$Changed event.
+				</param>
+				protected
+					virtual
+					void
+					On$property$Changed
+					(
+						RoutedPropertyChangedEventArgs<$type$> args
+					)
+				{
+						RaiseEvent(args);
+				}
+				//---------------------------------------------------------------------------
+				# endregion  DependencyProperty.$property$
+  	$end$
+	]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

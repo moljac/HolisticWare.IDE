@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+      <Title>mc_SL20_appstartup</Title>
+      <Author>Miljenko Cvjetko mc++</Author>
+      <Description>mc_SL20_appstartup mc++</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>mc_SL20_appstartup</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Class name</ToolTip>
+          <Default>ClassImplementation</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp"><![CDATA[
+Sometimes you might need to handle the application startup event of a Silverlight application in order to initialize or perform any other operations required by your internal logic. Exactly for this reason there is an Startup event located in your project application class that directly derives from System.Windows.Application. In most cases the name of this class is App and you can access its Startup event like this:
+
+C#
+
+   App.Current.Startup += new StartupEventHandler( ApplicationStartup );
+
+
+	private
+	void 
+	Application_Startup
+	(
+	  object sender
+	, StartupEventArgs e
+	)
+	{
+		if (e.InitParams.ContainsKey("ControlId"))
+		{
+			switch (e.InitParams["ControlId"])
+			{
+				case "Header":
+					this.RootVisual = new Header();
+					break;
+				case "Leftbar":
+					this.RootVisual = new Leftbar();
+					break;
+				case "Footer":
+					this.RootVisual = new Footer();
+					break;
+			}
+
+		}
+
+		if (e.InitParams.Count > 0)
+		{
+			if (e.InitParams["PageID"].Equals("1"))
+				this.RootVisual = new Page();
+			else
+				this.RootVisual = new MainPage();
+		}
+		else
+		{
+			this.RootVisual = new MainPage();
+		}
+			
+		return;    
+	} // Application_Startup
+	]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

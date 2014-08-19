@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>mc_textfile</Title>
+			<Shortcut>mc_textfile</Shortcut>
+			<Description>Code snippet for text file operatiions mc++</Description>
+			<Author>Miljenko Cvjetko mc++</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>filename</ID>
+					<ToolTip>File name</ToolTip>
+					<Default>FileName</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[
+			//=========================================================================
+			System.IO.StreamReader rdr = System.IO.File.OpenText(filename);
+
+			string input = rdr.ReadToEnd();
+			//while ((input = rdr.ReadLine()) != null)
+			{
+				//
+			}
+
+			rdr.Close();
+			rdr = null;
+			//=========================================================================
+			Core.BL.netfx2.dll.Text.Replacer<string, string> replacer;
+			replacer = new Core.BL.netfx2.dll.Text.Replacer<string, string>();
+			replacer.Original = input;
+			//replacer.ReplacemetMapping.Add("", "");
+			//=========================================================================	
+			System.IO.FileInfo fi = new System.IO.FileInfo(filename);
+			System.IO.StreamWriter wrt = fi.CreateText();
+			
+			//wrt.WriteLine("");
+			
+			wrt.Close();
+			wrt = null;
+			//=========================================================================
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

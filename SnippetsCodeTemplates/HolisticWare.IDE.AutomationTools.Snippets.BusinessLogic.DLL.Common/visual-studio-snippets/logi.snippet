@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Log Info</Title>
+			<Shortcut>logi</Shortcut>
+			<Description>Creates a Info Level Log Request</Description>
+			<Author>Apprenda</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>message</ID>
+					<ToolTip>The message to log.</ToolTip>
+					<Default></Default>
+				</Literal>
+        <Literal>
+          <ID>loggerName</ID>
+          <ToolTip>The name of your local logger.</ToolTip>
+          <Default>log</Default>
+        </Literal>        
+			</Declarations>
+			<Code Language="csharp">
+    <![CDATA[if($loggerName$.IsInfoEnabled)
+  {
+    $loggerName$.Info("$message$");
+  }
+  $end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
