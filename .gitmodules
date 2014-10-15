@@ -1,0 +1,6 @@
+[submodule "submodulez/RedthsAddIn"]
+	path = submodulez/RedthsAddIn
+	url = https://github.com/Redth/XamarinStudio.RedthsAddin.git
+[submodule "submodulez/RedthsAndroidSignatureToolAddIn"]
+	path = submodulez/RedthsAndroidSignatureToolAddIn
+	url = https://github.com/Redth/AndroidSignatureToolAddin.git
