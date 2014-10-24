@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+	<TemplateData>
+		<Name>Blank App (Xamarin.Forms Portable)</Name>
+		<Description>A multiproject template for building apps with Xamarin.Forms, sharing code using a portable class library. On Visual Studio 2010, the Portable Class Library Tools are required.</Description>
+		<Icon>ICN_FormsAppTemplate.ico</Icon>
+		<DefaultName>App</DefaultName>
+		<ProjectType>CSharp</ProjectType>
+		<PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+		<NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectCollection>
+			<ProjectTemplateLink ProjectName="$safeprojectname$">
+				FormsTemplate\FormsTemplate.vstemplate
+			</ProjectTemplateLink>
+			<ProjectTemplateLink ProjectName="$safeprojectname$.iOS">
+				FormsTemplate.iOS\FormsTemplate.iOS.vstemplate
+			</ProjectTemplateLink>
+			<ProjectTemplateLink ProjectName="$safeprojectname$.Android">
+				FormsTemplate.Android\FormsTemplate.Android.vstemplate
+			</ProjectTemplateLink>
+			<ProjectTemplateLink ProjectName="$safeprojectname$.WinPhone">
+				FormsTemplate.WinPhone\FormsTemplate.WinPhone.vstemplate
+			</ProjectTemplateLink>
+		</ProjectCollection>
+	</TemplateContent>
+	<WizardExtension>
+		<Assembly>Xamarin.Forms.VSTemplate, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e755b816eb188b35</Assembly>
+		<FullClassName>Xamarin.Forms.RootWizard</FullClassName>
+	</WizardExtension>
+</VSTemplate>

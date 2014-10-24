@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.IDE.Productivity.CopyPasteAsLink", "HolisticWare.IDE.Productivity.CopyPasteAsLink\HolisticWare.IDE.Productivity.CopyPasteAsLink.csproj", "{CFCA5BE7-A1BE-4EB1-A601-26EA39A57643}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{57A2C034-627B-4615-88AD-B714C2985F3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedthAddin", "..\..\submodulez\RedthsAddIn\RedthAddin\RedthAddin.csproj", "{822ABB71-1C84-442B-9347-341FAD978728}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{822ABB71-1C84-442B-9347-341FAD978728}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{822ABB71-1C84-442B-9347-341FAD978728}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{822ABB71-1C84-442B-9347-341FAD978728}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{822ABB71-1C84-442B-9347-341FAD978728}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFCA5BE7-A1BE-4EB1-A601-26EA39A57643}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFCA5BE7-A1BE-4EB1-A601-26EA39A57643}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFCA5BE7-A1BE-4EB1-A601-26EA39A57643}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFCA5BE7-A1BE-4EB1-A601-26EA39A57643}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{822ABB71-1C84-442B-9347-341FAD978728} = {57A2C034-627B-4615-88AD-B714C2985F3B}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = HolisticWare.IDE.Productivity.CopyPasteAsLink\HolisticWare.IDE.Productivity.CopyPasteAsLink.csproj
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

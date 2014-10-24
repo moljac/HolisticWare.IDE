@@ -1,0 +1,58 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Xamarin.Component.Project</Name>
+    <Description>Xamarin Component Packing and Testing project</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Xamarin.Component.Project</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="Xamarin.Component.Project.csproj" File="Xamarin.Component.Project.csproj" ReplaceParameters="true">
+      <Folder Name="bat" TargetFolderName="bat">
+        <ProjectItem ReplaceParameters="false" TargetFileName="compile.sh.command">compile.sh.command</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="component-create.bat">component-create.bat</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="component-create.sh">component-create.sh</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="component-create.sh.command">component-create.sh.command</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="git-add-ignored-libraries.bat">git-add-ignored-libraries.bat</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="windows-bat-step-01-compile.bat">windows-bat-step-01-compile.bat</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="windows-bat-step-02-content.bat">windows-bat-step-02-content.bat</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="windows-bat-step-03-component-pack.bat">windows-bat-step-03-component-pack.bat</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="windows-bat-step-04-component-test.bat">windows-bat-step-04-component-test.bat</ProjectItem>
+      </Folder>
+      <Folder Name="content" TargetFolderName="content">
+        <ProjectItem ReplaceParameters="false" TargetFileName="Details.md">Details.md</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="GettingStarted.md">GettingStarted.md</ProjectItem>
+        <Folder Name="icons" TargetFolderName="icons">
+          <ProjectItem ReplaceParameters="false" TargetFileName="XamarinSampleComponent_128x128.png">XamarinSampleComponent_128x128.png</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="XamarinSampleComponent_512x512.png">XamarinSampleComponent_512x512.png</ProjectItem>
+        </Folder>
+        <Folder Name="lib" TargetFolderName="lib" />
+        <ProjectItem ReplaceParameters="false" TargetFileName="License.md">License.md</ProjectItem>
+        <Folder Name="samples" TargetFolderName="samples">
+          <Folder Name="Android" TargetFolderName="Android" />
+          <Folder Name="iOS" TargetFolderName="iOS" />
+        </Folder>
+      </Folder>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Makefile">Makefile</ProjectItem>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="false" TargetFileName="readme.md">readme.md</ProjectItem>
+      <Folder Name="sbin" TargetFolderName="sbin">
+        <Folder Name="lib" TargetFolderName="lib">
+          <ProjectItem ReplaceParameters="false" TargetFileName="mdoc.exe">mdoc.exe</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="monodoc.dll">monodoc.dll</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="false" TargetFileName="xamarin-component.exe">xamarin-component.exe</ProjectItem>
+      </Folder>
+      <Folder Name="test" TargetFolderName="test" />
+    </Project>
+  </TemplateContent>
+</VSTemplate>

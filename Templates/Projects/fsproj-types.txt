@@ -1,0 +1,12 @@
+./Templates/Projects/XamarinStudio/Mac/FS/Android/Android.Honeycomb.Application-FS/Android.Honeycomb.Application-FS.fsproj:    
+{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{F278D4AB-4730-4720-B08E-FE5E31564D9E};{4925A630-B079-445D-BCD4-3A9C94FE9307}
+./Templates/Projects/XamarinStudio/Mac/FS/Android/Android.IceCreamSandwich.Application-FS/Android.IceCreamSandwich.Application-FS.fsproj:    
+{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{F278D4AB-4730-4720-B08E-FE5E31564D9E};{4925A630-B079-445D-BCD4-3A9C94FE9307}
+./Templates/Projects/XamarinStudio/Mac/FS/Android/Android.Library.Project-FS/Android.Library.Project-FS.fsproj:    
+{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{F278D4AB-4730-4720-B08E-FE5E31564D9E};{4925A630-B079-445D-BCD4-3A9C94FE9307}
+./Templates/Projects/XamarinStudio/Mac/FS/Android/Android.OpenGL.Application-FS/Android.OpenGL.Application-FS.fsproj:    
+{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{F278D4AB-4730-4720-B08E-FE5E31564D9E};{4925A630-B079-445D-BCD4-3A9C94FE9307}
+./Templates/Projects/XamarinStudio/Mac/FS/Android/Android.Unit.Test.Project-FS/Android.Unit.Test.Project-FS.fsproj:    
+{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{F278D4AB-4730-4720-B08E-FE5E31564D9E};{4925A630-B079-445D-BCD4-3A9C94FE9307}
+./Templates/Projects/XamarinStudio/Mac/FS/Android/AndroidApplication-FS/AndroidApplication-FS.fsproj:    
+{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{F278D4AB-4730-4720-B08E-FE5E31564D9E};{4925A630-B079-445D-BCD4-3A9C94FE9307}

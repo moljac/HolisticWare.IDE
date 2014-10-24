@@ -1,0 +1,33 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Universal Xamarin.Forms Library (App Component)</Name>
+    <Description>Forms PCL Library Project</Description>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>FormsTemplate</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <Icon>__TemplateIcon.ico</Icon>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="$safeprojectname$.csproj" File="FormsTemplate.csproj" ReplaceParameters="true">
+      <ProjectItem OpenInEditor="true" ReplaceParameters="true" TargetFileName="App.cs">App.cs</ProjectItem>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Xamarin.Forms.VSTemplate, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e755b816eb188b35</Assembly>
+    <FullClassName>Xamarin.Forms.ChildWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <packages repository="extension" repositoryId="Xamarin.VisualStudio">
+      <package id="Xamarin.Forms" version="1.0.6186" />
+    </packages>
+  </WizardData>
+</VSTemplate>
