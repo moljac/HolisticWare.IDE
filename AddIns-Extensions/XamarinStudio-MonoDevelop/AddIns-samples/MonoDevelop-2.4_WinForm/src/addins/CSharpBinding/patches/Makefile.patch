@@ -1,0 +1,12 @@
+--- Makefile.org	2010-10-20 19:32:28.000000000 +0200
++++ Makefile	2010-10-20 09:52:53.000000000 +0200
+@@ -355,7 +355,9 @@ RES = \
+ 	MonoDevelop.CSharp.Formatting/CSharpFormattingPolicy.xml \
+ 	templates/AssemblyInfo.xft.xml \
+ 	templates/ConsoleProject.xpt.xml \
++	templates/WinFormProject.xpt.xml \
+ 	templates/EmptyCSharpFile.xft.xml \
++	templates/EmptyFormCSharpFile.xft.xml \
+ 	templates/EmptyProject.xpt.xml \
+ 	templates/GtkSharp2Project.xpt.xml \
+ 	templates/GtkSharp2ProjectMac.xpt.xml \

@@ -1,0 +1,16 @@
+--- CSharpBinding_copy.addin.xml	2010-06-14 21:48:25.000000000 +0200
++++ CSharpBinding.addin.xml	2010-10-20 09:57:15.000000000 +0200
+@@ -27,11 +27,13 @@
+ 
+ 	<Extension path = "/MonoDevelop/Ide/FileTemplates">
+ 		<FileTemplate id = "CSharpEmptyFile" resource = "EmptyCSharpFile.xft.xml"/>
++		<FileTemplate id = "CSharpEmptyFormFile" resource = "EmptyFormCSharpFile.xft.xml"/>
+ 		<FileTemplate id = "CSharpAssemblyInfo" resource = "AssemblyInfo.xft.xml"/>
+ 	</Extension>
+ 
+ 	<Extension path = "/MonoDevelop/Ide/ProjectTemplates">
+ 		<ProjectTemplate id = "CSharpConsoleProject" resource = "ConsoleProject.xpt.xml"/>
++		<ProjectTemplate id = "CSharpWinFormProject" resource = "WinFormProject.xpt.xml"/>
+ 		<ProjectTemplate id = "CSharpEmptyProject" resource = "EmptyProject.xpt.xml"/>
+ 		<Condition id="Platform" value="!mac">
+ 			<ProjectTemplate id = "CSharpGtkSharp2Project" resource = "GtkSharp2Project.xpt.xml"/>
