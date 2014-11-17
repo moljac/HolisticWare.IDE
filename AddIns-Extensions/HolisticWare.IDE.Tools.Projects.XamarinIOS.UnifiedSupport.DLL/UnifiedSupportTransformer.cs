@@ -8,6 +8,8 @@ using System.IO;
 using System.Text.RegularExpressions;
 using System.Xml;
 
+using HolisticWare.IDE.Tools.Projects.DomainBusinessLogic;
+
 
 namespace HolisticWare.IDE.Tools.Projects.XamarinIOS.UnifiedSupport
 {

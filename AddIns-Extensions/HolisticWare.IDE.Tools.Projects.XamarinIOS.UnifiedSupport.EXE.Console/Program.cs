@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 using System.Diagnostics;
 
-namespace Xamarin.iOS.UnifiedSupportTransformer
+using HolisticWare.IDE.Tools.Projects.XamarinIOS.UnifiedSupport;
+
+namespace IDE.Tools.Projects.XamarinIOS.UnifiedSupport.EXE
 {
 	class Program
 	{

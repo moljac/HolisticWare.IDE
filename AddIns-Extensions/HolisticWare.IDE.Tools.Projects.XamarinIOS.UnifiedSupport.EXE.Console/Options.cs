@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using CommandLine;
 using CommandLine.Text;
 
-namespace Xamarin.iOS.UnifiedSupportTransformer
+namespace IDE.Tools.Projects.XamarinIOS.UnifiedSupport.EXE
 {
 	public partial class UnifiedSupportTransformerCommandLineOptions
 	{

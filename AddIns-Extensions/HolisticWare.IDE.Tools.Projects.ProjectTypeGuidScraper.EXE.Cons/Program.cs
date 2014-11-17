@@ -1,8 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
+using HolisticWare.IDE.Tools.Projects.DomainBusinessLogic;
 
 namespace HolisticWare.IDE.Tools.Projects.ProjectTypeGuidScraper.EXE
 {
