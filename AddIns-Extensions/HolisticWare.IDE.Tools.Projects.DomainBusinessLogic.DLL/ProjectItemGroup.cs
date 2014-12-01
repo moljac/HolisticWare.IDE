@@ -14,11 +14,17 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 
 		private ProjectItemGroupObjcBindingApiDefinition objcBindingApiDefinitionField;
 
-		private ProjectItemGroupFolder folderField;
+		private ProjectItemGroupFolder[] folderField;
 
 		private ProjectItemGroupReference[] referenceField;
 
-		
+		private ProjectItemGroupCompile compileField;
+
+		private ProjectItemGroupContent[] contentField;
+
+		private ProjectItemGroupNone[] noneField;
+
+	
 		public ProjectItemGroupObjcBindingCoreSource ObjcBindingCoreSource
 		{
 			get
@@ -44,8 +50,10 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 			}
 		}
 
-		
-		public ProjectItemGroupFolder Folder
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlElementAttribute("Folder")]
+		public ProjectItemGroupFolder[] Folder
 		{
 			get
 			{
@@ -70,5 +78,49 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 				this.referenceField = value;
 			}
 		}
+
+
+
+		/// <remarks/>
+		public ProjectItemGroupCompile Compile
+		{
+			get
+			{
+				return this.compileField;
+			}
+			set
+			{
+				this.compileField = value;
+			}
+		}
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlElementAttribute("Content")]
+		public ProjectItemGroupContent[] Content
+		{
+			get
+			{
+				return this.contentField;
+			}
+			set
+			{
+				this.contentField = value;
+			}
+		}
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlElementAttribute("None")]
+		public ProjectItemGroupNone[] None
+		{
+			get
+			{
+				return this.noneField;
+			}
+			set
+			{
+				this.noneField = value;
+			}
+		}
+
 	}
 }

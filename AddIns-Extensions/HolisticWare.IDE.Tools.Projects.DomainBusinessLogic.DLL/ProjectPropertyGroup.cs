@@ -23,6 +23,8 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 
 		private string outputPathField;
 
+		private string appDesignerFolderField;
+		
 		private string defineConstantsField;
 
 		private string errorReportField;
@@ -38,6 +40,8 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 		private bool allowUnsafeBlocksField;
 
 		private bool allowUnsafeBlocksFieldSpecified;
+
+		private ProjectPropertyGroupCustomCommands customCommandsField;
 
 		private ProjectPropertyGroupConfiguration configurationField;
 
@@ -65,6 +69,35 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 
 		private string conditionField;
 
+		private string targetFrameworkVersionField;
+
+		private string targetFrameworkProfileField;
+
+		private ushort fileAlignmentField;
+
+		private bool fileAlignmentFieldSpecified;
+
+		private string postBuildEventField;
+
+		private string platformTargetField;
+
+
+
+		private bool androidApplicationField;
+
+		private bool androidApplicationFieldSpecified;
+
+		private string androidResgenFileField;
+
+		private string generateSerializationAssembliesField;
+
+		private string androidManifestField;
+
+		private string androidUseSharedRuntimeField;
+
+		private string androidLinkModeField;
+
+		
 		
 		public bool DebugSymbols
 		{
@@ -78,8 +111,7 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 			}
 		}
 
-		
-		[System.Xml.Serialization.XmlIgnoreAttribute()]
+
 		public bool DebugSymbolsSpecified
 		{
 			get
@@ -92,7 +124,7 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 			}
 		}
 
-		
+
 		public string DebugType
 		{
 			get
@@ -119,7 +151,6 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 		}
 
 		
-		[System.Xml.Serialization.XmlIgnoreAttribute()]
 		public bool OptimizeSpecified
 		{
 			get
@@ -145,6 +176,17 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 			}
 		}
 
+		public string AppDesignerFolder
+		{
+			get
+			{
+				return this.appDesignerFolderField;
+			}
+			set
+			{
+				this.appDesignerFolderField = value;
+			}
+		}
 		
 		public string DefineConstants
 		{
@@ -185,7 +227,6 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 		}
 
 		
-		[System.Xml.Serialization.XmlIgnoreAttribute()]
 		public bool WarningLevelSpecified
 		{
 			get
@@ -212,7 +253,6 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 		}
 
 		
-		[System.Xml.Serialization.XmlIgnoreAttribute()]
 		public bool ConsolePauseSpecified
 		{
 			get
@@ -239,7 +279,6 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 		}
 
 		
-		[System.Xml.Serialization.XmlIgnoreAttribute()]
 		public bool AllowUnsafeBlocksSpecified
 		{
 			get
@@ -318,7 +357,6 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 		}
 
 		
-		[System.Xml.Serialization.XmlIgnoreAttribute()]
 		public bool SchemaVersionSpecified
 		{
 			get
@@ -422,6 +460,207 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 				this.conditionField = value;
 			}
 		}
+
+		/// <remarks/>
+		public string TargetFrameworkVersion
+		{
+			get
+			{
+				return this.targetFrameworkVersionField;
+			}
+			set
+			{
+				this.targetFrameworkVersionField = value;
+			}
+		}
+
+		/// <remarks/>
+		public string TargetFrameworkProfile
+		{
+			get
+			{
+				return this.targetFrameworkProfileField;
+			}
+			set
+			{
+				this.targetFrameworkProfileField = value;
+			}
+		}
+
+
+		/// <remarks/>
+		public ushort FileAlignment
+		{
+			get
+			{
+				return this.fileAlignmentField;
+			}
+			set
+			{
+				this.fileAlignmentField = value;
+			}
+		}
+
+		/// <remarks/>
+		public bool FileAlignmentSpecified
+		{
+			get
+			{
+				return this.fileAlignmentFieldSpecified;
+			}
+			set
+			{
+				this.fileAlignmentFieldSpecified = value;
+			}
+		}
+
+		public string PostBuildEvent
+		{
+			get
+			{
+				return this.postBuildEventField;
+			}
+			set
+			{
+				this.postBuildEventField = value;
+			}
+		}
+
+
+		/// <remarks/>
+		public string PlatformTarget
+		{
+			get
+			{
+				return this.platformTargetField;
+			}
+			set
+			{
+				this.platformTargetField = value;
+			}
+		}
+
+
+		/// <remarks/>
+		public ProjectPropertyGroupCustomCommands CustomCommands
+		{
+			get
+			{
+				return this.customCommandsField;
+			}
+			set
+			{
+				this.customCommandsField = value;
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+		/// <remarks/>
+		public bool AndroidApplication
+		{
+			get
+			{
+				return this.androidApplicationField;
+			}
+			set
+			{
+				this.androidApplicationField = value;
+			}
+		}
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlIgnoreAttribute()]
+		public bool AndroidApplicationSpecified
+		{
+			get
+			{
+				return this.androidApplicationFieldSpecified;
+			}
+			set
+			{
+				this.androidApplicationFieldSpecified = value;
+			}
+		}
+
+		/// <remarks/>
+		public string AndroidResgenFile
+		{
+			get
+			{
+				return this.androidResgenFileField;
+			}
+			set
+			{
+				this.androidResgenFileField = value;
+			}
+		}
+
+		/// <remarks/>
+		public string GenerateSerializationAssemblies
+		{
+			get
+			{
+				return this.generateSerializationAssembliesField;
+			}
+			set
+			{
+				this.generateSerializationAssembliesField = value;
+			}
+		}
+
+		/// <remarks/>
+		public string AndroidManifest
+		{
+			get
+			{
+				return this.androidManifestField;
+			}
+			set
+			{
+				this.androidManifestField = value;
+			}
+		}
+
+		/// <remarks/>
+		public string AndroidUseSharedRuntime
+		{
+			get
+			{
+				return this.androidUseSharedRuntimeField;
+			}
+			set
+			{
+				this.androidUseSharedRuntimeField = value;
+			}
+		}
+
+		/// <remarks/>
+		public string AndroidLinkMode
+		{
+			get
+			{
+				return this.androidLinkModeField;
+			}
+			set
+			{
+				this.androidLinkModeField = value;
+			}
+		}
+
+	
+	
+	
 	}
 
 }

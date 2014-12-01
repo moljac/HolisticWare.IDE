@@ -446,7 +446,6 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic.XamarinStudio.Xama
 		}
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlIgnoreAttribute()]
 		public bool SpecificVersionSpecified
 		{
 			get
