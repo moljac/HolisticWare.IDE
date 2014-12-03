@@ -13,6 +13,8 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 
 		private string includeField;
 
+		private string copyToOutputDirectoryField;
+
 		/// <remarks/>
 		[System.Xml.Serialization.XmlAttributeAttribute()]
 		public string Include
@@ -26,5 +28,19 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 				this.includeField = value;
 			}
 		}
+
+		/// <remarks/>
+		public string CopyToOutputDirectory
+		{
+			get
+			{
+				return this.copyToOutputDirectoryField;
+			}
+			set
+			{
+				this.copyToOutputDirectoryField = value;
+			}
+		}
+
 	}
 }

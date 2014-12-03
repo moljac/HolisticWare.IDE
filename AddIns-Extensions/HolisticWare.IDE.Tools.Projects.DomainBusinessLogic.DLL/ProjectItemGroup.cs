@@ -10,21 +10,42 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 	public partial class ProjectItemGroup
 	{
 
-		private ProjectItemGroupObjcBindingCoreSource objcBindingCoreSourceField;
-
-		private ProjectItemGroupObjcBindingApiDefinition objcBindingApiDefinitionField;
 
 		private ProjectItemGroupFolder[] folderField;
 
 		private ProjectItemGroupReference[] referenceField;
 
-		private ProjectItemGroupCompile compileField;
+		private ProjectItemGroupCompile[] compileField;
 
 		private ProjectItemGroupContent[] contentField;
 
 		private ProjectItemGroupNone[] noneField;
 
+		//-----------------------------------------------------------------------
+		// Xamarin.Android
+		//................................................................
+		private ProjectItemGroupAndroidResource androidResourceField;
+		//................................................................
+		// Xamarin.Android Bindings
+		private ProjectItemGroupTransformFile[] transformFileField;
+		//-----------------------------------------------------------------------
+
+		//ios
+		private ProjectItemGroupObjcBindingCoreSource objcBindingCoreSourceField;
+
+		private ProjectItemGroupObjcBindingApiDefinition objcBindingApiDefinitionField;
+
 	
+		//WP
+		private ProjectItemGroupApplicationDefinition applicationDefinitionField;
+
+		private ProjectItemGroupPage pageField;
+
+		private ProjectItemGroupEmbeddedResource embeddedResourceField;
+		private ProjectItemGroupProjectReference projectReferenceField;
+
+
+
 		public ProjectItemGroupObjcBindingCoreSource ObjcBindingCoreSource
 		{
 			get
@@ -82,7 +103,8 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 
 
 		/// <remarks/>
-		public ProjectItemGroupCompile Compile
+		[System.Xml.Serialization.XmlElementAttribute("Compile")]
+		public ProjectItemGroupCompile[] Compile
 		{
 			get
 			{
@@ -122,5 +144,93 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 			}
 		}
 
+		/// <remarks/>
+		public ProjectItemGroupProjectReference ProjectReference
+		{
+			get
+			{
+				return this.projectReferenceField;
+			}
+			set
+			{
+				this.projectReferenceField = value;
+			}
+		}
+
+		public ProjectItemGroupEmbeddedResource EmbeddedResource
+		{
+			get
+			{
+				return this.embeddedResourceField;
+			}
+			set
+			{
+				this.embeddedResourceField = value;
+			}
+		}
+
+		
+		public ProjectItemGroupAndroidResource AndroidResource
+		{
+			get
+			{
+				return this.androidResourceField;
+			}
+			set
+			{
+				this.androidResourceField = value;
+			}
+		}
+
+		[System.Xml.Serialization.XmlElementAttribute("TransformFile")]
+		public ProjectItemGroupTransformFile[] TransformFile
+		{
+			get
+			{
+				return this.transformFileField;
+			}
+			set
+			{
+				this.transformFileField = value;
+			}
+		}
+
+
+
+
+
+		/// <remarks/>
+		public ProjectItemGroupApplicationDefinition ApplicationDefinition
+		{
+			get
+			{
+				return this.applicationDefinitionField;
+			}
+			set
+			{
+				this.applicationDefinitionField = value;
+			}
+		}
+
+		/// <remarks/>
+		public ProjectItemGroupPage Page
+		{
+			get
+			{
+				return this.pageField;
+			}
+			set
+			{
+				this.pageField = value;
+			}
+		}
+	
+	
+	
+	
+	
+	
+	
+	
 	}
 }

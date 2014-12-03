@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic.tmp
 {
 
+
 	/// <remarks/>
 	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
 	[System.Xml.Serialization.XmlRootAttribute(Namespace = "http://schemas.microsoft.com/developer/msbuild/2003", IsNullable = false)]
@@ -15,13 +16,11 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic.tmp
 
 		private ProjectPropertyGroup[] propertyGroupField;
 
-		private ProjectItemGroup[] itemGroupField;
-
-		private ProjectImport importField;
-
-		private decimal toolsVersionField;
+		private ProjectItemGroup itemGroupField;
 
 		private string defaultTargetsField;
+
+		private decimal toolsVersionField;
 
 		/// <remarks/>
 		[System.Xml.Serialization.XmlElementAttribute("PropertyGroup")]
@@ -38,8 +37,7 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic.tmp
 		}
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlElementAttribute("ItemGroup")]
-		public ProjectItemGroup[] ItemGroup
+		public ProjectItemGroup ItemGroup
 		{
 			get
 			{
@@ -48,33 +46,6 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic.tmp
 			set
 			{
 				this.itemGroupField = value;
-			}
-		}
-
-		/// <remarks/>
-		public ProjectImport Import
-		{
-			get
-			{
-				return this.importField;
-			}
-			set
-			{
-				this.importField = value;
-			}
-		}
-
-		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
-		public decimal ToolsVersion
-		{
-			get
-			{
-				return this.toolsVersionField;
-			}
-			set
-			{
-				this.toolsVersionField = value;
 			}
 		}
 
@@ -91,6 +62,20 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic.tmp
 				this.defaultTargetsField = value;
 			}
 		}
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlAttributeAttribute()]
+		public decimal ToolsVersion
+		{
+			get
+			{
+				return this.toolsVersionField;
+			}
+			set
+			{
+				this.toolsVersionField = value;
+			}
+		}
 	}
 
 	/// <remarks/>
@@ -102,25 +87,23 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic.tmp
 
 		private bool debugSymbolsFieldSpecified;
 
-		private string debugTypeField;
-
-		private bool optimizeField;
-
-		private bool optimizeFieldSpecified;
-
 		private string outputPathField;
 
-		private string defineConstantsField;
+		private bool externalconsoleField;
 
-		private string errorReportField;
+		private bool externalconsoleFieldSpecified;
 
-		private byte warningLevelField;
+		private string outputNameField;
 
-		private bool warningLevelFieldSpecified;
+		private string compileTargetField;
 
-		private string androidUseSharedRuntimeField;
+		private byte optimizationLevelField;
 
-		private string androidLinkModeField;
+		private bool optimizationLevelFieldSpecified;
+
+		private string defineSymbolsField;
+
+		private string sourceDirectoryField;
 
 		private ProjectPropertyGroupConfiguration configurationField;
 
@@ -134,29 +117,11 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic.tmp
 
 		private string projectGuidField;
 
-		private string projectTypeGuidsField;
+		private ProjectPropertyGroupCompiler compilerField;
 
-		private string outputTypeField;
+		private string languageField;
 
-		private string appDesignerFolderField;
-
-		private string rootNamespaceField;
-
-		private string assemblyNameField;
-
-		private ushort fileAlignmentField;
-
-		private bool fileAlignmentFieldSpecified;
-
-		private bool androidApplicationField;
-
-		private bool androidApplicationFieldSpecified;
-
-		private string androidResgenFileField;
-
-		private string generateSerializationAssembliesField;
-
-		private string androidManifestField;
+		private string targetField;
 
 		private string conditionField;
 
@@ -188,46 +153,6 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic.tmp
 		}
 
 		/// <remarks/>
-		public string DebugType
-		{
-			get
-			{
-				return this.debugTypeField;
-			}
-			set
-			{
-				this.debugTypeField = value;
-			}
-		}
-
-		/// <remarks/>
-		public bool Optimize
-		{
-			get
-			{
-				return this.optimizeField;
-			}
-			set
-			{
-				this.optimizeField = value;
-			}
-		}
-
-		/// <remarks/>
-		[System.Xml.Serialization.XmlIgnoreAttribute()]
-		public bool OptimizeSpecified
-		{
-			get
-			{
-				return this.optimizeFieldSpecified;
-			}
-			set
-			{
-				this.optimizeFieldSpecified = value;
-			}
-		}
-
-		/// <remarks/>
 		public string OutputPath
 		{
 			get
@@ -241,81 +166,108 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic.tmp
 		}
 
 		/// <remarks/>
-		public string DefineConstants
+		public bool Externalconsole
 		{
 			get
 			{
-				return this.defineConstantsField;
+				return this.externalconsoleField;
 			}
 			set
 			{
-				this.defineConstantsField = value;
-			}
-		}
-
-		/// <remarks/>
-		public string ErrorReport
-		{
-			get
-			{
-				return this.errorReportField;
-			}
-			set
-			{
-				this.errorReportField = value;
-			}
-		}
-
-		/// <remarks/>
-		public byte WarningLevel
-		{
-			get
-			{
-				return this.warningLevelField;
-			}
-			set
-			{
-				this.warningLevelField = value;
+				this.externalconsoleField = value;
 			}
 		}
 
 		/// <remarks/>
 		[System.Xml.Serialization.XmlIgnoreAttribute()]
-		public bool WarningLevelSpecified
+		public bool ExternalconsoleSpecified
 		{
 			get
 			{
-				return this.warningLevelFieldSpecified;
+				return this.externalconsoleFieldSpecified;
 			}
 			set
 			{
-				this.warningLevelFieldSpecified = value;
+				this.externalconsoleFieldSpecified = value;
 			}
 		}
 
 		/// <remarks/>
-		public string AndroidUseSharedRuntime
+		public string OutputName
 		{
 			get
 			{
-				return this.androidUseSharedRuntimeField;
+				return this.outputNameField;
 			}
 			set
 			{
-				this.androidUseSharedRuntimeField = value;
+				this.outputNameField = value;
 			}
 		}
 
 		/// <remarks/>
-		public string AndroidLinkMode
+		public string CompileTarget
 		{
 			get
 			{
-				return this.androidLinkModeField;
+				return this.compileTargetField;
 			}
 			set
 			{
-				this.androidLinkModeField = value;
+				this.compileTargetField = value;
+			}
+		}
+
+		/// <remarks/>
+		public byte OptimizationLevel
+		{
+			get
+			{
+				return this.optimizationLevelField;
+			}
+			set
+			{
+				this.optimizationLevelField = value;
+			}
+		}
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlIgnoreAttribute()]
+		public bool OptimizationLevelSpecified
+		{
+			get
+			{
+				return this.optimizationLevelFieldSpecified;
+			}
+			set
+			{
+				this.optimizationLevelFieldSpecified = value;
+			}
+		}
+
+		/// <remarks/>
+		public string DefineSymbols
+		{
+			get
+			{
+				return this.defineSymbolsField;
+			}
+			set
+			{
+				this.defineSymbolsField = value;
+			}
+		}
+
+		/// <remarks/>
+		public string SourceDirectory
+		{
+			get
+			{
+				return this.sourceDirectoryField;
+			}
+			set
+			{
+				this.sourceDirectoryField = value;
 			}
 		}
 
@@ -399,160 +351,41 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic.tmp
 		}
 
 		/// <remarks/>
-		public string ProjectTypeGuids
+		public ProjectPropertyGroupCompiler Compiler
 		{
 			get
 			{
-				return this.projectTypeGuidsField;
+				return this.compilerField;
 			}
 			set
 			{
-				this.projectTypeGuidsField = value;
+				this.compilerField = value;
 			}
 		}
 
 		/// <remarks/>
-		public string OutputType
+		public string Language
 		{
 			get
 			{
-				return this.outputTypeField;
+				return this.languageField;
 			}
 			set
 			{
-				this.outputTypeField = value;
+				this.languageField = value;
 			}
 		}
 
 		/// <remarks/>
-		public string AppDesignerFolder
+		public string Target
 		{
 			get
 			{
-				return this.appDesignerFolderField;
+				return this.targetField;
 			}
 			set
 			{
-				this.appDesignerFolderField = value;
-			}
-		}
-
-		/// <remarks/>
-		public string RootNamespace
-		{
-			get
-			{
-				return this.rootNamespaceField;
-			}
-			set
-			{
-				this.rootNamespaceField = value;
-			}
-		}
-
-		/// <remarks/>
-		public string AssemblyName
-		{
-			get
-			{
-				return this.assemblyNameField;
-			}
-			set
-			{
-				this.assemblyNameField = value;
-			}
-		}
-
-		/// <remarks/>
-		public ushort FileAlignment
-		{
-			get
-			{
-				return this.fileAlignmentField;
-			}
-			set
-			{
-				this.fileAlignmentField = value;
-			}
-		}
-
-		/// <remarks/>
-		[System.Xml.Serialization.XmlIgnoreAttribute()]
-		public bool FileAlignmentSpecified
-		{
-			get
-			{
-				return this.fileAlignmentFieldSpecified;
-			}
-			set
-			{
-				this.fileAlignmentFieldSpecified = value;
-			}
-		}
-
-		/// <remarks/>
-		public bool AndroidApplication
-		{
-			get
-			{
-				return this.androidApplicationField;
-			}
-			set
-			{
-				this.androidApplicationField = value;
-			}
-		}
-
-		/// <remarks/>
-		[System.Xml.Serialization.XmlIgnoreAttribute()]
-		public bool AndroidApplicationSpecified
-		{
-			get
-			{
-				return this.androidApplicationFieldSpecified;
-			}
-			set
-			{
-				this.androidApplicationFieldSpecified = value;
-			}
-		}
-
-		/// <remarks/>
-		public string AndroidResgenFile
-		{
-			get
-			{
-				return this.androidResgenFileField;
-			}
-			set
-			{
-				this.androidResgenFileField = value;
-			}
-		}
-
-		/// <remarks/>
-		public string GenerateSerializationAssemblies
-		{
-			get
-			{
-				return this.generateSerializationAssembliesField;
-			}
-			set
-			{
-				this.generateSerializationAssembliesField = value;
-			}
-		}
-
-		/// <remarks/>
-		public string AndroidManifest
-		{
-			get
-			{
-				return this.androidManifestField;
-			}
-			set
-			{
-				this.androidManifestField = value;
+				this.targetField = value;
 			}
 		}
 
@@ -649,62 +482,56 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic.tmp
 
 	/// <remarks/>
 	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
+	public partial class ProjectPropertyGroupCompiler
+	{
+
+		private ProjectPropertyGroupCompilerCompiler compilerField;
+
+		/// <remarks/>
+		public ProjectPropertyGroupCompilerCompiler Compiler
+		{
+			get
+			{
+				return this.compilerField;
+			}
+			set
+			{
+				this.compilerField = value;
+			}
+		}
+	}
+
+	/// <remarks/>
+	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
+	public partial class ProjectPropertyGroupCompilerCompiler
+	{
+
+		private string ctypeField;
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlAttributeAttribute()]
+		public string ctype
+		{
+			get
+			{
+				return this.ctypeField;
+			}
+			set
+			{
+				this.ctypeField = value;
+			}
+		}
+	}
+
+	/// <remarks/>
+	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
 	public partial class ProjectItemGroup
 	{
 
-		private ProjectItemGroupContent contentField;
-
-		private ProjectItemGroupAndroidResource androidResourceField;
-
-		private ProjectItemGroupNone[] noneField;
-
-		private ProjectItemGroupCompile[] compileField;
-
-		private ProjectItemGroupReference[] referenceField;
+		private ProjectItemGroupCompile compileField;
 
 		/// <remarks/>
-		public ProjectItemGroupContent Content
-		{
-			get
-			{
-				return this.contentField;
-			}
-			set
-			{
-				this.contentField = value;
-			}
-		}
-
-		/// <remarks/>
-		public ProjectItemGroupAndroidResource AndroidResource
-		{
-			get
-			{
-				return this.androidResourceField;
-			}
-			set
-			{
-				this.androidResourceField = value;
-			}
-		}
-
-		/// <remarks/>
-		[System.Xml.Serialization.XmlElementAttribute("None")]
-		public ProjectItemGroupNone[] None
-		{
-			get
-			{
-				return this.noneField;
-			}
-			set
-			{
-				this.noneField = value;
-			}
-		}
-
-		/// <remarks/>
-		[System.Xml.Serialization.XmlElementAttribute("Compile")]
-		public ProjectItemGroupCompile[] Compile
+		public ProjectItemGroupCompile Compile
 		{
 			get
 			{
@@ -713,86 +540,6 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic.tmp
 			set
 			{
 				this.compileField = value;
-			}
-		}
-
-		/// <remarks/>
-		[System.Xml.Serialization.XmlElementAttribute("Reference")]
-		public ProjectItemGroupReference[] Reference
-		{
-			get
-			{
-				return this.referenceField;
-			}
-			set
-			{
-				this.referenceField = value;
-			}
-		}
-	}
-
-	/// <remarks/>
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectItemGroupContent
-	{
-
-		private string includeField;
-
-		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
-		public string Include
-		{
-			get
-			{
-				return this.includeField;
-			}
-			set
-			{
-				this.includeField = value;
-			}
-		}
-	}
-
-	/// <remarks/>
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectItemGroupAndroidResource
-	{
-
-		private string includeField;
-
-		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
-		public string Include
-		{
-			get
-			{
-				return this.includeField;
-			}
-			set
-			{
-				this.includeField = value;
-			}
-		}
-	}
-
-	/// <remarks/>
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectItemGroupNone
-	{
-
-		private string includeField;
-
-		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
-		public string Include
-		{
-			get
-			{
-				return this.includeField;
-			}
-			set
-			{
-				this.includeField = value;
 			}
 		}
 	}
@@ -818,51 +565,6 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic.tmp
 			}
 		}
 	}
-
-	/// <remarks/>
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectItemGroupReference
-	{
-
-		private string includeField;
-
-		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
-		public string Include
-		{
-			get
-			{
-				return this.includeField;
-			}
-			set
-			{
-				this.includeField = value;
-			}
-		}
-	}
-
-	/// <remarks/>
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectImport
-	{
-
-		private string projectField;
-
-		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
-		public string Project
-		{
-			get
-			{
-				return this.projectField;
-			}
-			set
-			{
-				this.projectField = value;
-			}
-		}
-	}
-
 
 
 

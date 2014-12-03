@@ -8,12 +8,12 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 {
 	/// <remarks/>
 	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectItemGroupNone
+	public partial class ProjectItemGroupProjectReference
 	{
 
 		private string includeField;
 
-		private string subTypeField;
+		private string nameField;
 
 		/// <remarks/>
 		[System.Xml.Serialization.XmlAttributeAttribute()]
@@ -29,21 +29,17 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 			}
 		}
 
-
 		/// <remarks/>
-		public string SubType
+		public string Name
 		{
 			get
 			{
-				return this.subTypeField;
+				return this.nameField;
 			}
 			set
 			{
-				this.subTypeField = value;
+				this.nameField = value;
 			}
 		}
-
-
 	}
-
 }

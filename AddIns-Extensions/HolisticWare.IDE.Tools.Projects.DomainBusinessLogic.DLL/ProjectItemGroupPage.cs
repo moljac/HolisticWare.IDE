@@ -8,27 +8,14 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 {
 	/// <remarks/>
 	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectItemGroupNone
+	public partial class ProjectItemGroupPage
 	{
-
-		private string includeField;
 
 		private string subTypeField;
 
-		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
-		public string Include
-		{
-			get
-			{
-				return this.includeField;
-			}
-			set
-			{
-				this.includeField = value;
-			}
-		}
+		private string generatorField;
 
+		private string includeField;
 
 		/// <remarks/>
 		public string SubType
@@ -43,7 +30,31 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 			}
 		}
 
+		/// <remarks/>
+		public string Generator
+		{
+			get
+			{
+				return this.generatorField;
+			}
+			set
+			{
+				this.generatorField = value;
+			}
+		}
 
+		/// <remarks/>
+		[System.Xml.Serialization.XmlAttributeAttribute()]
+		public string Include
+		{
+			get
+			{
+				return this.includeField;
+			}
+			set
+			{
+				this.includeField = value;
+			}
+		}
 	}
-
 }

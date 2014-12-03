@@ -43,6 +43,10 @@ namespace HolisticWare.IDE.Tools.Projects.ProjectTypeGuidScraper.EXE
 				}
 			}
 
+			if (nodes_unknown_total.Keys.Count > 0)
+			{
+				throw new System.SystemException("Project with unknown node found!");
+			}
 			//SerializationWarmUp();
 
 			return;

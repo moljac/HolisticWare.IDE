@@ -17,13 +17,13 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 
 		private ProjectItemGroup[] itemGroupField;
 
-		private ProjectImport importField;
+		private ProjectImport[] importField;
 
 		private string defaultTargetsField;
 
 		private decimal toolsVersionField;
 
-		
+	
 		[System.Xml.Serialization.XmlElementAttribute("PropertyGroup")]
 		public ProjectPropertyGroup[] PropertyGroup
 		{
@@ -51,8 +51,9 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 			}
 		}
 
-		
-		public ProjectImport Import
+
+		[System.Xml.Serialization.XmlElementAttribute("Import")]
+		public ProjectImport[] Import
 		{
 			get
 			{
@@ -91,6 +92,27 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 				this.toolsVersionField = value;
 			}
 		}
+
+
+
+		private ProjectProjectExtensions projectExtensionsField;
+
+		/// <remarks/>
+		public ProjectProjectExtensions ProjectExtensions
+		{
+			get
+			{
+				return this.projectExtensionsField;
+			}
+			set
+			{
+				this.projectExtensionsField = value;
+			}
+		}
+
+
+
+
 	}
 
 

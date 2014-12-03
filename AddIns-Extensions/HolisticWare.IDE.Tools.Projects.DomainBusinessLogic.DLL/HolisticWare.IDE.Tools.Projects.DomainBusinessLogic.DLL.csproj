@@ -39,6 +39,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="XamarinStudio\ProjectPropertyGroupCompilerCompiler.cs" />
+    <Compile Include="XamarinStudio\ProjectPropertyGroupCompiler.cs" />
+    <Compile Include="ProjectProjectExtensions.cs" />
+    <Compile Include="XamarinStudio\ProjectProjectExtensionsMonoDevelop.cs" />
+    <Compile Include="XamarinStudio\ProjectProjectExtensionsMonoDevelopProperties.cs" />
+    <Compile Include="XamarinStudio\ProjectProjectExtensionsMonoDevelopPropertiesXspParameters.cs" />
+    <Compile Include="ProjectItemGroupProjectReference.cs" />
+    <Compile Include="ProjectItemGroupEmbeddedResource.cs" />
+    <Compile Include="ProjectItemGroupPage.cs" />
+    <Compile Include="ProjectItemGroupApplicationDefinition.cs" />
+    <Compile Include="ProjectItemGroupTransformFile.cs" />
+    <Compile Include="ProjectItemGroupAndroidResource.cs" />
     <Compile Include="ProjectItemGroupContent.cs" />
     <Compile Include="ProjectItemGroupNone.cs" />
     <Compile Include="ProjectItemGroupCompile.cs" />

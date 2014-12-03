@@ -8,42 +8,22 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 {
 	/// <remarks/>
 	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectItemGroupNone
+	public partial class ProjectProjectExtensions
 	{
 
-		private string includeField;
-
-		private string subTypeField;
+		private ProjectProjectExtensionsMonoDevelop monoDevelopField;
 
 		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
-		public string Include
+		public ProjectProjectExtensionsMonoDevelop MonoDevelop
 		{
 			get
 			{
-				return this.includeField;
+				return this.monoDevelopField;
 			}
 			set
 			{
-				this.includeField = value;
+				this.monoDevelopField = value;
 			}
 		}
-
-
-		/// <remarks/>
-		public string SubType
-		{
-			get
-			{
-				return this.subTypeField;
-			}
-			set
-			{
-				this.subTypeField = value;
-			}
-		}
-
-
 	}
-
 }

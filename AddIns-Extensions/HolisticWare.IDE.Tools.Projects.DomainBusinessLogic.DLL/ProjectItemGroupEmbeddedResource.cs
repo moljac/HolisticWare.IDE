@@ -6,61 +6,55 @@ using System.Threading.Tasks;
 
 namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 {
-	
+	/// <remarks/>
 	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
-	public partial class ProjectImport
+	public partial class ProjectItemGroupEmbeddedResource
 	{
 
-		private string projectField;
+		private string generatorField;
 
-		private string conditionField;
-		private string labelField;
+		private string lastGenOutputField;
 
+		private string includeField;
 
-
-		[System.Xml.Serialization.XmlAttributeAttribute()]
-		public string Project
+		/// <remarks/>
+		public string Generator
 		{
 			get
 			{
-				return this.projectField;
+				return this.generatorField;
 			}
 			set
 			{
-				this.projectField = value;
+				this.generatorField = value;
 			}
 		}
 
+		/// <remarks/>
+		public string LastGenOutput
+		{
+			get
+			{
+				return this.lastGenOutputField;
+			}
+			set
+			{
+				this.lastGenOutputField = value;
+			}
+		}
 
 		/// <remarks/>
 		[System.Xml.Serialization.XmlAttributeAttribute()]
-		public string Condition
+		public string Include
 		{
 			get
 			{
-				return this.conditionField;
+				return this.includeField;
 			}
 			set
 			{
-				this.conditionField = value;
+				this.includeField = value;
 			}
 		}
-
-
-		/// Shared Projects
-		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
-		public string Label
-		{
-			get
-			{
-				return this.labelField;
-			}
-			set
-			{
-				this.labelField = value;
-			}
-		}
-
 	}
 }

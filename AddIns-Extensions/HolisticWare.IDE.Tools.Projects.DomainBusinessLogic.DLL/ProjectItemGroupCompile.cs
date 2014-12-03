@@ -13,6 +13,12 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 
 		private string includeField;
 
+		private string autoGenField;
+
+		private string designTimeField;
+
+		private string dependentUponField;
+
 		/// <remarks/>
 		[System.Xml.Serialization.XmlAttributeAttribute()]
 		public string Include
@@ -26,5 +32,47 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 				this.includeField = value;
 			}
 		}
+
+
+		/// <remarks/>
+		public string AutoGen
+		{
+			get
+			{
+				return this.autoGenField;
+			}
+			set
+			{
+				this.autoGenField = value;
+			}
+		}
+
+		/// <remarks/>
+		public string DesignTime
+		{
+			get
+			{
+				return this.designTimeField;
+			}
+			set
+			{
+				this.designTimeField = value;
+			}
+		}
+
+		/// <remarks/>
+		public string DependentUpon
+		{
+			get
+			{
+				return this.dependentUponField;
+			}
+			set
+			{
+				this.dependentUponField = value;
+			}
+		}
+	
+	
 	}
 }
