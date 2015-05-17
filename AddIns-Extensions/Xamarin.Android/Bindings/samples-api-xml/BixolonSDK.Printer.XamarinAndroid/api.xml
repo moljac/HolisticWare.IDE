@@ -1,0 +1,2455 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<api>
+<package name="com.bixolon.printer">
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="BixolonPrinter" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="BixolonPrinter" static="false" type="com.bixolon.printer.BixolonPrinter" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+<parameter name="p1" type="android.os.Handler">
+</parameter>
+<parameter name="p2" type="android.os.Looper">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="automateStatusBack" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="cancelMsrReaderMode" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="connect" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="connect" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.hardware.usb.UsbDevice">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="connect" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="connect" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="connectUsb" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="cutPaper" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="cutPaper" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="defineNvImage" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.graphics.Bitmap">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="defineNvImage" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="disconnect" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="executeAutomaticCalibration" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="executeDirectIo" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="findBluetoothPrinters" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="findNetworkPrinters" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="findUsbPrinters" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="findUsbPrintersBySerial" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="formFeed" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getBatteryStatus" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getBatteryVoltageStatus" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getBsCodePage" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getDefinedNvImageKeyCodes" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getMacAddress" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getMonoPixels" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.graphics.Bitmap">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getMonoPixels" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getMsrMode" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getPowerMode" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getPowerSavingMode" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getPrintDensity" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getPrintSpeed" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getPrinterId" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getReceiveBufferDataSize" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getStatus" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getTphThermistorStatus" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getUsbSerial" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="initialize" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="kickOutDrawer" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="lineFeed" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="print1dBarcode" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+<parameter name="p4" type="int">
+</parameter>
+<parameter name="p5" type="int">
+</parameter>
+<parameter name="p6" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="printBitmap" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.graphics.Bitmap">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+<parameter name="p4" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="printBitmap" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.graphics.Bitmap">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+<parameter name="p4" type="boolean">
+</parameter>
+<parameter name="p5" type="boolean">
+</parameter>
+<parameter name="p6" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="printBitmap" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+<parameter name="p4" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="printBitmap" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+<parameter name="p4" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="printBitmap" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+<parameter name="p4" type="boolean">
+</parameter>
+<parameter name="p5" type="boolean">
+</parameter>
+<parameter name="p6" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="printBox" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+<parameter name="p4" type="int">
+</parameter>
+<parameter name="p5" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="printDataMatrix" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="printDotMatrixBitmap" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.graphics.Bitmap">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+<parameter name="p4" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="printDotMatrixBitmap" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+<parameter name="p4" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="printDotMatrixText" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+<parameter name="p4" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="printLine" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+<parameter name="p4" type="int">
+</parameter>
+<parameter name="p5" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="printLog" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="printMaxiCode" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="printNvImage" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="printPdf417" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+<parameter name="p4" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="printPdf" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="boolean">
+</parameter>
+<parameter name="p4" type="boolean">
+</parameter>
+<parameter name="p5" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="printQrCode" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+<parameter name="p4" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="printQrCode" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+<parameter name="p4" type="int">
+</parameter>
+<parameter name="p5" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="printQrCode" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+<parameter name="p4" type="int">
+</parameter>
+<parameter name="p5" type="int">
+</parameter>
+<parameter name="p6" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="printSelfTest" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="printText" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+<parameter name="p4" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="removeAllNvImage" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="removeNvImage" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setAbsolutePrintPosition" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setAbsoluteVerticalPrintPosition" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setBsCodePage" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setDoubleByteFont" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setLabelMode" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setMsrReaderMode" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setPageMode" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setPowerSavingMode" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="boolean">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setPrintArea" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setPrintColor" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setPrintDensity" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setPrintDirection" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setPrintSpeed" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setReceiptMode" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setSingleByteFont" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setStandardMode" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="shutDown" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="updateFirmware" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<field deprecated="not deprecated" final="true" name="ALIGNMENT_CENTER" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ALIGNMENT_LEFT" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ALIGNMENT_RIGHT" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="AUTO_STATUS_AUTO_RECOVERABLE_ERROR" static="true" transient="false" type="int" type-generic-aware="int" value="4" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="AUTO_STATUS_COVER_OPEN" static="true" transient="false" type="int" type-generic-aware="int" value="32" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="AUTO_STATUS_NO_PAPER" static="true" transient="false" type="int" type-generic-aware="int" value="12" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="AUTO_STATUS_OFF_LINE" static="true" transient="false" type="int" type-generic-aware="int" value="8" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="AUTO_STATUS_PAPER_FED" static="true" transient="false" type="int" type-generic-aware="int" value="64" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="AUTO_STATUS_UNRECOVERABLE_ERROR" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BAR_CODE_CODABAR" static="true" transient="false" type="int" type-generic-aware="int" value="71" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BAR_CODE_CODE128" static="true" transient="false" type="int" type-generic-aware="int" value="73" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BAR_CODE_CODE39" static="true" transient="false" type="int" type-generic-aware="int" value="69" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BAR_CODE_CODE93" static="true" transient="false" type="int" type-generic-aware="int" value="72" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BAR_CODE_EAN13" static="true" transient="false" type="int" type-generic-aware="int" value="67" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BAR_CODE_EAN8" static="true" transient="false" type="int" type-generic-aware="int" value="68" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BAR_CODE_ITF" static="true" transient="false" type="int" type-generic-aware="int" value="70" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BAR_CODE_UPC_A" static="true" transient="false" type="int" type-generic-aware="int" value="65" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BAR_CODE_UPC_E" static="true" transient="false" type="int" type-generic-aware="int" value="66" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BITMAP_WIDTH_FULL" static="true" transient="false" type="int" type-generic-aware="int" value="-1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BITMAP_WIDTH_NONE" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_1250_CZECH" static="true" transient="false" type="byte" type-generic-aware="byte" value="47" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_1251_CYRILLIC" static="true" transient="false" type="byte" type-generic-aware="byte" value="28" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_1252_LATIN1" static="true" transient="false" type="byte" type-generic-aware="byte" value="16" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_1253_GREEK" static="true" transient="false" type="byte" type-generic-aware="byte" value="24" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_1254_TURKISH" static="true" transient="false" type="byte" type-generic-aware="byte" value="25" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_1255_HEBREW_NEW_CODE" static="true" transient="false" type="byte" type-generic-aware="byte" value="33" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_1256_ARABIC" static="true" transient="false" type="byte" type-generic-aware="byte" value="40" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_1257_BALTIC" static="true" transient="false" type="byte" type-generic-aware="byte" value="26" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_1258_VIETNAM" static="true" transient="false" type="byte" type-generic-aware="byte" value="41" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_437_USA" static="true" transient="false" type="byte" type-generic-aware="byte" value="0" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_737_GREEK" static="true" transient="false" type="byte" type-generic-aware="byte" value="29" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_775_BALTIC" static="true" transient="false" type="byte" type-generic-aware="byte" value="30" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_850_MULTILINGUAL" static="true" transient="false" type="byte" type-generic-aware="byte" value="2" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_852_LATIN2" static="true" transient="false" type="byte" type-generic-aware="byte" value="18" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_855_CYRILLIC" static="true" transient="false" type="byte" type-generic-aware="byte" value="36" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_857_TURKISH" static="true" transient="false" type="byte" type-generic-aware="byte" value="37" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_858_EURO" static="true" transient="false" type="byte" type-generic-aware="byte" value="19" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_860_PORTUGUESE" static="true" transient="false" type="byte" type-generic-aware="byte" value="3" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_862_HEBREW_DOS_CODE" static="true" transient="false" type="byte" type-generic-aware="byte" value="21" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_863_CANADIAN_FRENCH" static="true" transient="false" type="byte" type-generic-aware="byte" value="4" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_864_ARABIC" static="true" transient="false" type="byte" type-generic-aware="byte" value="22" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_865_NORDIC" static="true" transient="false" type="byte" type-generic-aware="byte" value="5" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_866_CYRILLIC2" static="true" transient="false" type="byte" type-generic-aware="byte" value="17" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_928_GREEK" static="true" transient="false" type="byte" type-generic-aware="byte" value="38" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_FARSI" static="true" transient="false" type="byte" type-generic-aware="byte" value="27" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_KATAKANA" static="true" transient="false" type="byte" type-generic-aware="byte" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_KHMER_CAMBODIA" static="true" transient="false" type="byte" type-generic-aware="byte" value="42" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_THAI11" static="true" transient="false" type="byte" type-generic-aware="byte" value="34" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_THAI14" static="true" transient="false" type="byte" type-generic-aware="byte" value="31" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_THAI16" static="true" transient="false" type="byte" type-generic-aware="byte" value="39" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_THAI18" static="true" transient="false" type="byte" type-generic-aware="byte" value="35" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_THAI42" static="true" transient="false" type="byte" type-generic-aware="byte" value="23" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="COLOR_BLACK" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="COLOR_RED" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="D" static="true" transient="false" type="boolean" type-generic-aware="boolean" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DIRECTION_0_DEGREE_ROTATION" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DIRECTION_180_DEGREE_ROTATION" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DIRECTION_270_DEGREE_ROTATION" static="true" transient="false" type="int" type-generic-aware="int" value="3" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DIRECTION_90_DEGREE_ROTATION" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DOUBLE_BYTE_FONT_BIG5" static="true" transient="false" type="byte" type-generic-aware="byte" value="125" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DOUBLE_BYTE_FONT_GB2312" static="true" transient="false" type="byte" type-generic-aware="byte" value="126" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DOUBLE_BYTE_FONT_KS5601" static="true" transient="false" type="byte" type-generic-aware="byte" value="124" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DOUBLE_BYTE_FONT_SHIFT_JIS" static="true" transient="false" type="byte" type-generic-aware="byte" value="127" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DRAWER_CONNECTOR_PIN2" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DRAWER_CONNECTOR_PIN5" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="EXECUTE_DIRECT_IO" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;EXECUTE_DIRECT_IO&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="HRI_CHARACTERS_ABOVE_AND_BELOW_BAR_CODE" static="true" transient="false" type="int" type-generic-aware="int" value="3" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="HRI_CHARACTERS_ABOVE_BAR_CODE" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="HRI_CHARACTERS_BELOW_BAR_CODE" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="HRI_CHARACTER_NOT_PRINTED" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="KEY_STRING_CODE_PAGE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;code_page&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="KEY_STRING_DEVICE_NAME" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;device_name&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="KEY_STRING_DIRECT_IO" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;direct_io&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="KEY_STRING_MONO_PIXELS" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;mono_pixels&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="KEY_STRING_MSR_TRACK1" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;msr_track1&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="KEY_STRING_MSR_TRACK2" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;msr_track2&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="KEY_STRING_MSR_TRACK3" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;msr_track3&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="KEY_STRING_PRINTER_ID" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;printer_id&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="KEY_STRING_TOAST" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;toast&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MAXI_CODE_MODE2" static="true" transient="false" type="int" type-generic-aware="int" value="50" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MAXI_CODE_MODE3" static="true" transient="false" type="int" type-generic-aware="int" value="51" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MAXI_CODE_MODE4" static="true" transient="false" type="int" type-generic-aware="int" value="52" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_BLUETOOTH_DEVICE_SET" static="true" transient="false" type="int" type-generic-aware="int" value="7" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_COMPLETE_PROCESS_BITMAP" static="true" transient="false" type="int" type-generic-aware="int" value="9" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_DEVICE_NAME" static="true" transient="false" type="int" type-generic-aware="int" value="4" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_ERROR_CLASSES_NOT_FOUND" static="true" transient="false" type="int" type-generic-aware="int" value="16" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_ERROR_INVALID_ARGUMENT" static="true" transient="false" type="int" type-generic-aware="int" value="13" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_ERROR_NV_MEMORY_CAPACITY" static="true" transient="false" type="int" type-generic-aware="int" value="15" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_ERROR_OUT_OF_MEMORY" static="true" transient="false" type="int" type-generic-aware="int" value="14" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_LOG" static="true" transient="false" type="int" type-generic-aware="int" value="6" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_NETWORK_DEVICE_SET" static="true" transient="false" type="int" type-generic-aware="int" value="12" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_PRINT_COMPLETE" static="true" transient="false" type="int" type-generic-aware="int" value="8" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_READ" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_STATE_CHANGE" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_TOAST" static="true" transient="false" type="int" type-generic-aware="int" value="5" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_USB_DEVICE_SET" static="true" transient="false" type="int" type-generic-aware="int" value="10" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_USB_SERIAL_SET" static="true" transient="false" type="int" type-generic-aware="int" value="11" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MESSAGE_WRITE" static="true" transient="false" type="int" type-generic-aware="int" value="3" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MSR_MODE_NOT_USED" static="true" transient="false" type="int" type-generic-aware="int" value="72" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MSR_MODE_TRACK123_AUTO" static="true" transient="false" type="int" type-generic-aware="int" value="71" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MSR_MODE_TRACK123_COMMAND" static="true" transient="false" type="int" type-generic-aware="int" value="65" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MSR_MODE_TRACK12_AUTO" static="true" transient="false" type="int" type-generic-aware="int" value="69" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MSR_MODE_TRACK1_AUTO" static="true" transient="false" type="int" type-generic-aware="int" value="66" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MSR_MODE_TRACK23_AUTO" static="true" transient="false" type="int" type-generic-aware="int" value="70" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MSR_MODE_TRACK2_AUTO" static="true" transient="false" type="int" type-generic-aware="int" value="67" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MSR_MODE_TRACK3_AUTO" static="true" transient="false" type="int" type-generic-aware="int" value="68" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="NV_IMAGE_KEY_CODES" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;nv_image_key_codes&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINTER_ID_CODE_PAGE" static="true" transient="false" type="int" type-generic-aware="int" value="69" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINTER_ID_FEATURE_ID" static="true" transient="false" type="int" type-generic-aware="int" value="3" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINTER_ID_FIRMWARE_VERSION" static="true" transient="false" type="int" type-generic-aware="int" value="65" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINTER_ID_MANUFACTURER" static="true" transient="false" type="int" type-generic-aware="int" value="66" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINTER_ID_MODEL_ID" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINTER_ID_PRINTER_MODEL" static="true" transient="false" type="int" type-generic-aware="int" value="67" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINTER_ID_PRODUCT_SERIAL" static="true" transient="false" type="int" type-generic-aware="int" value="68" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINTER_ID_TYPE_ID" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINT_DENSITY_DARK" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINT_DENSITY_DEFAULT" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINT_DENSITY_LIGHT" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINT_SPEED_HIGH" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINT_SPEED_LOW" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINT_SPEED_MEDIUM" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_AUTO_STATUS_BACK" static="true" transient="false" type="int" type-generic-aware="int" value="6" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_CONNECTED" static="true" transient="false" type="int" type-generic-aware="int" value="22" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_DEFINE_NV_IMAGE" static="true" transient="false" type="int" type-generic-aware="int" value="19" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_EXECUTE_DIRECT_IO" static="true" transient="false" type="int" type-generic-aware="int" value="9" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_GET_BATTERY_STATUS" static="true" transient="false" type="int" type-generic-aware="int" value="29" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_GET_BATTERY_VOLTAGE_STATUS" static="true" transient="false" type="int" type-generic-aware="int" value="25" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_GET_BS_CODE_PAGE" static="true" transient="false" type="int" type-generic-aware="int" value="26" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_GET_DOUBLE_BYTE_FONT" static="true" transient="false" type="int" type-generic-aware="int" value="13" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_GET_MSR_MODE" static="true" transient="false" type="int" type-generic-aware="int" value="30" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_GET_NV_IMAGE_KEY_CODES" static="true" transient="false" type="int" type-generic-aware="int" value="18" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_GET_POWER_MODE" static="true" transient="false" type="int" type-generic-aware="int" value="8" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_GET_POWER_SAVING_MODE" static="true" transient="false" type="int" type-generic-aware="int" value="24" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_GET_PRINTER_ID" static="true" transient="false" type="int" type-generic-aware="int" value="5" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_GET_PRINT_DENSITY" static="true" transient="false" type="int" type-generic-aware="int" value="16" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_GET_PRINT_SPEED" static="true" transient="false" type="int" type-generic-aware="int" value="14" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_GET_RECEIVE_BUFFER_DATA_SIZE" static="true" transient="false" type="int" type-generic-aware="int" value="31" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_GET_STATUS" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_GET_STATUS1" static="true" transient="false" type="int" type-generic-aware="int" value="3" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_GET_STATUS2" static="true" transient="false" type="int" type-generic-aware="int" value="4" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_GET_TPH_THEMISTOR_STATUS" static="true" transient="false" type="int" type-generic-aware="int" value="7" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_KICK_OUT_CASH_DRAWER" static="true" transient="false" type="int" type-generic-aware="int" value="32" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_MSR_TRACK" static="true" transient="false" type="int" type-generic-aware="int" value="23" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_NONE" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_REMOVE_NV_IMAGE" static="true" transient="false" type="int" type-generic-aware="int" value="20" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_RESPONSE" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_SET_BS_CODE_PAGE" static="true" transient="false" type="int" type-generic-aware="int" value="28" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_SET_BS_CODE_PAGE_START" static="true" transient="false" type="int" type-generic-aware="int" value="27" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_SET_DOUBLE_BYTE_FONT" static="true" transient="false" type="int" type-generic-aware="int" value="11" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_SET_PRINT_DENSITY" static="true" transient="false" type="int" type-generic-aware="int" value="17" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_SET_PRINT_SPEED" static="true" transient="false" type="int" type-generic-aware="int" value="15" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_SET_SINGLE_BYTE_FONT" static="true" transient="false" type="int" type-generic-aware="int" value="10" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROCESS_UPDATE_FIRMWARE" static="true" transient="false" type="int" type-generic-aware="int" value="21" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="QR_CODE_ERROR_CORRECTION_LEVEL_H" static="true" transient="false" type="int" type-generic-aware="int" value="51" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="QR_CODE_ERROR_CORRECTION_LEVEL_L" static="true" transient="false" type="int" type-generic-aware="int" value="48" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="QR_CODE_ERROR_CORRECTION_LEVEL_M" static="true" transient="false" type="int" type-generic-aware="int" value="49" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="QR_CODE_ERROR_CORRECTION_LEVEL_Q" static="true" transient="false" type="int" type-generic-aware="int" value="50" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="QR_CODE_MODEL1" static="true" transient="false" type="int" type-generic-aware="int" value="49" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="QR_CODE_MODEL2" static="true" transient="false" type="int" type-generic-aware="int" value="50" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="STATE_CONNECTED" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="STATE_CONNECTING" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="STATE_NONE" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="STATUS_BATTERY_FULL" static="true" transient="false" type="int" type-generic-aware="int" value="48" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="STATUS_BATTERY_HIGH" static="true" transient="false" type="int" type-generic-aware="int" value="49" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="STATUS_BATTERY_LOW" static="true" transient="false" type="int" type-generic-aware="int" value="51" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="STATUS_BATTERY_LOW_VOLTAGE" static="true" transient="false" type="int" type-generic-aware="int" value="32" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="STATUS_BATTERY_MIDDLE" static="true" transient="false" type="int" type-generic-aware="int" value="50" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="STATUS_COVER_OPEN" static="true" transient="false" type="int" type-generic-aware="int" value="4" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="STATUS_ERROR_OCCURRED" static="true" transient="false" type="int" type-generic-aware="int" value="64" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="STATUS_NORMAL" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="STATUS_PAPER_FED" static="true" transient="false" type="int" type-generic-aware="int" value="8" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="STATUS_PAPER_NEAR_END" static="true" transient="false" type="int" type-generic-aware="int" value="12" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="STATUS_PAPER_NOT_PRESENT" static="true" transient="false" type="int" type-generic-aware="int" value="96" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="STATUS_PRINTING_STOPPED" static="true" transient="false" type="int" type-generic-aware="int" value="32" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="STATUS_SMPS_MODE" static="true" transient="false" type="int" type-generic-aware="int" value="64" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="STATUS_TPH_OVER_HEATING" static="true" transient="false" type="int" type-generic-aware="int" value="4" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TAG" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;BixolonPrinter&quot;" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TEXT_ATTRIBUTE_EMPHASIZED" static="true" transient="false" type="int" type-generic-aware="int" value="16" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TEXT_ATTRIBUTE_FONT_A" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TEXT_ATTRIBUTE_FONT_B" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TEXT_ATTRIBUTE_FONT_C" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TEXT_ATTRIBUTE_REVERSE" static="true" transient="false" type="int" type-generic-aware="int" value="32" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TEXT_ATTRIBUTE_REVERSE_ORDER" static="true" transient="false" type="int" type-generic-aware="int" value="64" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TEXT_ATTRIBUTE_UNDERLINE1" static="true" transient="false" type="int" type-generic-aware="int" value="4" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TEXT_ATTRIBUTE_UNDERLINE2" static="true" transient="false" type="int" type-generic-aware="int" value="8" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TEXT_SIZE_HORIZONTAL1" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TEXT_SIZE_HORIZONTAL2" static="true" transient="false" type="int" type-generic-aware="int" value="16" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TEXT_SIZE_HORIZONTAL3" static="true" transient="false" type="int" type-generic-aware="int" value="32" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TEXT_SIZE_HORIZONTAL4" static="true" transient="false" type="int" type-generic-aware="int" value="48" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TEXT_SIZE_HORIZONTAL5" static="true" transient="false" type="int" type-generic-aware="int" value="64" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TEXT_SIZE_HORIZONTAL6" static="true" transient="false" type="int" type-generic-aware="int" value="80" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TEXT_SIZE_HORIZONTAL7" static="true" transient="false" type="int" type-generic-aware="int" value="96" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TEXT_SIZE_HORIZONTAL8" static="true" transient="false" type="int" type-generic-aware="int" value="112" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TEXT_SIZE_VERTICAL1" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TEXT_SIZE_VERTICAL2" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TEXT_SIZE_VERTICAL3" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TEXT_SIZE_VERTICAL4" static="true" transient="false" type="int" type-generic-aware="int" value="3" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TEXT_SIZE_VERTICAL5" static="true" transient="false" type="int" type-generic-aware="int" value="4" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TEXT_SIZE_VERTICAL6" static="true" transient="false" type="int" type-generic-aware="int" value="5" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TEXT_SIZE_VERTICAL7" static="true" transient="false" type="int" type-generic-aware="int" value="6" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TEXT_SIZE_VERTICAL8" static="true" transient="false" type="int" type-generic-aware="int" value="7" visibility="public" volatile="false">
+</field>
+</class>
+</package>
+<package name="com.bixolon.printer.charset">
+<class abstract="true" deprecated="not deprecated" extends="java.nio.charset.Charset" extends-generic-aware="java.nio.charset.Charset" final="false" name="ByteCharset" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="NONE" static="true" transient="false" type="char" type-generic-aware="char" value="65533" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="lookupTable" static="false" transient="false" type="char[]" type-generic-aware="char[]" value="null" visibility="protected" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.nio.charset.CharsetDecoder" extends-generic-aware="java.nio.charset.CharsetDecoder" final="true" name="ByteCharset.Decoder" static="true" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="decodeLoop" native="false" return="java.nio.charset.CoderResult" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.nio.ByteBuffer">
+</parameter>
+<parameter name="p1" type="java.nio.CharBuffer">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.nio.charset.CharsetEncoder" extends-generic-aware="java.nio.charset.CharsetEncoder" final="true" name="ByteCharset.Encoder" static="true" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="encodeLoop" native="false" return="java.nio.charset.CoderResult" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.nio.CharBuffer">
+</parameter>
+<parameter name="p1" type="java.nio.ByteBuffer">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="Cp437" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Cp437" static="false" type="com.bixolon.printer.charset.Cp437" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="Cp737" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Cp737" static="false" type="com.bixolon.printer.charset.Cp737" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="Cp775" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Cp775" static="false" type="com.bixolon.printer.charset.Cp775" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="Cp850" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Cp850" static="false" type="com.bixolon.printer.charset.Cp850" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="Cp852" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Cp852" static="false" type="com.bixolon.printer.charset.Cp852" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="Cp855" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Cp855" static="false" type="com.bixolon.printer.charset.Cp855" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="Cp857" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Cp857" static="false" type="com.bixolon.printer.charset.Cp857" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="Cp858" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Cp858" static="false" type="com.bixolon.printer.charset.Cp858" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="Cp860" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Cp860" static="false" type="com.bixolon.printer.charset.Cp860" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="Cp862" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Cp862" static="false" type="com.bixolon.printer.charset.Cp862" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="Cp863" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Cp863" static="false" type="com.bixolon.printer.charset.Cp863" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="Cp864" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Cp864" static="false" type="com.bixolon.printer.charset.Cp864" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="Cp865" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Cp865" static="false" type="com.bixolon.printer.charset.Cp865" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="Cp866" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Cp866" static="false" type="com.bixolon.printer.charset.Cp866" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="Cp928" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Cp928" static="false" type="com.bixolon.printer.charset.Cp928" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="Farsi" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Farsi" static="false" type="com.bixolon.printer.charset.Farsi" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="Katakana" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Katakana" static="false" type="com.bixolon.printer.charset.Katakana" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="KhmerCambodia" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="KhmerCambodia" static="false" type="com.bixolon.printer.charset.KhmerCambodia" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="Thai11" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Thai11" static="false" type="com.bixolon.printer.charset.Thai11" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="Thai14" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Thai14" static="false" type="com.bixolon.printer.charset.Thai14" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="Thai16" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Thai16" static="false" type="com.bixolon.printer.charset.Thai16" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="Thai18" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Thai18" static="false" type="com.bixolon.printer.charset.Thai18" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="Thai42" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Thai42" static="false" type="com.bixolon.printer.charset.Thai42" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.nio.charset.Charset" extends-generic-aware="java.nio.charset.Charset" final="true" name="US_ASCII" static="false" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.nio.charset.CharsetDecoder" extends-generic-aware="java.nio.charset.CharsetDecoder" final="true" name="US_ASCII.Decoder" static="true" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="decodeLoop" native="false" return="java.nio.charset.CoderResult" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.nio.ByteBuffer">
+</parameter>
+<parameter name="p1" type="java.nio.CharBuffer">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.nio.charset.CharsetEncoder" extends-generic-aware="java.nio.charset.CharsetEncoder" final="true" name="US_ASCII.Encoder" static="true" visibility="">
+<method abstract="false" deprecated="not deprecated" final="false" name="encodeLoop" native="false" return="java.nio.charset.CoderResult" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.nio.CharBuffer">
+</parameter>
+<parameter name="p1" type="java.nio.ByteBuffer">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="Windows1250" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Windows1250" static="false" type="com.bixolon.printer.charset.Windows1250" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="Windows1251" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Windows1251" static="false" type="com.bixolon.printer.charset.Windows1251" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="Windows1252" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Windows1252" static="false" type="com.bixolon.printer.charset.Windows1252" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="Windows1253" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Windows1253" static="false" type="com.bixolon.printer.charset.Windows1253" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="Windows1254" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Windows1254" static="false" type="com.bixolon.printer.charset.Windows1254" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="Windows1255" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Windows1255" static="false" type="com.bixolon.printer.charset.Windows1255" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="Windows1256" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Windows1256" static="false" type="com.bixolon.printer.charset.Windows1256" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="Windows1257" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Windows1257" static="false" type="com.bixolon.printer.charset.Windows1257" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.charset.ByteCharset" extends-generic-aware="com.bixolon.printer.charset.ByteCharset" final="false" name="Windows1258" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Windows1258" static="false" type="com.bixolon.printer.charset.Windows1258" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.charset.Charset">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newDecoder" native="false" return="java.nio.charset.CharsetDecoder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="newEncoder" native="false" return="java.nio.charset.CharsetEncoder" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+</package>
+<package name="com.bixolon.printer.connectivity">
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.connectivity.ConnectivityService" extends-generic-aware="com.bixolon.printer.connectivity.ConnectivityService" final="true" name="BluetoothService" static="false" visibility="public"/>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.connectivity.ConnectivityService.ConnectThread" extends-generic-aware="com.bixolon.printer.connectivity.ConnectivityService.ConnectThread" final="false" name="BluetoothService.ConnectThread" static="false" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.connectivity.ConnectivityService.ConnectedThread" extends-generic-aware="com.bixolon.printer.connectivity.ConnectivityService.ConnectedThread" final="false" name="BluetoothService.ConnectedThread" static="false" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Thread" extends-generic-aware="java.lang.Thread" final="true" name="BroadcastThread" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="BroadcastThread" static="false" type="com.bixolon.printer.connectivity.BroadcastThread" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+<parameter name="p1" type="android.os.Handler">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</constructor>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="BroadcastThread.1" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Thread" extends-generic-aware="java.lang.Thread" final="false" name="BroadcastThread.DatagramSocketThread" static="false" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="BroadcastThread.DatagramSocketThread.1" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="ConnectivityManager" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="ConnectivityManager" static="false" type="com.bixolon.printer.connectivity.ConnectivityManager" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+<parameter name="p1" type="com.bixolon.printer.service.PrinterHandler">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="connect" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="connect" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.hardware.usb.UsbDevice">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="connect" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="connect" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="connectUsb" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="disconnect" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="findBluetoothPrinters" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="findNetworkPrinters" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="findUsbPrinters" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="findUsbPrintersBySerial" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getMacAddress" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getUsbSerial" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="write" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;com.bixolon.printer.connectivity.ConnectivityManager.Connectivity&gt;" final="true" name="ConnectivityManager.Connectivity" static="true" visibility="">
+<field deprecated="not deprecated" final="true" name="CONNECT_BLUETOOTH" static="true" transient="false" type="com.bixolon.printer.connectivity.ConnectivityManager.Connectivity" type-generic-aware="com.bixolon.printer.connectivity.ConnectivityManager.Connectivity" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CONNECT_NETWORK" static="true" transient="false" type="com.bixolon.printer.connectivity.ConnectivityManager.Connectivity" type-generic-aware="com.bixolon.printer.connectivity.ConnectivityManager.Connectivity" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CONNECT_NONE" static="true" transient="false" type="com.bixolon.printer.connectivity.ConnectivityManager.Connectivity" type-generic-aware="com.bixolon.printer.connectivity.ConnectivityManager.Connectivity" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CONNECT_USB" static="true" transient="false" type="com.bixolon.printer.connectivity.ConnectivityManager.Connectivity" type-generic-aware="com.bixolon.printer.connectivity.ConnectivityManager.Connectivity" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="true" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ConnectivityService" static="false" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="connectionFailed" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="connectionLost" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setState" native="false" return="void" static="false" synchronized="true" visibility="protected">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<field deprecated="not deprecated" final="true" name="D" static="true" transient="false" type="boolean" type-generic-aware="boolean" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="mConnectThread" static="false" transient="false" type="com.bixolon.printer.connectivity.ConnectivityService.ConnectThread" type-generic-aware="com.bixolon.printer.connectivity.ConnectivityService.ConnectThread" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="mConnectedThread" static="false" transient="false" type="com.bixolon.printer.connectivity.ConnectivityService.ConnectedThread" type-generic-aware="com.bixolon.printer.connectivity.ConnectivityService.ConnectedThread" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="mHandler" static="false" transient="false" type="android.os.Handler" type-generic-aware="android.os.Handler" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="mState" static="false" transient="false" type="int" type-generic-aware="int" visibility="protected" volatile="false">
+</field>
+</class>
+<class abstract="true" deprecated="not deprecated" extends="java.lang.Thread" extends-generic-aware="java.lang.Thread" final="false" name="ConnectivityService.ConnectThread" static="false" visibility="protected">
+<constructor deprecated="not deprecated" final="false" name="ConnectivityService.ConnectThread" static="false" type="com.bixolon.printer.connectivity.ConnectivityService.ConnectThread" visibility="protected">
+</constructor>
+</class>
+<class abstract="true" deprecated="not deprecated" extends="java.lang.Thread" extends-generic-aware="java.lang.Thread" final="false" name="ConnectivityService.ConnectedThread" static="false" visibility="protected">
+<constructor deprecated="not deprecated" final="false" name="ConnectivityService.ConnectedThread" static="false" type="com.bixolon.printer.connectivity.ConnectivityService.ConnectedThread" visibility="protected">
+</constructor>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.connectivity.ConnectivityService" extends-generic-aware="com.bixolon.printer.connectivity.ConnectivityService" final="true" name="NetworkService" static="false" visibility="public"/>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.connectivity.ConnectivityService.ConnectThread" extends-generic-aware="com.bixolon.printer.connectivity.ConnectivityService.ConnectThread" final="false" name="NetworkService.ConnectThread" static="false" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.connectivity.ConnectivityService.ConnectedThread" extends-generic-aware="com.bixolon.printer.connectivity.ConnectivityService.ConnectedThread" final="false" name="NetworkService.ConnectedThread" static="false" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.connectivity.ConnectivityService" extends-generic-aware="com.bixolon.printer.connectivity.ConnectivityService" final="true" name="UsbService" static="false" visibility="public"/>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.connectivity.ConnectivityService.ConnectThread" extends-generic-aware="com.bixolon.printer.connectivity.ConnectivityService.ConnectThread" final="false" name="UsbService.ConnectThread" static="false" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="com.bixolon.printer.connectivity.ConnectivityService.ConnectedThread" extends-generic-aware="com.bixolon.printer.connectivity.ConnectivityService.ConnectedThread" final="false" name="UsbService.ConnectedThread" static="false" visibility=""/>
+</package>
+<package name="com.bixolon.printer.print">
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="BarCodeManager" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="BarCodeManager" static="false" type="com.bixolon.printer.print.BarCodeManager" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="get1DBarCode" native="false" return="byte[]" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+<parameter name="p4" type="int">
+</parameter>
+<parameter name="p5" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getDataMatrix" native="false" return="byte[]" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getMaxiCode" native="false" return="byte[]" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getPdf417" native="false" return="byte[]" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getQrCode" native="false" return="byte[]" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+<parameter name="p4" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="isOverFlow" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="BitmapManager" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="BitmapManager" static="false" type="com.bixolon.printer.print.BitmapManager" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="bitmap2printerData" native="false" return="byte[]" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="android.graphics.Bitmap">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+<parameter name="p4" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="byteBuffer2Bytes" native="false" return="byte[]" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.nio.ByteBuffer">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="bytesOfWidth" native="false" return="int" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="convertToGray" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getBitmapHeight" native="false" return="int" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="android.graphics.Bitmap">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getNearest" native="false" return="int" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="log" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="makeDiffusionImageData" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="makeMonoGsvData" native="false" return="byte[]" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+<parameter name="p4" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="makeMonoImageData" native="false" return="byte[]" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+<parameter name="p4" type="int">
+</parameter>
+</method>
+<field deprecated="not deprecated" final="true" name="MODE_ESC_24DOT" static="true" transient="false" type="int" type-generic-aware="int" value="24" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MODE_ESC_8DOT" static="true" transient="false" type="int" type-generic-aware="int" value="8" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MODE_GSV0" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="RunLengthEncoding" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="RunLengthEncoding" static="false" type="com.bixolon.printer.print.RunLengthEncoding" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="encode" native="false" return="byte[]" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</method>
+</class>
+</package>
+<package name="com.bixolon.printer.property">
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="CodePageManager" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="CodePageManager" static="false" type="com.bixolon.printer.property.CodePageManager" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getBytes" native="false" return="byte[]" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getCodePageCommand" native="false" return="byte[]" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getDoubleByteCodePageName" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getSingleByteCodePageName" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+</method>
+<field deprecated="not deprecated" final="true" name="DOUBLE_BYTE_FONT_CHINESE_BIG5" static="true" transient="false" type="byte" type-generic-aware="byte" value="125" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DOUBLE_BYTE_FONT_CHINESE_GB2312" static="true" transient="false" type="byte" type-generic-aware="byte" value="126" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DOUBLE_BYTE_FONT_JAPANESE" static="true" transient="false" type="byte" type-generic-aware="byte" value="127" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DOUBLE_BYTE_FONT_KOREAN" static="true" transient="false" type="byte" type-generic-aware="byte" value="124" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="MsrManager" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="MsrManager" static="false" type="com.bixolon.printer.property.MsrManager" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getMsrMode" native="false" return="int" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getTrackDatas" native="false" return="byte[][]" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="handleMsrData" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="PropertyManager" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="PropertyManager" static="false" type="com.bixolon.printer.property.PropertyManager" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getDensity" native="false" return="int" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getMemorySwitch" native="false" return="byte[]" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getSpeed" native="false" return="int" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="SecurityManager" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="SecurityManager" static="false" type="com.bixolon.printer.property.SecurityManager" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getSecurityCode" native="false" return="byte[]" static="true" synchronized="false" visibility="public">
+</method>
+</class>
+</package>
+<package name="com.bixolon.printer.service">
+<class abstract="false" deprecated="not deprecated" extends="android.os.Handler" extends-generic-aware="android.os.Handler" final="true" name="PrinterHandler" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="PrinterHandler" static="false" type="com.bixolon.printer.service.PrinterHandler" visibility="public">
+<parameter name="p0" type="com.bixolon.printer.service.ServiceManager">
+</parameter>
+<parameter name="p1" type="android.content.Context">
+</parameter>
+<parameter name="p2" type="android.os.Handler">
+</parameter>
+<parameter name="p3" type="android.os.Looper">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="PrinterHandler" static="false" type="com.bixolon.printer.service.PrinterHandler" visibility="public">
+<parameter name="p0" type="com.bixolon.printer.service.ServiceManager">
+</parameter>
+<parameter name="p1" type="android.content.Context">
+</parameter>
+<parameter name="p2" type="android.os.Handler">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="dispatchMessage" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="ServiceManager" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="ServiceManager" static="false" type="com.bixolon.printer.service.ServiceManager" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="android.content.Context">
+</parameter>
+<parameter name="p2" type="android.os.Handler">
+</parameter>
+<parameter name="p3" type="android.os.Looper">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="connect" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="connect" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.hardware.usb.UsbDevice">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="connect" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="connect" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="connectUsb" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="disconnect" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="executeCommand" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="executeCommand" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="byte[]">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="executeCommand" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="findBluetoothPrinters" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="findNetworkPrinters" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="findUsbPrinters" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="findUsbPrintersBySerial" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getBitmapMode" native="false" return="int" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getCodePage" native="false" return="int" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getMacAddress" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getMaxWidth" native="false" return="int" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getPrinterModel" native="false" return="int" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getUsbSerial" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setCodePage" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="shutDown" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="D" static="true" transient="false" type="boolean" type-generic-aware="boolean" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TAG" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ServiceManager&quot;" visibility="public" volatile="false">
+</field>
+</class>
+</package>
+<package name="com.bixolon.printer.utility">
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="Command" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Command" static="false" type="com.bixolon.printer.utility.Command" visibility="public">
+</constructor>
+<field deprecated="not deprecated" final="true" name="ABSOLUTE_POSITION" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ABSOLUTE_VERTICAL_POSITION" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ADJUSTMENT_CUTTING_POSITION" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ADJUSTMENT_STARTING_POSITION" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ALIGNMENT_CENTER" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ALIGNMENT_LEFT" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ALIGNMENT_RIGHT" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ASB_AUTOMATICALLY_RECOVERABLE_ERROR" static="true" transient="false" type="byte" type-generic-aware="byte" value="64" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ASB_COVER_OPEN" static="true" transient="false" type="byte" type-generic-aware="byte" value="32" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ASB_FIXED" static="true" transient="false" type="byte" type-generic-aware="byte" value="15" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ASB_NO_PAPER" static="true" transient="false" type="byte" type-generic-aware="byte" value="12" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ASB_OFF_LINE" static="true" transient="false" type="byte" type-generic-aware="byte" value="8" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ASB_PAPER_FED" static="true" transient="false" type="byte" type-generic-aware="byte" value="64" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ASB_UNRECOVERABLE_ERROR" static="true" transient="false" type="byte" type-generic-aware="byte" value="32" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="AUTOMATIC_CALIBRATION" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BAR_CODE_CODABAR" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BAR_CODE_CODE128" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BAR_CODE_CODE39" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BAR_CODE_CODE93" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BAR_CODE_EAN13" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BAR_CODE_EAN8" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BAR_CODE_HEIGHT" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BAR_CODE_ITF" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BAR_CODE_UPC_A" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BAR_CODE_UPC_E" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BAR_CODE_WIDTH" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BATTERY_STATUS" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BIG5_GB2312" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BLACK_MARK_PAPER_FORMAT" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BPP_100_FIRMWARE_DOWNLOAD_NEW" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BPP_100_FIRMWARE_DOWNLOAD_OLD" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BS_MEMORY_SWITCH_SETTING_FUNCTION1" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BS_MEMORY_SWITCH_SETTING_FUNCTION2" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BS_MEMORY_SWITCH_SETTING_FUNCTION3" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BS_MEMORY_SWITCH_SETTING_FUNCTION4_2" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BS_MEMORY_SWITCH_SETTING_FUNCTION4_8" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CANCEL" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CCARRIAGE_RETURN" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CHARACTER_CODE_PAGE" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CHARACTER_SIZE" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_1250_CZECH" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_1251_CYRILLIC" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_1252_LATIN1" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_1253_GREEK" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_1254_TURKISH" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_1255_HEBREW_NEW_CODE" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_1256_ARB" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_1257_BALTIC" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_1258_VIETNAM" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_437_USA" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_737_GREEK" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_775_BALTIC" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_850_MULTILINGUAL" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_852_LATIN2" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_855_CYRILLIC" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_857_TURKISH" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_858_EURO" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_860_PORTUGUESE" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_862_HEBREW_DOS_CODE" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_863_CCANADIAN_FRENCH" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_864_ARABIC" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_865_NORDIC" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_866_CYRILLIC2" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_928_GREEK" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_FARSI" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_HEBREW_OLD_CODE" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_KATAKANA" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_KHMER_CAMBODIA" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_THAI11" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_THAI14" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_THAI16" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_THAI18" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CODE_PAGE_THAI42" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="COVER_OPEN" static="true" transient="false" type="byte" type-generic-aware="byte" value="4" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_1250_CZECH" static="true" transient="false" type="byte" type-generic-aware="byte" value="47" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_1251_CYRILLIC" static="true" transient="false" type="byte" type-generic-aware="byte" value="28" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_1252_LATIN1" static="true" transient="false" type="byte" type-generic-aware="byte" value="16" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_1253_GREEK" static="true" transient="false" type="byte" type-generic-aware="byte" value="24" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_1254_TURKISH" static="true" transient="false" type="byte" type-generic-aware="byte" value="25" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_1255_HEBREW_NEW_CODE" static="true" transient="false" type="byte" type-generic-aware="byte" value="33" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_1256_ARABIC" static="true" transient="false" type="byte" type-generic-aware="byte" value="40" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_1257_BALTIC" static="true" transient="false" type="byte" type-generic-aware="byte" value="26" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_1258_VIETNAM" static="true" transient="false" type="byte" type-generic-aware="byte" value="41" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_437_USA" static="true" transient="false" type="byte" type-generic-aware="byte" value="0" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_737_GREEK" static="true" transient="false" type="byte" type-generic-aware="byte" value="29" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_775_BALTIC" static="true" transient="false" type="byte" type-generic-aware="byte" value="30" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_850_MULTILINGUAL" static="true" transient="false" type="byte" type-generic-aware="byte" value="2" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_852_LATIN2" static="true" transient="false" type="byte" type-generic-aware="byte" value="18" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_855_CYRILLIC" static="true" transient="false" type="byte" type-generic-aware="byte" value="36" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_857_TURKISH" static="true" transient="false" type="byte" type-generic-aware="byte" value="37" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_858_EURO" static="true" transient="false" type="byte" type-generic-aware="byte" value="19" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_860_PORTUGUESE" static="true" transient="false" type="byte" type-generic-aware="byte" value="3" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_862_HEBREW_DOS_CODE" static="true" transient="false" type="byte" type-generic-aware="byte" value="21" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_863_CANADIAN_FRENCH" static="true" transient="false" type="byte" type-generic-aware="byte" value="4" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_864_ARABIC" static="true" transient="false" type="byte" type-generic-aware="byte" value="22" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_865_NORDIC" static="true" transient="false" type="byte" type-generic-aware="byte" value="5" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_866_CYRILLIC2" static="true" transient="false" type="byte" type-generic-aware="byte" value="17" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_928_GREEK" static="true" transient="false" type="byte" type-generic-aware="byte" value="38" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_FARSI" static="true" transient="false" type="byte" type-generic-aware="byte" value="27" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_KATAKANA" static="true" transient="false" type="byte" type-generic-aware="byte" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_KHMER_CAMBODIA" static="true" transient="false" type="byte" type-generic-aware="byte" value="42" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_THAI11" static="true" transient="false" type="byte" type-generic-aware="byte" value="34" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_THAI14" static="true" transient="false" type="byte" type-generic-aware="byte" value="31" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_THAI16" static="true" transient="false" type="byte" type-generic-aware="byte" value="39" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_THAI18" static="true" transient="false" type="byte" type-generic-aware="byte" value="35" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CP_THAI42" static="true" transient="false" type="byte" type-generic-aware="byte" value="23" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DATA_MATRIX_PRINT" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DATA_MATRIX_SIZE" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DATA_MATRIX_STORE" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DATA_MATRIX_STORE_PARAMETER" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DEVICE_FONT_A" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DEVICE_FONT_B" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DEVICE_FONT_C" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DISABLE_ASB" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DISABLE_POWER_SAVING_TIME" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DISABLE_PRINTER" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DOUBLE_BYTE_FONT" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DRAWER_CONNECTOR_PIN2" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DRAWER_CONNECTOR_PIN5" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DRAWER_CONNECTOR_STATUS" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DRAWER_PIN3_HIGH" static="true" transient="false" type="byte" type-generic-aware="byte" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="EMPHASIZED_OFF" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="EMPHASIZED_ON" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ENABLE_ASB" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ENABLE_POWER_SAVING_TIME" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ENABLE_PRINTER" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ERROR_OCCURRED" static="true" transient="false" type="byte" type-generic-aware="byte" value="64" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="FEED_N" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="FORM_FEED" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="FS_DEFINE_NV_IMAGE" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="FS_PRINT_NV_IMAGE_DOUBLE_HEIGHT" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="FS_PRINT_NV_IMAGE_DOUBLE_WIDTH" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="FS_PRINT_NV_IMAGE_NORMAL" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="FS_PRINT_NV_IMAGE_QUADRUPLE" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="FULL" static="true" transient="false" type="byte" type-generic-aware="byte" value="48" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="GET_POWER_SAVING_TIME_STATUS" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="HIGH" static="true" transient="false" type="byte" type-generic-aware="byte" value="49" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="HORIZONTAL_1TIME" static="true" transient="false" type="byte" type-generic-aware="byte" value="0" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="HORIZONTAL_2TIMES" static="true" transient="false" type="byte" type-generic-aware="byte" value="16" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="HORIZONTAL_3TIMES" static="true" transient="false" type="byte" type-generic-aware="byte" value="32" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="HORIZONTAL_4TIMES" static="true" transient="false" type="byte" type-generic-aware="byte" value="48" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="HORIZONTAL_5TIMES" static="true" transient="false" type="byte" type-generic-aware="byte" value="64" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="HORIZONTAL_6TIMES" static="true" transient="false" type="byte" type-generic-aware="byte" value="80" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="HORIZONTAL_7TIMES" static="true" transient="false" type="byte" type-generic-aware="byte" value="96" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="HORIZONTAL_8TIMES" static="true" transient="false" type="byte" type-generic-aware="byte" value="112" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="HORIZONTAL_TAB" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="HRI_CHARACTERS_ABOVE_AND_BELOW_BAR_CODE" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="HRI_CHARACTERS_ABOVE_BAR_CODE" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="HRI_CHARACTERS_BELOW_BAR_CODE" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="HRI_CHARACTERS_NOT_PRINTED" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="INITIALIZATION" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="INTERNATIONAL_CHARACTER_SET" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="INTERNATIONAL_CHARACTER_SET_DENMARK1" static="true" transient="false" type="byte" type-generic-aware="byte" value="4" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="INTERNATIONAL_CHARACTER_SET_DENMARK2" static="true" transient="false" type="byte" type-generic-aware="byte" value="10" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="INTERNATIONAL_CHARACTER_SET_FRANCE" static="true" transient="false" type="byte" type-generic-aware="byte" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="INTERNATIONAL_CHARACTER_SET_GERMANY" static="true" transient="false" type="byte" type-generic-aware="byte" value="2" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="INTERNATIONAL_CHARACTER_SET_ITALY" static="true" transient="false" type="byte" type-generic-aware="byte" value="6" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="INTERNATIONAL_CHARACTER_SET_KOREA" static="true" transient="false" type="byte" type-generic-aware="byte" value="13" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="INTERNATIONAL_CHARACTER_SET_LATIN_AMERICA" static="true" transient="false" type="byte" type-generic-aware="byte" value="12" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="INTERNATIONAL_CHARACTER_SET_NORWAY" static="true" transient="false" type="byte" type-generic-aware="byte" value="9" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="INTERNATIONAL_CHARACTER_SET_SPAIN1" static="true" transient="false" type="byte" type-generic-aware="byte" value="7" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="INTERNATIONAL_CHARACTER_SET_SPAIN2" static="true" transient="false" type="byte" type-generic-aware="byte" value="11" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="INTERNATIONAL_CHARACTER_SET_SWEDEN" static="true" transient="false" type="byte" type-generic-aware="byte" value="5" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="INTERNATIONAL_CHARACTER_SET_UK" static="true" transient="false" type="byte" type-generic-aware="byte" value="3" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="INTERNATIONAL_CHARACTER_SET_USA" static="true" transient="false" type="byte" type-generic-aware="byte" value="0" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="KANJI_CHATACTER_OFF" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="KANJI_CHATACTER_ON" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="KS5601" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="LABEL_MODE" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="LINE_FEED" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="LOW" static="true" transient="false" type="byte" type-generic-aware="byte" value="51" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="LOW_VOLTAGE" static="true" transient="false" type="byte" type-generic-aware="byte" value="32" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MAXI_CODE_MODE2" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MAXI_CODE_MODE3" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MAXI_CODE_MODE4" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MAXI_CODE_PRINT" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MAXI_CODE_STORE" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MAXI_CODE_STORE_PARAMETER" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MEMORY_SWITCH_SETTING_FUNCTION1" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MEMORY_SWITCH_SETTING_FUNCTION2" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MEMORY_SWITCH_SETTING_FUNCTION3" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MEMORY_SWITCH_SETTING_FUNCTION4" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MIDDLE" static="true" transient="false" type="byte" type-generic-aware="byte" value="50" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MSR_CANCEL_READER_MODE" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MSR_SETTING_VALUE" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MSR_SET_123TRACK_READER_MODE" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="NV_IMAGE_ALL_REMOVAL" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="NV_IMAGE_DEFINITION" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="NV_IMAGE_DEFINITION_COLOR1" static="true" transient="false" type="byte" type-generic-aware="byte" value="49" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="NV_IMAGE_DEFINITION_COLORS_NUMBER" static="true" transient="false" type="byte" type-generic-aware="byte" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="NV_IMAGE_DEFINITION_FUNCTION" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="NV_IMAGE_KEY_CODE_LIST" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="NV_IMAGE_KEY_CODE_LIST_ACK" static="true" transient="false" type="byte" type-generic-aware="byte" value="6" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="NV_IMAGE_PRINT" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="NV_IMAGE_PRINT_FOOTER" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="NV_IMAGE_REMAINING_CAPACITY" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="NV_IMAGE_REMOVAL" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PAGE_MODE" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PAPER_FED" static="true" transient="false" type="byte" type-generic-aware="byte" value="8" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PAPER_NEAR_END" static="true" transient="false" type="byte" type-generic-aware="byte" value="12" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PAPER_NOT_PRESENT" static="true" transient="false" type="byte" type-generic-aware="byte" value="96" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PARTIAL_CUT" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PARTIAL_CUT_NO_FEED" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PDF417_COLUMN_NUMBER_AUTO" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PDF417_HEIGHT" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PDF417_PRINT" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PDF417_ROW_NUMBER_AUTO" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PDF417_STORE" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PDF417_STORE_PARAMETER" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PDF417_WIDTH" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINTER_ID_CODE_PAGE" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINTER_ID_FEATURE_ID" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINTER_ID_FIRMWARE_VERSION" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINTER_ID_MANUFACTURER" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINTER_ID_MODEL_ID" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINTER_ID_PRINTER_MODEL" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINTER_ID_PRODUCT_SERIAL" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINTER_ID_TYPE_ID" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINTING_STOPPED" static="true" transient="false" type="byte" type-generic-aware="byte" value="32" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINT_AND_FEED" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINT_AREA" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINT_BOX" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINT_COLOR_BLACK" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINT_COLOR_RED" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINT_DIRECION_BOTTOM_TO_TOP" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINT_DIRECION_LEFT_TO_RIGHT" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINT_DIRECION_RIGHT_TO_LEFT" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINT_DIRECION_TOP_TO_BOTTOM" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINT_IN_PAGE_MODE" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINT_LINE" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINT_MODE" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINT_MODE_DOUBLE_HEIGHT" static="true" transient="false" type="byte" type-generic-aware="byte" value="16" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINT_MODE_DOUBLE_WIDTH" static="true" transient="false" type="byte" type-generic-aware="byte" value="32" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINT_MODE_EMPHASIZED" static="true" transient="false" type="byte" type-generic-aware="byte" value="8" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINT_MODE_FONT_B" static="true" transient="false" type="byte" type-generic-aware="byte" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PRINT_SPEED_DENSITY" static="true" transient="false" type="byte" type-generic-aware="byte" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="QR_CODE_ERROR_CORRECTION_LEVEL" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="QR_CODE_MODEL1" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="QR_CODE_MODEL2" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="QR_CODE_PRINT" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="QR_CODE_SIZE" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="QR_CODE_STORE" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="QR_CODE_STORE_PARAMETER" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="QR_CODE_VERSION" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="RASTER_BIT_IMAGE_DOUBLE_HEIGHT" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="RASTER_BIT_IMAGE_DOUBLE_WIDTH" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="RASTER_BIT_IMAGE_NORMAL" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="RASTER_BIT_IMAGE_QUADRUPLE" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="REAL_TIME_OFF_LINE_STATUS" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="REAL_TIME_PAPER_ROLL_SENSOR_STATUS" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="REAL_TIME_RECEIVE_BUFFER_DATA_SIZE" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="REAL_TIME_TPH_POWER_STATUS" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="RECEIPT_MODE" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="RELATIVE_PRINT_POSITION" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="REVERSE_OFF" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="REVERSE_ON" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SELECT_DOUBLE_BYTE_FONT" static="true" transient="false" type="byte" type-generic-aware="byte" value="12" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SELECT_SINGLE_BYTE_FONT" static="true" transient="false" type="byte" type-generic-aware="byte" value="2" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SELF_TEST" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SHIFT_JIS" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SINGLE_BYTE_FONT" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SMPS_MODE" static="true" transient="false" type="byte" type-generic-aware="byte" value="64" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SPECIFY_BIT_IMAGE_24DOT_DOUBLE_DENSITY" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SPECIFY_BIT_IMAGE_24DOT_SINGLE_DENSITY" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SPECIFY_BIT_IMAGE_8DOT_DOUBLE_DENSITY" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SPECIFY_BIT_IMAGE_8DOT_SINGLE_DENSITY" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="STANDARD_MODE" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TPH_OVER_HEATING" static="true" transient="false" type="byte" type-generic-aware="byte" value="4" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="UNDERLINE_1DOT_THICK" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="UNDERLINE_2DOT_THICK" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="UNDERLINE_OFF" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="UPSIDE_DOWN_OFF" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="UPSIDE_DOWN_ON" static="true" transient="false" type="byte[]" type-generic-aware="byte[]" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="USER_CODE_PAGE" static="true" transient="false" type="byte" type-generic-aware="byte" value="-1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="VERTICCAL_1TIME" static="true" transient="false" type="byte" type-generic-aware="byte" value="0" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="VERTICCAL_2TIMES" static="true" transient="false" type="byte" type-generic-aware="byte" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="VERTICCAL_3TIMES" static="true" transient="false" type="byte" type-generic-aware="byte" value="2" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="VERTICCAL_4TIMES" static="true" transient="false" type="byte" type-generic-aware="byte" value="3" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="VERTICCAL_5TIMES" static="true" transient="false" type="byte" type-generic-aware="byte" value="4" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="VERTICCAL_6TIMES" static="true" transient="false" type="byte" type-generic-aware="byte" value="5" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="VERTICCAL_7TIMES" static="true" transient="false" type="byte" type-generic-aware="byte" value="6" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="VERTICCAL_8TIMES" static="true" transient="false" type="byte" type-generic-aware="byte" value="7" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="Encryptor" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Encryptor" static="false" type="com.bixolon.printer.utility.Encryptor" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="bytesToHex" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="decrypt" native="false" return="byte[]" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="encrypt" native="false" return="byte[]" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="FileLog" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="FileLog" static="false" type="com.bixolon.printer.utility.FileLog" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="createBinaryFile" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="println" native="false" return="int" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="Utility" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Utility" static="false" type="com.bixolon.printer.utility.Utility" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="copyOfRange" native="false" return="byte[]" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<exception name="ArrayIndexOutOfBoundsException" type="java.lang.ArrayIndexOutOfBoundsException">
+</exception>
+<exception name="IllegalArgumentException" type="java.lang.IllegalArgumentException">
+</exception>
+<exception name="NullPointerException" type="java.lang.NullPointerException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getBinary" native="false" return="byte[]" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getBinary" native="false" return="byte[]" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="linearSearch" native="false" return="int" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="byte[]">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="toHexString" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="toHexString" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</method>
+</class>
+</package>
+</api>
