@@ -8,8 +8,9 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 {
 	public partial class ProjectType
 	{
+		public string GuidTextual { get; set; }
+
 		public string Description { get; set; }
 
-		public string GuidTextual { get; set; }
 	}
 }

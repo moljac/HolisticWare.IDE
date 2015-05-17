@@ -11,6 +11,11 @@ namespace HolisticWare.IDE.Tools.Projects.ProjectTypeGuidScraper.EXE
 	{
 		static void Main(string[] args)
 		{
+			ProjectTypes projecttypes = ProjectTypes.GetProjectTypes();
+
+
+			SerializationWarmUp();
+
 			// Directory("*.*proj")
 			//	*.csproj
 			//	*.fsproj
@@ -35,7 +40,7 @@ namespace HolisticWare.IDE.Tools.Projects.ProjectTypeGuidScraper.EXE
 			{
 				nodes_unknown = null;
 
-				ReadProject(f);
+				ReadProjectAsync(f);
 
 				if (null != nodes_unknown)
 				{
@@ -47,7 +52,6 @@ namespace HolisticWare.IDE.Tools.Projects.ProjectTypeGuidScraper.EXE
 			{
 				throw new System.SystemException("Project with unknown node found!");
 			}
-			//SerializationWarmUp();
 
 			return;
 		}
@@ -93,8 +97,11 @@ namespace HolisticWare.IDE.Tools.Projects.ProjectTypeGuidScraper.EXE
 
 
 
-		static protected void ReadProject(string filename)
+		static async protected void ReadProjectAsync(string filename)
 		{
+			System.Console.WriteLine("projectname = {0}", filename);
+				 
+
 			// Create an instance of the XmlSerializer class; 
 			// specify the type of object to be deserialized.
 			System.Xml.Serialization.XmlSerializer serializer = null;
@@ -110,22 +117,40 @@ namespace HolisticWare.IDE.Tools.Projects.ProjectTypeGuidScraper.EXE
 				;
 
 			// A FileStream is needed to read the XML document.
-			System.IO.FileStream fs = new System.IO.FileStream(filename, System.IO.FileMode.Open);
-			// Declare an object variable of the type to be deserialized.
-			Project po;
+			System.IO.FileStream fs = new System.IO.FileStream
+														(
+														filename, 
+														System.IO.FileMode.Open,
+														System.IO.FileAccess.Read,
+														System.IO.FileShare.Read, 
+														4096,
+														useAsync: true
+														);
 			// Use the Deserialize method to restore the object's state with
 			// data from the XML document.
 			try
 			{
-				po = (Project)serializer.Deserialize(fs);
+				using (System.IO.StreamReader reader = new System.IO.StreamReader(fs))
+				{
+					string project_file_content = await reader.ReadToEndAsync();
+					System.Console.WriteLine("\t project file content = ");
+					System.Console.WriteLine(project_file_content);
+				}
+
+
+				// Declare an object variable of the type to be deserialized.
+				Project po = (Project)serializer.Deserialize(fs);
 			}
 			catch (System.InvalidOperationException exc_inv_op)
 			{
 				files_with_errors.Add(filename);
 			}
-			// Read the order date.
+			catch (System.Exception exc)
+			{
+				throw exc;
+			}
 
-			// Read the subtotal, shipping cost, and total cost.
+			return;
 		}
 
 		static private void serializer_UnknownAttribute(object sender, System.Xml.Serialization.XmlAttributeEventArgs e)

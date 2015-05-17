@@ -9,36 +9,73 @@ namespace HolisticWare.IDE.Tools.Projects.DomainBusinessLogic
 {
 	public partial class ProjectTypes : List<ProjectType>
 	{
-		public static ProjectTypes GetProjectTypes()
+		public static ProjectTypes GetProjectTypes ()
 		{
-			ProjectTypes pt = new ProjectTypes()
-			{
+			ProjectTypes pt = new ProjectTypes () {
 			};
 
 			string[] lines = collected_project_type_guids_as_text
-									.Split
-										(
-										  new string[] { Environment.NewLine}
-										, StringSplitOptions.RemoveEmptyEntries
-										);
+							.Split
+								(
+				                 new string[] {
+					Environment.NewLine
+				}
+								, StringSplitOptions.RemoveEmptyEntries
+			                 );
+
+			Dictionary<string, List<string>> mapping_filter = new Dictionary<string, List<string> > ();
+			mapping_filter = new Dictionary<string, List<string> > ();
 
 			foreach (string l in lines)
 			{
-				string l_trimmed = l.Trim();
+				string l_trimmed = l.Trim ();
 
-				if (l_trimmed == String.Empty || l_trimmed.StartsWith(@"//"))
+				if (l_trimmed == String.Empty || l_trimmed.StartsWith (@"//"))
 				{
 					continue;
 				}
 				else
 				{
-					int position_guid_begin = l_trimmed.IndexOf('{');
-					int position_guid_end = l_trimmed.IndexOf('}');
-					string description = l_trimmed.Substring(0, position_guid_begin).Trim();
-					string guid_project_type = l_trimmed.Substring(position_guid_begin + 1, position_guid_end - position_guid_begin - 1);
+					int position_guid_begin = l_trimmed.IndexOf ('{');
+					int position_guid_end = l_trimmed.IndexOf ('}');
+					string description = l_trimmed.Substring (0, position_guid_begin).Trim ();
+
+					string guid_project_type = l_trimmed.Substring (position_guid_begin + 1, position_guid_end - position_guid_begin - 1);
+
+					if (mapping_filter.ContainsKey (guid_project_type))
+					{
+						mapping_filter [guid_project_type].Add (description);
+					}
+					else
+					{
+						List<string> descriptions = new List<string> ();
+						descriptions.Add (description);
+						mapping_filter.Add (guid_project_type, descriptions);
+					}
 				}
 
 			}
+
+			foreach (KeyValuePair<string, List<string> > kvp in mapping_filter)
+			{
+				List<string> descriptions = kvp.Value;
+				StringBuilder sb = new StringBuilder ();
+				foreach (string s in descriptions)
+				{
+					sb.Append(s);
+					sb.AppendLine();
+				}
+
+				pt.Add
+						(
+						new ProjectType () 
+						{
+							GuidTextual = kvp.Key,
+							Description = sb.ToString()
+						}
+					);
+			}
+			 
 			return pt;
 		}
 
