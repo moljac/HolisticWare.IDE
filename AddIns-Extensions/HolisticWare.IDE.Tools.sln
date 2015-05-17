@@ -11,12 +11,20 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.IDE.Tools.Proj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.IDE.Tools.Projects.ProjectTypeGuidScraper.EXE.Cons", "HolisticWare.IDE.Tools.Projects.ProjectTypeGuidScraper.EXE.Cons\HolisticWare.IDE.Tools.Projects.ProjectTypeGuidScraper.EXE.Cons.csproj", "{18E344C3-DF6F-432C-82CA-7FEB383C0BAC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.IDE.Tools.Projects.XamarinAndroid.Bindings.DLL", "HolisticWare.IDE.Tools.Projects.XamarinAndroid.Bindings.DLL\HolisticWare.IDE.Tools.Projects.XamarinAndroid.Bindings.DLL.csproj", "{B76E2A3C-2655-4DED-BE84-37A8A7B2B0E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.IDE.Tools.Projects.XamarinAndroid.Bindings.EXE.Console", "HolisticWare.IDE.Tools.Projects.XamarinAndroid.Bindings.EXE.Console\HolisticWare.IDE.Tools.Projects.XamarinAndroid.Bindings.EXE.Console.csproj", "{020B7796-64DF-473D-98BA-1A4B3ECEC9E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{020B7796-64DF-473D-98BA-1A4B3ECEC9E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{020B7796-64DF-473D-98BA-1A4B3ECEC9E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{020B7796-64DF-473D-98BA-1A4B3ECEC9E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{020B7796-64DF-473D-98BA-1A4B3ECEC9E2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{18E344C3-DF6F-432C-82CA-7FEB383C0BAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{18E344C3-DF6F-432C-82CA-7FEB383C0BAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18E344C3-DF6F-432C-82CA-7FEB383C0BAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -29,6 +37,10 @@ Global
 		{AF9BED1D-AC73-4542-88D8-79C7672F6D69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF9BED1D-AC73-4542-88D8-79C7672F6D69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF9BED1D-AC73-4542-88D8-79C7672F6D69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B76E2A3C-2655-4DED-BE84-37A8A7B2B0E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B76E2A3C-2655-4DED-BE84-37A8A7B2B0E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B76E2A3C-2655-4DED-BE84-37A8A7B2B0E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B76E2A3C-2655-4DED-BE84-37A8A7B2B0E1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E5DC65BB-151F-47C7-AF39-69F02932D01C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E5DC65BB-151F-47C7-AF39-69F02932D01C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5DC65BB-151F-47C7-AF39-69F02932D01C}.Release|Any CPU.ActiveCfg = Release|Any CPU
