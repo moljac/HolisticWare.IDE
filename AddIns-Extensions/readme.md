@@ -11,3 +11,14 @@ which may corrupt the stack.
 
 
 The runtime has encountered a fatal error. The error code is 0xc0000005. 
+
+
+http://www.codeproject.com/Reference/720512/List-of-Visual-Studio-Project-Type-GUIDs
+https://github.com/mono/monodevelop/blob/master/main/src/core/MonoDevelop.Core/MonoDevelop.Core.addin.xml#L299
+
+
+http://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/binding_a_java_library_%28.jar%29/api_metadata_reference/
+
+
+https://medium.com/xamarin-development/diving-into-xamarin-reusing-objective-c-libraries-18b6f29c7922
+
