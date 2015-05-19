@@ -22,3 +22,9 @@ http://developer.xamarin.com/guides/android/advanced_topics/java_integration_ove
 
 https://medium.com/xamarin-development/diving-into-xamarin-reusing-objective-c-libraries-18b6f29c7922
 
+
+
+
+
+http://stackoverflow.com/questions/10606534/how-to-search-xml-files-with-xpath-returning-line-and-column-numbers-of-found
+http://stackoverflow.com/questions/24555976/how-to-get-line-number-from-an-xmlelement-or-a-xpathnavigator
