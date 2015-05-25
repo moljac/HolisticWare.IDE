@@ -1,16 +1,36 @@
-FatalExecutionEngineError occurred
-Message: Managed Debugging Assistant 'FatalExecutionEngineError' has detected a problem in 
-
-HolisticWare.IDE.Tools.Projects.ProjectTypeGuidScraper.EXE.Cons\bin\Debug\.vshost.exe'.
-Additional information: The runtime has encountered a fatal error. 
-The address of the error was at 0x745703a6, on thread 0x1074. 
-The error code is 0xc0000005. 
-This error may be a bug in the CLR or in the unsafe or non-verifiable portions of user code. 
-Common sources of this bug include user marshaling errors for COM-interop or PInvoke, 
-which may corrupt the stack.
+# MonoDevelop AddIns
 
 
-The runtime has encountered a fatal error. The error code is 0xc0000005. 
+## XPath matcher/search
+
+*	[http://codebeautify.org/Xpath-Tester](http://codebeautify.org/Xpath-Tester)
+*	http://www.freeformatter.com/xpath-tester.html
+http://www.freeformatter.com/xpath-tester.html
+http://www.xpathtester.com/xpath
+http://www.online-toolz.com/tools/xpath-editor.php
+
+
+http://stackoverflow.com/questions/10606534/how-to-search-xml-files-with-xpath-returning-line-and-column-numbers-of-found
+http://stackoverflow.com/questions/24555976/how-to-get-line-number-from-an-xmlelement-or-a-xpathnavigator
+
+
+## csproj types GUIDs
+
+
+### Error
+
+	FatalExecutionEngineError occurred
+	Message: Managed Debugging Assistant 'FatalExecutionEngineError' has detected a problem in 
+
+	HolisticWare.IDE.Tools.Projects.ProjectTypeGuidScraper.EXE.Cons\bin\Debug\.vshost.exe'.
+	Additional information: The runtime has encountered a fatal error. 
+	The address of the error was at 0x745703a6, on thread 0x1074. 
+	The error code is 0xc0000005. 
+	This error may be a bug in the CLR or in the unsafe or non-verifiable portions of user code. 
+	Common sources of this bug include user marshaling errors for COM-interop or PInvoke, 
+	which may corrupt the stack.
+
+	The runtime has encountered a fatal error. The error code is 0xc0000005. 
 
 
 http://www.codeproject.com/Reference/720512/List-of-Visual-Studio-Project-Type-GUIDs
@@ -26,5 +46,3 @@ https://medium.com/xamarin-development/diving-into-xamarin-reusing-objective-c-l
 
 
 
-http://stackoverflow.com/questions/10606534/how-to-search-xml-files-with-xpath-returning-line-and-column-numbers-of-found
-http://stackoverflow.com/questions/24555976/how-to-get-line-number-from-an-xmlelement-or-a-xpathnavigator
